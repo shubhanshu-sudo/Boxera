@@ -11,7 +11,7 @@ const programs = [
         type: "TAG_STACK",
         title: "GROUP CLASSES",
         tagline: "COMMUNITY STRENGTH",
-        tags: ["PRO BOXING", "MUAY THAI", "STRENGTH & POWER"],
+        tags: ["HIIT", "BODY TRAINING", "STRENGTH & POWER TRAINING"],
         icon: <Target className="w-6 h-6" />,
         image: "/training.png",
     },
@@ -20,17 +20,22 @@ const programs = [
         type: "PERSONAL_TRAINING",
         title: "PERSONAL TRAINING",
         tagline: "ONE-ON-ONE FOCUS",
-        tags: ["POWERLIFTING", "CORE", "ENDURANCE"],
-        features: ["Customized Workout Plans", "Form Correction", "Progress Tracking"],
+        tags: ["ASHWIN", "SHIVANI", "JEETH"],
+        features: [
+            "Individual Assessment",
+            "Identification of wear point",
+            "Goal & result oriented training",
+            "Expert / Qualified Trainers"
+        ],
         icon: <Zap className="w-6 h-6" />,
         image: "/hero.png",
     },
     {
         id: "03",
         type: "TAG_STACK",
-        title: "TRANSFORMATIVE",
+        title: "TRANSFORMATIVE PROGRAM",
         tagline: "ELITE EVOLUTION",
-        tags: ["ASSESSMENT", "NUTRITION", "CONDITIONING"],
+        tags: ["Group / DBS", "1-1 / CONSULTATION"],
         icon: <Shield className="w-6 h-6" />,
         image: "/programs_bg.png",
     },
@@ -46,7 +51,7 @@ export default function Programs() {
 
     const itemVariants = {
         rest: { opacity: 0, y: 20 },
-        hover: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } }
+        hover: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] as any } }
     };
 
     return (
@@ -143,7 +148,7 @@ export default function Programs() {
                                                 initial={{ opacity: 0, y: 20 }}
                                                 animate={hoveredIndex === index ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                                 transition={{ delay: 0.4, duration: 0.5 }}
-                                                className="mt-4 bg-accent text-white px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all hover:bg-white hover:text-black hover:gap-5"
+                                                className="mt-4 bg-white text-black px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all hover:bg-accent hover:text-white hover:gap-5"
                                             >
                                                 EXPLORE NOW <MoveRight size={16} />
                                             </motion.button>
@@ -174,9 +179,14 @@ export default function Programs() {
                                                     </div>
                                                 ))}
                                             </div>
-                                            <ul className="flex flex-col gap-4 items-center mb-10">
+                                            <ul className="flex flex-col gap-4 items-start mb-10 w-fit mx-auto">
                                                 {program.features?.map((f, fIdx) => (
-                                                    <li key={fIdx} className="text-white/60 text-[10px] md:text-xs uppercase tracking-[0.2em]">{f}</li>
+                                                    f ? (
+                                                        <li key={fIdx} className="text-white/60 text-[10px] md:text-xs uppercase tracking-[0.2em] flex items-center gap-3">
+                                                            <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 shadow-[0_0_8px_rgba(255,0,0,0.6)]" />
+                                                            {f}
+                                                        </li>
+                                                    ) : null
                                                 ))}
                                             </ul>
 
@@ -185,7 +195,7 @@ export default function Programs() {
                                                 initial={{ opacity: 0, y: 20 }}
                                                 animate={hoveredIndex === index ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                                 transition={{ delay: 0.4, duration: 0.5 }}
-                                                className="bg-accent text-white px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all hover:bg-white hover:text-black hover:gap-5"
+                                                className="bg-white text-black px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all hover:bg-accent hover:text-white hover:gap-5"
                                             >
                                                 EXPLORE NOW <MoveRight size={16} />
                                             </motion.button>
