@@ -147,7 +147,7 @@ export default function Programs() {
                                 onMouseLeave={() => !isMobile && setHoveredIndex(null)}
                                 className={`group relative h-[500px] md:h-[700px] bg-zinc-900 overflow-hidden border transition-all duration-700 rounded-sm cursor-pointer flex-shrink-0 w-[85vw] md:w-auto snap-center md:snap-align-none
                                     ${!isMobile && hoveredIndex !== null && hoveredIndex !== index ? "opacity-30 grayscale blur-[1px]" : "opacity-100 grayscale-0 blur-0"}
-                                    ${isActive ? "border-accent shadow-[0_0_40px_rgba(255,0,0,0.2)]" : "border-white/5"}
+                                    ${isActive ? "border-accent shadow-[0_0_40px_rgba(67,67,209,0.35)]" : "border-white/5"}
                                 `}
                             >
                                 <div className="absolute inset-0">
@@ -232,7 +232,7 @@ export default function Programs() {
                                                     {program.features?.map((f, fIdx) => (
                                                         f ? (
                                                             <li key={fIdx} className="text-white/60 text-[9px] md:text-[10px] uppercase tracking-[0.2em] flex items-center gap-3">
-                                                                <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 shadow-[0_0_8px_rgba(255,0,0,0.6)]" />
+                                                                <span className="w-1.5 h-1.5 rounded-full bg-accent-red flex-shrink-0 shadow-[0_0_8px_rgba(255,0,0,0.6)]" />
                                                                 {f}
                                                             </li>
                                                         ) : null

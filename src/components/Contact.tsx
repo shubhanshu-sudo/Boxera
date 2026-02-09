@@ -204,7 +204,7 @@ export default function Contact() {
                                             key="error"
                                             initial={{ opacity: 0, y: 10 }}
                                             animate={{ opacity: 1, y: 0 }}
-                                            className="w-full bg-accent/20 text-accent border border-accent/20 py-5 flex items-center justify-center gap-3 font-bold uppercase tracking-widest text-xs cursor-pointer"
+                                            className="w-full bg-red-500/20 text-red-500 border border-red-500/20 py-5 flex items-center justify-center gap-3 font-bold uppercase tracking-widest text-xs cursor-pointer"
                                             onClick={() => setStatus("idle")}
                                         >
                                             <AlertCircle size={18} /> Something went wrong. Please try again.
