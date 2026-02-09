@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ArrowUpRight, Zap, Target, Shield, MoveRight } from "lucide-react";
@@ -44,6 +44,8 @@ const programs = [
 export default function Programs() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const [isMobile, setIsMobile] = useState(false);
+    const [activeMobileIndex, setActiveMobileIndex] = useState(0);
+    const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const checkMobile = () => {
@@ -53,6 +55,35 @@ export default function Programs() {
         window.addEventListener("resize", checkMobile);
         return () => window.removeEventListener("resize", checkMobile);
     }, []);
+
+    // Handle Scroll detection for dots
+    const handleScroll = () => {
+        if (!scrollRef.current || !isMobile) return;
+        const scrollLeft = scrollRef.current.scrollLeft;
+        const cardWidth = scrollRef.current.offsetWidth * 0.85; // matching current width
+        const newIndex = Math.round(scrollLeft / cardWidth);
+        if (newIndex !== activeMobileIndex) {
+            setActiveMobileIndex(newIndex);
+        }
+    };
+
+    // Auto-slide logic for mobile
+    useEffect(() => {
+        if (!isMobile) return;
+
+        const interval = setInterval(() => {
+            if (!scrollRef.current) return;
+            const nextIndex = (activeMobileIndex + 1) % programs.length;
+            const cardWithGap = (scrollRef.current.querySelector('div')?.offsetWidth || 0) + 24; // 24 is the gap-6
+
+            scrollRef.current.scrollTo({
+                left: nextIndex * cardWithGap,
+                behavior: "smooth"
+            });
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [isMobile, activeMobileIndex]);
 
     const containerVariants = {
         rest: { transition: { staggerChildren: 0.1 } },
@@ -98,9 +129,13 @@ export default function Programs() {
                 </div>
 
                 {/* Grid on Desktop, Slider on Mobile */}
-                <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar md:grid md:grid-cols-3 gap-6 md:gap-10 -mx-6 px-6 md:mx-0 md:px-0 pb-8 md:pb-0">
+                <div
+                    ref={scrollRef}
+                    onScroll={handleScroll}
+                    className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar md:grid md:grid-cols-3 gap-6 md:gap-10 -mx-6 px-6 md:mx-0 md:px-0 pb-8 md:pb-0"
+                >
                     {programs.map((program, index) => {
-                        const isActive = isMobile ? true : hoveredIndex === index;
+                        const isActive = isMobile ? (activeMobileIndex === index) : hoveredIndex === index;
 
                         return (
                             <motion.div
@@ -223,6 +258,30 @@ export default function Programs() {
                         );
                     })}
                 </div>
+
+                {/* Animated Dots for Mobile Slider */}
+                {isMobile && (
+                    <div className="flex justify-center gap-3 mt-8">
+                        {programs.map((_, i) => (
+                            <div
+                                key={i}
+                                className="h-1 bg-white/10 overflow-hidden rounded-full w-12 relative"
+                            >
+                                <motion.div
+                                    className="absolute inset-0 bg-accent origin-left"
+                                    initial={{ scaleX: 0 }}
+                                    animate={{
+                                        scaleX: activeMobileIndex === i ? 1 : 0
+                                    }}
+                                    transition={{
+                                        duration: activeMobileIndex === i ? 5 : 0.3,
+                                        ease: "linear"
+                                    }}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
             <style jsx global>{`
                 .no-scrollbar::-webkit-scrollbar {
