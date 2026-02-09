@@ -7,15 +7,17 @@ import Image from "next/image";
 const locations = [
     {
         city: "New Delhi",
-        address: "12, RING ROAD, SOUTH EXT-1, NEW DELHI - 110049",
+        address: "D-69, HAUZ KHAS RD, BLOCK H, HAUZ KHAS, NEW DELHI, DELHI 110016",
+        link: "https://www.google.com/maps/dir//Boxx+Era+Fitness+Studio,+D-69,+Hauz+Khas+Rd,+near+main+market,+Block+H,+Hauz+Khas,+New+Delhi,+Delhi+110016/@28.5530108,77.2070739,17z/data=!4m9!4m8!1m1!4e2!1m5!1m1!1s0x390ce3db6c83b431:0xafc64cf1526c1c41!2m2!1d77.2070739!2d28.5530108?entry=ttu",
         cta: "GET DIRECTIONS",
-        image: "/studios_bg.png",
+        image: "/image 1.png",
     },
     {
         city: "Gurgaon",
-        address: "SECTOR 43, DLF PHASE IV, GURGAON - 122002",
-        cta: "VISIT STUDIO",
-        image: "/training.png",
+        address: "C-524, BLOCK C, SUSHANT LOK PHASE I, SECTOR 43, GURUGRAM, HARYANA 122009",
+        link: "https://www.google.com/maps/dir//Boxx+Era+Fitness+Studio,+C-524,+Block+C,+Sushant+Lok+Phase+I,+Sector+43,+Gurugram,+Haryana+122009/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x390d1945a840c91f:0xafb204df9668f70c?sa=X&ved=1t:57443&ictx=111",
+        cta: "GET DIRECTIONS",
+        image: "/image 2.png",
     },
 ];
 
@@ -75,12 +77,15 @@ export default function Studios() {
                                     {loc.address}
                                 </p>
 
-                                <motion.button
+                                <motion.a
+                                    href={loc.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     whileHover={{ x: 10 }}
-                                    className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.3em] text-white group-hover:text-accent transition-colors"
+                                    className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.3em] text-white group-hover:text-accent transition-colors cursor-pointer"
                                 >
                                     {loc.cta} <ArrowUpRight size={16} className="text-accent" />
-                                </motion.button>
+                                </motion.a>
                             </div>
                         </motion.div>
                     ))}

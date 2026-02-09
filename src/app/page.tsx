@@ -3,6 +3,7 @@ import Programs from "@/components/Programs";
 import Marquee from "@/components/Marquee";
 import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
 import Studios from "@/components/Studios";
 import PreFooter from "@/components/PreFooter";
 import Image from "next/image";
@@ -24,6 +25,9 @@ export default function Home() {
 
       {/* Testimonials Section - Social Proof */}
       <Testimonials />
+
+      {/* Contact Section - The Transformation Start */}
+      <Contact />
 
       {/* Studios Section - Physical Locations */}
       <Studios />
