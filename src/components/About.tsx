@@ -12,7 +12,7 @@ export default function About() {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-5xl md:text-8xl font-anton uppercase leading-[0.9] tracking-tighter mb-8">
-                        FORGE YOUR BODY <br /> INTO A WEAPON.
+                        About Us
                     </h2>
                     <div className="flex gap-4 mb-8">
                         <div className="w-12 h-1 bg-accent" />

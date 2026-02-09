@@ -7,37 +7,35 @@ import Image from "next/image";
 
 const slides = [
     {
-        tagline: "EST. 2024 • NO EXCUSES • JUST RESULTS",
-        headline: (
-            <>
-                BOXXER<span className="text-accent">A</span>
-            </>
-        ),
-        description: "THE PREMIUM FIGHT CLUB FOR THOSE WHO DEMAND EXCELLENCE.",
+        tagline: "",
+        headline: "BOXXERA",
+        description: "FIGHT CLUB & TRANSFORMATION CENTRE",
         primaryCTA: "START YOUR JOURNEY",
         secondaryCTA: "VIEW SCHEDULE",
         image: "/hero.png",
     },
     {
-        tagline: "DISCIPLINE • POWER • ENDURANCE",
+        tagline: "ALL SENSES ON",
         headline: (
             <>
-                TRAIN LIKE A <span className="text-accent">FIGHTER</span>
+                DREAM BODY SERIES –<br />COMMIT TO EVOLVE
             </>
         ),
-        description: "BUILD STRENGTH, SPEED AND MENTAL TOUGHNESS.",
-        primaryCTA: "JOIN THE PROGRAM",
+        description: "by – Jeeth Sanghavi",
+        primaryCTA: "ENROLL NOW",
         secondaryCTA: "EXPLORE TRAINING",
         image: "/training.png",
+        ghostText: "TRANSFORMATION EXPERT"
     },
     {
-        tagline: "FORGE YOUR BODY",
-        headline: (
+        tagline: "", // Moved to headline focal point
+        headline: "TRAIN WITH THE BEST",
+        subHeadline: "CERTIFIED & TRANSFORMATION-FOCUSED TRAINING",
+        description: (
             <>
-                STEP INTO THE <span className="text-accent">RING</span>
+                TRAINED CELEBRITIES AND PROFESSIONAL ATHLETES — <span className="font-bold border-b border-white/30">PRIYANKA CHOPRA</span>
             </>
         ),
-        description: "TRANSFORM YOUR BODY AND MIND.",
         primaryCTA: "GET YOUR FIRST CLASS",
         secondaryCTA: "CONTACT US",
         image: "/ring.png",
@@ -64,7 +62,7 @@ export default function Hero() {
         const handleResize = () => setWindowWidth(window.innerWidth);
         window.addEventListener("resize", handleResize);
 
-        const timer = setInterval(nextSlide, 6000);
+        const timer = setInterval(nextSlide, 10000);
         return () => {
             clearTimeout(timeout);
             clearInterval(timer);
@@ -73,7 +71,9 @@ export default function Hero() {
     }, [nextSlide]);
 
     return (
-        <section className="relative min-h-screen w-full overflow-hidden bg-black text-white flex flex-col">
+        <section
+            className="relative min-h-screen w-full overflow-hidden bg-black text-white flex flex-col"
+        >
             {/* Navbar overlay */}
             <div className="absolute top-0 left-0 w-full h-20 md:h-24 bg-black/40 backdrop-blur-md z-50 flex items-center px-6 md:px-12 justify-between border-b border-white/10">
                 <div className="relative w-12 h-12 md:w-16 md:h-16">
@@ -100,7 +100,7 @@ export default function Hero() {
                         initial={{ x: "100%" }}
                         animate={{ x: 0 }}
                         exit={{ x: "-100%" }}
-                        transition={{ duration: 1, ease: [0.6, 0.05, -0.01, 0.9] }}
+                        transition={{ duration: 0.6, ease: [0.6, 0.05, -0.01, 0.9] }}
                         className="absolute inset-0 w-full h-full"
                     >
                         {/* Background Image */}
@@ -116,55 +116,127 @@ export default function Hero() {
                             <div className="absolute inset-0 bg-black/70" />
                         </div>
 
+                        {/* 0. Ghost Text (Decorative) */}
+                        {(slides[current] as any).ghostText && (
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+                                <motion.span
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    animate={{ opacity: 0.1, scale: 1 }}
+                                    transition={{
+                                        delay: 0.2,
+                                        duration: 2,
+                                        ease: [0.16, 1, 0.3, 1]
+                                    }}
+                                    className="text-[clamp(10vw,20vw,25vw)] font-anton uppercase text-white whitespace-nowrap leading-none text-center"
+                                >
+                                    {(slides[current] as any).ghostText}
+                                </motion.span>
+                            </div>
+                        )}
+
                         {/* Content Container */}
                         <div className="relative z-10 h-full w-full flex items-center justify-center pt-20">
                             <div className="container mx-auto px-6 flex flex-col items-center text-center">
 
-                                {/* 1. Tagline */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.5, duration: 0.8 }}
-                                    className="mb-6 md:mb-10"
-                                >
-                                    <span className="text-[clamp(0.6rem,2vw,0.85rem)] font-bold tracking-[0.3em] md:tracking-[0.4em] text-white/60 uppercase">
-                                        {slides[current].tagline}
-                                    </span>
-                                </motion.div>
+                                {/* 1. Tagline (Slides 1 & 2) */}
+                                {slides[current].tagline && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 15 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{
+                                            delay: 0.5,
+                                            duration: 0.8,
+                                            ease: "easeOut"
+                                        }}
+                                        className="mb-8 md:mb-12"
+                                    >
+                                        <span className="text-[clamp(0.6rem,2vw,0.85rem)] font-bold tracking-[0.4em] text-accent uppercase">
+                                            {slides[current].tagline}
+                                        </span>
+                                    </motion.div>
+                                )}
 
-                                {/* 2. Headline + Description Section */}
+                                {/* 2. Main Headline */}
                                 <motion.div
-                                    initial={{ opacity: 0, scale: 0.95 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 0.7, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                                    className="w-full max-w-5xl mb-12 md:mb-20"
+                                    initial={{
+                                        opacity: 0,
+                                        y: current === 2 ? 30 : 0,
+                                        scale: current === 2 ? 1 : 0.95
+                                    }}
+                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                    transition={{
+                                        delay: current === 2 ? 0.5 : 0.7, // Slide 3 headline first
+                                        duration: current === 2 ? 1.2 : 1,
+                                        ease: [0.16, 1, 0.3, 1]
+                                    }}
+                                    className={`w-full ${current === 2 ? "max-w-6xl" : "max-w-5xl"} mb-6 md:mb-8`}
                                 >
-                                    <h1 className="mb-6 md:mb-10 text-[clamp(2.5rem,10vw,8.5rem)] font-anton uppercase tracking-tighter leading-[1.05] md:leading-[0.95]">
+                                    <h1 className={`
+                                        font-anton uppercase tracking-tighter leading-[1.05] md:leading-[0.95]
+                                        ${current === 2
+                                            ? "text-[clamp(2.5rem,9vw,7.5rem)]" // Focal headline for Slide 3
+                                            : "text-[clamp(2.5rem,10vw,8.5rem)]"
+                                        }
+                                    `}>
                                         {slides[current].headline}
                                     </h1>
-                                    <p className="mx-auto max-w-2xl text-[clamp(0.7rem,2vw,1rem)] font-medium text-white/70 tracking-[0.1em] md:tracking-[0.2em] uppercase leading-relaxed">
+                                </motion.div>
+
+                                {/* 3. Sub-heading (Slide 3 Only) */}
+                                {(slides[current] as any).subHeadline && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{
+                                            delay: 0.9,
+                                            duration: 1.2,
+                                            ease: "easeOut"
+                                        }}
+                                        className="mb-8 md:mb-12 max-w-4xl"
+                                    >
+                                        <h2 className="text-[clamp(0.9rem,2.5vw,1.4rem)] font-bold tracking-[0.1em] md:tracking-[0.15em] text-white/80 uppercase leading-relaxed">
+                                            {(slides[current] as any).subHeadline}
+                                        </h2>
+                                    </motion.div>
+                                )}
+
+                                {/* 4. Supporting Description */}
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{
+                                        delay: current === 2 ? 1.3 : 0.9,
+                                        duration: 1
+                                    }}
+                                    className="mb-16 md:mb-24"
+                                >
+                                    <p className="mx-auto max-w-2xl text-[clamp(0.7rem,1.8vw,0.95rem)] font-medium text-white/50 tracking-[0.15em] md:tracking-[0.25em] uppercase leading-relaxed">
                                         {slides[current].description}
                                     </p>
                                 </motion.div>
 
-                                {/* 3. CTA Buttons */}
+                                {/* 5. CTA Buttons */}
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 1.2, duration: 0.8 }}
-                                    className="flex flex-col sm:flex-row gap-4 md:gap-8 w-full sm:w-auto"
+                                    transition={{
+                                        delay: current === 2 ? 1.5 : 1.3,
+                                        duration: 0.8,
+                                        ease: "easeOut"
+                                    }}
+                                    className="flex flex-col sm:flex-row gap-6 md:gap-10 w-full sm:w-auto"
                                 >
                                     <motion.button
-                                        whileHover={{ scale: 1.05, backgroundColor: "#ff0000", color: "#ffffff" }}
+                                        whileHover={{ scale: 1.05, backgroundColor: "#ffffff", color: "#000000", borderColor: "#ffffff" }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="bg-white text-black px-8 md:px-12 py-4 md:py-5 font-black uppercase tracking-widest text-xs md:text-sm flex items-center justify-center gap-4 transition-colors"
+                                        className="bg-accent text-white px-10 md:px-14 py-4 md:py-6 font-black uppercase tracking-widest text-xs md:text-sm flex items-center justify-center gap-4 transition-all shadow-[0_0_30px_rgba(255,0,0,0.3)] border-2 border-accent hover:border-white"
                                     >
                                         {slides[current].primaryCTA} <MoveRight size={18} />
                                     </motion.button>
                                     <motion.button
                                         whileHover={{ scale: 1.05, borderColor: "#ff0000", color: "#ff0000" }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="border-2 border-white/30 text-white/70 px-8 md:px-12 py-4 md:py-5 font-black uppercase tracking-widest text-xs md:text-sm transition-all"
+                                        className="border-2 border-white/20 text-white/60 px-10 md:px-14 py-4 md:py-6 font-black uppercase tracking-widest text-xs md:text-sm transition-all hover:bg-white/5"
                                     >
                                         {slides[current].secondaryCTA}
                                     </motion.button>

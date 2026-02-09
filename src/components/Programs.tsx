@@ -1,48 +1,56 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight, Zap, Target, Shield } from "lucide-react";
+import { ArrowUpRight, Zap, Target, Shield, MoveRight } from "lucide-react";
 
 const programs = [
     {
         id: "01",
-        title: "PRO BOXING",
-        tagline: "TECHNICAL MASTERY",
-        description: "ELITE-LEVEL TRAINING FOR ASPIRING FIGHTERS AND PROFESSIONALS.",
+        type: "TAG_STACK",
+        title: "GROUP CLASSES",
+        tagline: "COMMUNITY STRENGTH",
+        tags: ["PRO BOXING", "MUAY THAI", "STRENGTH & POWER"],
         icon: <Target className="w-6 h-6" />,
         image: "/training.png",
     },
     {
         id: "02",
-        title: "STRENGTH & POWER",
-        tagline: "EXPLOSIVE FORCE",
-        description: "BUILD FUNCTIONAL POWER AND SPEED THROUGH METABOLIC CONDITIONING.",
+        type: "PERSONAL_TRAINING",
+        title: "PERSONAL TRAINING",
+        tagline: "ONE-ON-ONE FOCUS",
+        tags: ["POWERLIFTING", "CORE", "ENDURANCE"],
+        features: ["Customized Workout Plans", "Form Correction", "Progress Tracking"],
         icon: <Zap className="w-6 h-6" />,
         image: "/hero.png",
     },
     {
         id: "03",
-        title: "MUAY THAI",
-        tagline: "ART OF 8 LIMBS",
-        description: "TRADITIONAL MUAY THAI TECHNIQUES FOR EFFECTIVE COMBAT OFFENSE.",
+        type: "TAG_STACK",
+        title: "TRANSFORMATIVE",
+        tagline: "ELITE EVOLUTION",
+        tags: ["ASSESSMENT", "NUTRITION", "CONDITIONING"],
         icon: <Shield className="w-6 h-6" />,
         image: "/programs_bg.png",
-    },
-    {
-        id: "04",
-        title: "CARDIO BOXING",
-        tagline: "FAT BURN",
-        description: "HIGH-ENERGY CLASSES DESIGNED TO BOOST STAMINA AND TORCH CALORIES.",
-        icon: <Zap className="w-6 h-6" />,
-        image: "/training.png",
     },
 ];
 
 export default function Programs() {
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+    const containerVariants = {
+        rest: { transition: { staggerChildren: 0.1 } },
+        hover: { transition: { staggerChildren: 0.05 } }
+    };
+
+    const itemVariants = {
+        rest: { opacity: 0, y: 20 },
+        hover: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } }
+    };
+
     return (
         <section className="bg-black py-24 md:py-32 px-6 md:px-12 relative overflow-hidden">
-            {/* Background Texture/Accent */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-accent/5 -skew-x-12 translate-x-1/2 pointer-events-none" />
 
             <div className="container mx-auto relative z-10 px-4 md:px-0">
@@ -51,7 +59,6 @@ export default function Programs() {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="flex-shrink-0"
                     >
                         <span className="text-accent uppercase tracking-widest text-[10px] md:text-xs font-bold mb-4 block">
                             TRAINING DISCIPLINE
@@ -75,72 +82,119 @@ export default function Programs() {
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
                     {programs.map((program, index) => (
                         <motion.div
                             key={program.id}
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            whileHover={{
-                                y: -10,
-                                transition: { duration: 0.3, ease: "easeOut" }
-                            }}
-                            transition={{
-                                delay: index * 0.1,
-                                duration: 0.8,
-                                ease: [0.16, 1, 0.3, 1]
-                            }}
-                            className="group relative h-[500px] md:h-[600px] bg-zinc-900 overflow-hidden border border-white/5 hover:border-accent/50 transition-colors duration-500"
+                            onMouseEnter={() => setHoveredIndex(index)}
+                            onMouseLeave={() => setHoveredIndex(null)}
+                            className={`group relative h-[550px] md:h-[700px] bg-zinc-900 overflow-hidden border transition-all duration-700 rounded-sm cursor-pointer
+                                ${hoveredIndex !== null && hoveredIndex !== index ? "opacity-30 grayscale blur-[1px]" : "opacity-100 grayscale-0 blur-0"}
+                                ${hoveredIndex === index ? "border-accent shadow-[0_0_40px_rgba(255,0,0,0.2)]" : "border-white/5"}
+                            `}
                         >
-                            {/* Image Layer */}
-                            <div className="absolute inset-0 grayscale transition-transform duration-700 group-hover:scale-110">
+                            <div className="absolute inset-0">
                                 <Image
                                     src={program.image}
                                     alt={program.title}
                                     fill
-                                    className="object-cover opacity-10 group-hover:opacity-30 transition-opacity"
+                                    className={`object-cover transition-all duration-1000 ${hoveredIndex === index ? "opacity-20 scale-105" : "opacity-15 scale-100"}`}
                                 />
+                                <div className={`absolute inset-0 transition-colors duration-700 ${hoveredIndex === index ? "bg-black/90" : "bg-black/70"}`} />
                             </div>
 
-                            {/* Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+                            <div className="absolute inset-0 p-8 md:p-10 flex flex-col z-20 overflow-hidden text-center items-center">
 
-                            {/* Content Box */}
-                            <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-between">
-                                <div className="flex justify-between items-start">
-                                    <span className="text-4xl md:text-5xl font-anton text-white/5 group-hover:text-accent transition-colors duration-500">
-                                        {program.id}
-                                    </span>
-                                    <div className="p-3 border border-white/10 bg-black/50 backdrop-blur-sm text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                        {program.icon}
+                                {program.type === "TAG_STACK" ? (
+                                    <div className="h-full flex flex-col relative items-center w-full">
+                                        {/* Heading Stack (Centered by default, moves to top on hover) */}
+                                        <div className={`absolute left-0 right-0 flex flex-col items-center transition-all duration-700 ease-[0.16,1,0.3,1] ${hoveredIndex === index ? "top-0" : "top-1/2 -translate-y-1/2"}`}>
+                                            <span className="text-accent uppercase tracking-[0.3em] font-bold text-[10px] mb-2 block">
+                                                {program.tagline}
+                                            </span>
+                                            <h3 className="text-[2.2rem] md:text-[2.8rem] font-anton uppercase tracking-tight text-white leading-none">
+                                                {program.title}
+                                            </h3>
+                                        </div>
+
+                                        {/* Hover Content - Tags Stack (Mirrored logic for 1st and last card) */}
+                                        <div className="flex flex-col items-center w-full mt-40 gap-8 h-full">
+                                            <motion.div
+                                                variants={containerVariants}
+                                                animate={hoveredIndex === index ? "hover" : "rest"}
+                                                className={`flex flex-col gap-3 w-full transition-all duration-700 ${hoveredIndex === index ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+                                            >
+                                                {program.tags?.map((tag, tIdx) => (
+                                                    <motion.div
+                                                        key={tIdx}
+                                                        variants={itemVariants}
+                                                        className="border border-white/20 bg-white/5 backdrop-blur-md px-4 py-3 text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] transform transition-all duration-300 hover:border-accent hover:bg-white/10"
+                                                    >
+                                                        {tag}
+                                                    </motion.div>
+                                                ))}
+                                            </motion.div>
+
+                                            {/* EXPLORE NOW Button */}
+                                            <motion.button
+                                                initial={{ opacity: 0, y: 20 }}
+                                                animate={hoveredIndex === index ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                                transition={{ delay: 0.4, duration: 0.5 }}
+                                                className="mt-4 bg-accent text-white px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all hover:bg-white hover:text-black hover:gap-5"
+                                            >
+                                                EXPLORE NOW <MoveRight size={16} />
+                                            </motion.button>
+                                        </div>
+
+                                        {/* Static Bottom */}
+                                        <div className={`mt-auto transition-opacity duration-500 ${hoveredIndex === index ? "opacity-0" : "opacity-100"}`}>
+                                            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/50 flex items-center gap-2">
+                                                EXPLORE <ArrowUpRight className="w-3 h-3" />
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
+                                ) : (
+                                    /* Card 02 - Personal Training (Retaining its unique hover logic) */
+                                    <div className="h-full flex flex-col relative items-center w-full">
+                                        <div className={`absolute left-0 right-0 flex flex-col items-center transition-all duration-700 ease-[0.16,1,0.3,1] ${hoveredIndex === index ? "top-0" : "top-1/2 -translate-y-1/2"}`}>
+                                            <span className="text-accent uppercase tracking-[0.3em] font-bold text-[10px] mb-2 block">{program.tagline}</span>
+                                            <h3 className="text-[2.5rem] md:text-[3rem] font-anton uppercase tracking-tight text-white leading-none">
+                                                PERSONAL <br /> TRAINING
+                                            </h3>
+                                        </div>
 
-                                <div className="flex flex-col gap-2 md:gap-4">
-                                    <span className="text-accent text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] block">
-                                        {program.tagline}
-                                    </span>
-                                    <h3 className="text-[clamp(1.5rem,3vw,2.2rem)] font-anton uppercase tracking-normal text-white leading-[1] md:leading-none group-hover:translate-x-2 transition-transform duration-500">
-                                        {program.title}
-                                    </h3>
-                                    <div className="overflow-hidden">
-                                        <p className="text-white/50 text-[10px] md:text-xs leading-relaxed uppercase tracking-widest max-w-[240px] opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                                            {program.description}
-                                        </p>
+                                        <div className={`w-full flex flex-col items-center transition-all duration-700 mt-44 ${hoveredIndex === index ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"}`}>
+                                            <div className="flex border-b border-white/10 mb-8 w-full">
+                                                {program.tags?.map((tag, tIdx) => (
+                                                    <div key={tIdx} className="flex-1 py-3 text-[10px] font-black text-white/40 hover:text-accent transition-colors border-r last:border-r-0 border-white/10 uppercase tracking-tighter">
+                                                        {tag}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                            <ul className="flex flex-col gap-4 items-center mb-10">
+                                                {program.features?.map((f, fIdx) => (
+                                                    <li key={fIdx} className="text-white/60 text-[10px] md:text-xs uppercase tracking-[0.2em]">{f}</li>
+                                                ))}
+                                            </ul>
+
+                                            {/* EXPLORE NOW Button */}
+                                            <motion.button
+                                                initial={{ opacity: 0, y: 20 }}
+                                                animate={hoveredIndex === index ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                                transition={{ delay: 0.4, duration: 0.5 }}
+                                                className="bg-accent text-white px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all hover:bg-white hover:text-black hover:gap-5"
+                                            >
+                                                EXPLORE NOW <MoveRight size={16} />
+                                            </motion.button>
+                                        </div>
                                     </div>
-
-                                    <motion.button
-                                        whileHover={{ x: 10 }}
-                                        className="mt-4 md:mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white border-b border-accent/30 pb-1 w-fit group-hover:border-accent transition-colors"
-                                    >
-                                        EXPLORE <ArrowUpRight className="w-3 h-3 text-accent" />
-                                    </motion.button>
-                                </div>
+                                )}
                             </div>
 
-                            {/* Hover Accent Line */}
-                            <div className="absolute bottom-0 left-0 w-0 h-1 bg-accent group-hover:w-full transition-all duration-500" />
+                            <div className={`absolute bottom-0 left-0 h-1 bg-accent transition-all duration-700 ${hoveredIndex === index ? "w-full" : "w-0"}`} />
                         </motion.div>
                     ))}
                 </div>
