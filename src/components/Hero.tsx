@@ -229,12 +229,12 @@ export default function Hero() {
                                     <motion.button
                                         whileHover={{ scale: 1.05, backgroundColor: "#ffffff", color: "#000000", borderColor: "#ffffff" }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="bg-accent text-white px-10 md:px-14 py-4 md:py-6 font-black uppercase tracking-widest text-xs md:text-sm flex items-center justify-center gap-4 transition-all shadow-[0_0_30px_rgba(255,0,0,0.3)] border-2 border-accent hover:border-white"
+                                        className="bg-accent text-white px-10 md:px-14 py-4 md:py-6 font-black uppercase tracking-widest text-xs md:text-sm flex items-center justify-center gap-4 transition-all shadow-[0_0_30px_rgba(67,67,209,0.35)] border-2 border-accent hover:border-white"
                                     >
                                         {slides[current].primaryCTA} <MoveRight size={18} />
                                     </motion.button>
                                     <motion.button
-                                        whileHover={{ scale: 1.05, borderColor: "#ff0000", color: "#ff0000" }}
+                                        whileHover={{ scale: 1.05, borderColor: "#4343D1", color: "#4343D1" }}
                                         whileTap={{ scale: 0.95 }}
                                         className="border-2 border-white/20 text-white/60 px-10 md:px-14 py-4 md:py-6 font-black uppercase tracking-widest text-xs md:text-sm transition-all hover:bg-white/5"
                                     >
@@ -259,9 +259,9 @@ export default function Hero() {
                         <motion.div
                             animate={{
                                 height: current === index ? (isMounted && windowWidth < 768 ? 24 : 32) : 12,
-                                backgroundColor: current === index ? "#ff0000" : "rgba(255,255,255,0.3)",
+                                backgroundColor: current === index ? "#4343D1" : "rgba(255,255,255,0.3)",
                             }}
-                            className="w-[2px] transition-colors duration-300 group-hover:bg-accent group-hover:shadow-[0_0_10px_rgba(255,0,0,0.8)]"
+                            className="w-[2px] transition-colors duration-300 group-hover:bg-[#4343D1] group-hover:shadow-[0_0_10px_rgba(67,67,209,0.8)]"
                         />
                     </button>
                 ))}
@@ -271,7 +271,7 @@ export default function Hero() {
             <div className="absolute left-8 md:left-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-12 items-center opacity-20 pointer-events-none">
                 <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-bold tracking-[0.5em] uppercase">Boxxera</span>
                 <div className="w-[1px] h-20 bg-white" />
-                <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-bold tracking-[0.5em] uppercase text-accent">Elite</span>
+                <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-bold tracking-[0.5em] uppercase text-[#4343D1]">Elite</span>
             </div>
 
             {/* Scroll indicator overlay */}
