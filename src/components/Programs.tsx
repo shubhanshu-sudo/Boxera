@@ -232,7 +232,7 @@ export default function Programs() {
                                                     {program.features?.map((f, fIdx) => (
                                                         f ? (
                                                             <li key={fIdx} className="text-white/60 text-[9px] md:text-[10px] uppercase tracking-[0.2em] flex items-center gap-3">
-                                                                <span className="w-1.5 h-1.5 rounded-full bg-accent-red flex-shrink-0 shadow-[0_0_8px_rgba(255,0,0,0.6)]" />
+                                                                <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 shadow-[0_0_8px_rgba(67,67,209,0.6)]" />
                                                                 {f}
                                                             </li>
                                                         ) : null
