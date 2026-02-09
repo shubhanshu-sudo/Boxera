@@ -45,9 +45,12 @@ export default function PreFooter() {
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        <h2 className="text-5xl md:text-7xl lg:text-8xl font-anton uppercase tracking-tight leading-[1.1] md:leading-[1] mb-12 md:mb-16">
-                            STOP WISHING. <br />
-                            <span className="text-white/20">START FIGHTING.</span>
+                        <span className="text-accent uppercase tracking-[0.4em] text-[10px] md:text-xs font-black mb-4 block">
+                            LET US HELP YOU
+                        </span>
+                        <h2 className="text-5xl md:text-7xl lg:text-8xl font-anton uppercase tracking-tight leading-[1.1] md:leading-[0.95] mb-12 md:mb-16">
+                            STILL UNSURE ABOUT <br />
+                            <span className="text-white/20 text-[0.8em] md:text-[0.7em] leading-none">WHAT PROGRAM TO CHOOSE?</span>
                         </h2>
 
                         <motion.button
