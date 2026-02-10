@@ -70,7 +70,7 @@ export const articles: Article[] = [
     {
         id: "6",
         source: "Zee News",
-        sourceLogo: "https://logo.clearbit.com/zeenews.india.com",
+        sourceLogo: "https://www.exchange4media.com/media-tv-news/zee-news-unveils-new-look-and-brand-identity-125626.html",
         brandColor: "#DA2129",
         headline: "Boxx Era: The Ultimate Fitness Studio For Holistic Wellness",
         excerpt: "A deep dive into why Boxx Era is the go-to destination for those seeking a total transformation.",

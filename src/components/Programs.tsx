@@ -49,7 +49,7 @@ export default function Programs() {
 
     useEffect(() => {
         const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768);
+            setIsMobile(window.innerWidth < 1024);
         };
         checkMobile();
         window.addEventListener("resize", checkMobile);
@@ -132,7 +132,7 @@ export default function Programs() {
                 <div
                     ref={scrollRef}
                     onScroll={handleScroll}
-                    className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar md:grid md:grid-cols-3 gap-6 md:gap-10 -mx-6 px-6 md:mx-0 md:px-0 pb-8 md:pb-0"
+                    className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar lg:grid lg:grid-cols-3 gap-6 lg:gap-10 -mx-6 px-6 lg:mx-0 lg:px-0 pb-8 lg:pb-0"
                 >
                     {programs.map((program, index) => {
                         const isActive = isMobile ? (activeMobileIndex === index) : hoveredIndex === index;
@@ -145,7 +145,7 @@ export default function Programs() {
                                 viewport={{ once: true, margin: "-50px" }}
                                 onMouseEnter={() => !isMobile && setHoveredIndex(index)}
                                 onMouseLeave={() => !isMobile && setHoveredIndex(null)}
-                                className={`group relative h-[500px] md:h-[700px] bg-zinc-900 overflow-hidden border transition-all duration-700 rounded-sm cursor-pointer flex-shrink-0 w-[85vw] md:w-auto snap-center md:snap-align-none
+                                className={`group relative h-[550px] md:h-[650px] lg:h-[750px] bg-zinc-900 overflow-hidden border transition-all duration-700 rounded-sm cursor-pointer flex-shrink-0 w-[85vw] sm:w-[60vw] lg:w-auto snap-center lg:snap-align-none
                                     ${!isMobile && hoveredIndex !== null && hoveredIndex !== index ? "opacity-30 grayscale blur-[1px]" : "opacity-100 grayscale-0 blur-0"}
                                     ${isActive ? "border-accent shadow-[0_0_40px_rgba(67,67,209,0.35)]" : "border-white/5"}
                                 `}
@@ -169,7 +169,7 @@ export default function Programs() {
                                                 <span className="text-accent uppercase tracking-[0.3em] font-bold text-[10px] mb-2 block">
                                                     {program.tagline}
                                                 </span>
-                                                <h3 className="text-[2.2rem] md:text-[2.8rem] font-anton uppercase tracking-tight text-white leading-none text-center">
+                                                <h3 className="text-[1.6rem] sm:text-[2rem] lg:text-[2.6rem] font-anton uppercase tracking-tight text-white leading-[1.1] text-center px-6 break-words">
                                                     {program.title}
                                                 </h3>
                                             </div>
@@ -215,7 +215,7 @@ export default function Programs() {
                                         <div className="h-full flex flex-col relative items-center w-full">
                                             <div className={`absolute left-0 right-0 flex flex-col items-center transition-all duration-700 ease-[0.16,1,0.3,1] ${isActive ? "top-0" : "top-1/2 -translate-y-1/2"}`}>
                                                 <span className="text-accent uppercase tracking-[0.3em] font-bold text-[10px] mb-2 block">{program.tagline}</span>
-                                                <h3 className="text-[2.2rem] md:text-[3rem] font-anton uppercase tracking-tight text-white leading-none">
+                                                <h3 className="text-[1.6rem] sm:text-[2rem] lg:text-[2.8rem] font-anton uppercase tracking-tight text-white leading-[0.95] text-center px-6 break-words">
                                                     PERSONAL <br /> TRAINING
                                                 </h3>
                                             </div>

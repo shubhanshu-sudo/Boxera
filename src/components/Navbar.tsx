@@ -63,7 +63,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Links */}
-                <div className="hidden md:flex gap-8 text-[10px] font-black uppercase tracking-[0.2em]">
+                <div className="hidden lg:flex gap-8 text-[10px] font-black uppercase tracking-[0.2em]">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -84,7 +84,7 @@ export default function Navbar() {
                     {/* Mobile Toggle */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="md:hidden text-white z-[111] p-2 -mr-2 focus:outline-none"
+                        className="lg:hidden text-white z-[111] p-2 -mr-2 focus:outline-none"
                         aria-label="Toggle Menu"
                     >
                         {isOpen ? <X size={28} className="text-accent" /> : <Menu size={28} />}
@@ -96,19 +96,30 @@ export default function Navbar() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, x: "100%" }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: "100%" }}
-                        transition={{ type: "spring", damping: 30, stiffness: 300 }}
-                        className="fixed inset-0 z-[110] bg-black flex flex-col pt-32 px-10"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[110] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center p-6"
                     >
-                        <div className="flex flex-col gap-8">
+                        {/* Background Decoration */}
+                        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+                            <div className="absolute -top-24 -right-24 w-96 h-96 bg-accent/20 rounded-full blur-[120px]" />
+                            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-accent/10 rounded-full blur-[120px]" />
+                        </div>
+
+                        <div className="relative z-10 flex flex-col items-center gap-10 w-full max-w-sm">
                             {navLinks.map((link, i) => (
                                 <motion.div
                                     key={link.name}
-                                    initial={{ opacity: 0, x: 20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.1 + i * 0.1 }}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{
+                                        delay: i * 0.1,
+                                        type: "spring",
+                                        stiffness: 260,
+                                        damping: 20
+                                    }}
+                                    className="w-full text-center"
                                 >
                                     <Link
                                         href={link.href}
@@ -116,29 +127,30 @@ export default function Navbar() {
                                             handleLinkClick(e, link.href);
                                             setIsOpen(false);
                                         }}
-                                        className="text-4xl xs:text-5xl font-anton uppercase tracking-tight hover:text-accent transition-colors block"
+                                        className={`text-5xl xs:text-6xl font-anton uppercase tracking-tight hover:text-accent transition-all duration-300 block ${pathname === link.href ? "text-accent" : "text-white"}`}
                                     >
                                         {link.name}
                                     </Link>
                                 </motion.div>
                             ))}
-                        </div>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.6 }}
-                            className="mt-auto mb-12"
-                        >
-                            <button className="w-full bg-accent text-white py-6 text-sm font-black uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all">
-                                Join The Era Now
-                            </button>
-                            <div className="mt-8 flex gap-6 text-white/40 text-[10px] font-bold uppercase tracking-widest">
-                                <span>Instagram</span>
-                                <span>Youtube</span>
-                                <span>Twitter</span>
-                            </div>
-                        </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.5 }}
+                                className="w-full mt-6"
+                            >
+                                <button className="w-full bg-white text-black py-5 text-xs font-black uppercase tracking-[0.4em] hover:bg-accent hover:text-white transition-all transform active:scale-95">
+                                    Join The Era Now
+                                </button>
+
+                                <div className="mt-12 flex justify-center gap-8 text-white/30 text-[10px] font-black uppercase tracking-[0.2em]">
+                                    <span className="hover:text-accent cursor-pointer transition-colors">IG</span>
+                                    <span className="hover:text-accent cursor-pointer transition-colors">YT</span>
+                                    <span className="hover:text-accent cursor-pointer transition-colors">TW</span>
+                                </div>
+                            </motion.div>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>
