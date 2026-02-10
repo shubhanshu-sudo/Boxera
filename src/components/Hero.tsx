@@ -74,24 +74,8 @@ export default function Hero() {
         <section
             className="relative min-h-screen w-full overflow-hidden bg-black text-white flex flex-col"
         >
-            {/* Navbar overlay */}
-            <div className="absolute top-0 left-0 w-full h-20 md:h-24 bg-black/40 backdrop-blur-md z-50 flex items-center px-6 md:px-12 justify-between border-b border-white/10">
-                <div className="relative w-12 h-12 md:w-16 md:h-16">
-                    <Image
-                        src="/logo.png"
-                        alt="BOXXERA Logo"
-                        fill
-                        className="object-contain invert" // Inverting because the uploaded logo is black on white
-                    />
-                </div>
-                <div className="hidden md:flex gap-8 text-[10px] font-black uppercase tracking-[0.2em]">
-                    <a href="#" className="hover:text-accent transition-colors">Training</a>
-                    <a href="#" className="hover:text-accent transition-colors">Coaches</a>
-                    <a href="#" className="hover:text-accent transition-colors">Pricing</a>
-                    <a href="#" className="hover:text-accent transition-colors">Contact</a>
-                </div>
-                <button className="bg-white text-black px-5 md:px-6 py-2 text-[9px] md:text-[10px] font-black uppercase tracking-wider hover:bg-accent hover:text-white transition-colors">Join Now</button>
-            </div>
+            {/* Navbar overlay removed, now global in layout */}
+
 
             <div className="flex-grow relative overflow-hidden">
                 <AnimatePresence mode="wait">

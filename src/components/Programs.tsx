@@ -96,7 +96,7 @@ export default function Programs() {
     };
 
     return (
-        <section className="bg-black py-24 md:py-32 px-6 md:px-12 relative overflow-hidden">
+        <section id="programs" className="bg-black py-24 md:py-32 px-6 md:px-12 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-1/2 h-full bg-accent/5 -skew-x-12 translate-x-1/2 pointer-events-none" />
 
             <div className="container mx-auto relative z-10 px-4 md:px-0">
