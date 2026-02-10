@@ -72,7 +72,8 @@ export default function Hero() {
 
     return (
         <section
-            className="relative min-h-screen w-full overflow-hidden bg-black text-white flex flex-col"
+            id="hero"
+            className="relative h-screen min-h-[660px] w-full overflow-hidden bg-black text-white flex flex-col"
         >
             {/* Navbar overlay removed, now global in layout */}
 
@@ -119,7 +120,7 @@ export default function Hero() {
                         )}
 
                         {/* Content Container */}
-                        <div className="relative z-10 h-full w-full flex items-center justify-center pt-20">
+                        <div className="relative z-10 h-full w-full flex items-center justify-center pt-28 md:pt-20">
                             <div className="container mx-auto px-6 flex flex-col items-center text-center">
 
                                 {/* 1. Tagline (Slides 1 & 2) */}
@@ -134,7 +135,7 @@ export default function Hero() {
                                         }}
                                         className="mb-8 md:mb-12"
                                     >
-                                        <span className="text-[clamp(0.6rem,2vw,0.85rem)] font-bold tracking-[0.4em] text-accent uppercase">
+                                        <span className="text-[clamp(0.6rem,2.5vw,0.8rem)] font-black tracking-[0.5em] text-accent uppercase bg-black/20 backdrop-blur-sm px-4 py-1">
                                             {slides[current].tagline}
                                         </span>
                                     </motion.div>
@@ -158,7 +159,7 @@ export default function Hero() {
                                     <h1 className={`
                                         font-anton uppercase tracking-tighter leading-[1.05] md:leading-[0.95]
                                         ${current === 2
-                                            ? "text-[clamp(2.5rem,9vw,7.5rem)]" // Focal headline for Slide 3
+                                            ? "text-[clamp(2.2rem,9vw,7.5rem)]"
                                             : "text-[clamp(2.5rem,10vw,8.5rem)]"
                                         }
                                     `}>
