@@ -30,6 +30,7 @@ export default function Navbar() {
     const navLinks = [
         { name: "Training", href: "/#programs" },
         { name: "Coaches", href: "/#coaches" },
+        { name: "Gallery", href: "/gallery" },
         { name: "Articles", href: "/articles" },
         { name: "Pricing", href: "/#pricing" },
         { name: "Contact", href: "/#contact" },
@@ -76,10 +77,16 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                <div className="flex items-center gap-4 md:gap-8">
-                    <button className="hidden xs:block bg-accent text-white px-5 md:px-8 py-2 md:py-3 text-[10px] font-black uppercase tracking-[0.2em] shadow-[0_5px_15px_rgba(67,67,209,0.35)] hover:bg-white hover:text-black transition-all transform hover:-translate-y-0.5 active:scale-95 duration-300">
-                        Join Now
-                    </button>
+                <div className="flex items-center gap-3 md:gap-6">
+                    <Link href="/#contact" onClick={(e) => handleLinkClick(e, "/#contact")}>
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="hidden xs:flex bg-accent text-white px-6 md:px-8 py-2.5 md:py-3.5 text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] shadow-[0_10px_30px_rgba(67,67,209,0.3)] hover:bg-white hover:text-black transition-all duration-300 items-center justify-center whitespace-nowrap"
+                        >
+                            JOIN THE ERA NOW
+                        </motion.button>
+                    </Link>
 
                     {/* Mobile Toggle */}
                     <button
