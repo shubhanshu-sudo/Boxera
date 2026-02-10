@@ -51,51 +51,58 @@ export default function Navbar() {
     return (
         <>
             <nav
-                className={`fixed top-0 left-0 w-full h-20 md:h-24 z-[150] flex items-center px-8 md:px-12 justify-between border-b border-white/10 transition-all duration-500 ${isHome && !isOpen ? "bg-black/40 backdrop-blur-md" : "bg-black"
+                className={`fixed top-0 left-0 w-full h-20 md:h-24 z-[150] border-b border-white/10 transition-all duration-500 ${isHome && !isOpen ? "bg-black/40 backdrop-blur-md" : "bg-black"
                     }`}
             >
-                <Link href="/" className="relative w-12 h-12 md:w-16 md:h-16 z-[101]">
-                    <Image
-                        src="/logo.png"
-                        alt="BOXXERA Logo"
-                        fill
-                        className="object-contain invert"
-                    />
-                </Link>
-
-                {/* Desktop Links */}
-                <div className="hidden lg:flex gap-8 text-[10px] font-black uppercase tracking-[0.2em]">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            onClick={(e) => handleLinkClick(e, link.href)}
-                            className={`transition-colors hover:text-accent ${pathname === link.href ? "text-accent" : "text-white"}`}
-                        >
-                            {link.name}
+                <div className="container mx-auto px-6 h-full flex items-center justify-between">
+                    {/* Left: Logo */}
+                    <div className="flex-1 flex justify-start">
+                        <Link href="/" className="relative w-12 h-12 md:w-16 md:h-16 z-[101]">
+                            <Image
+                                src="/logo.png"
+                                alt="BOXXERA Logo"
+                                fill
+                                className="object-contain invert"
+                            />
                         </Link>
-                    ))}
-                </div>
+                    </div>
 
-                <div className="flex items-center gap-3 md:gap-6">
-                    <Link href="/#contact" onClick={(e) => handleLinkClick(e, "/#contact")}>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="hidden xs:flex bg-accent text-white px-6 md:px-8 py-2.5 md:py-3.5 text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] shadow-[0_10px_30px_rgba(67,67,209,0.3)] hover:bg-white hover:text-black transition-all duration-300 items-center justify-center whitespace-nowrap"
+                    {/* Desktop Links - Perfectly Centered */}
+                    <div className="hidden lg:flex flex-none items-center gap-10 text-[10px] font-black uppercase tracking-[0.2em]">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                onClick={(e) => handleLinkClick(e, link.href)}
+                                className={`transition-all duration-300 hover:text-accent relative group ${pathname === link.href ? "text-accent" : "text-white"}`}
+                            >
+                                {link.name}
+                                <span className={`absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent transition-all duration-300 group-hover:w-full ${pathname === link.href ? "w-full" : ""}`} />
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* Right: Actions */}
+                    <div className="flex-1 flex items-center justify-end gap-3 md:gap-6">
+                        <Link href="/#contact" onClick={(e) => handleLinkClick(e, "/#contact")}>
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="hidden xs:flex bg-accent text-white px-6 md:px-10 py-2.5 md:py-3.5 text-[10px] md:text-[11px] font-black uppercase tracking-[0.25em] shadow-[0_10px_30px_rgba(67,67,209,0.3)] hover:bg-white hover:text-black transition-all duration-500 items-center justify-center whitespace-nowrap"
+                            >
+                                JOIN THE ERA NOW
+                            </motion.button>
+                        </Link>
+
+                        {/* Mobile Toggle */}
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="lg:hidden text-white z-[111] p-1 focus:outline-none flex items-center justify-center transition-transform active:scale-90"
+                            aria-label="Toggle Menu"
                         >
-                            JOIN THE ERA NOW
-                        </motion.button>
-                    </Link>
-
-                    {/* Mobile Toggle */}
-                    <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="lg:hidden text-white z-[111] p-1 focus:outline-none flex items-center justify-center transition-transform active:scale-90"
-                        aria-label="Toggle Menu"
-                    >
-                        {isOpen ? <X size={24} className="text-accent" /> : <Menu size={24} />}
-                    </button>
+                            {isOpen ? <X size={24} className="text-accent" /> : <Menu size={24} />}
+                        </button>
+                    </div>
                 </div>
             </nav>
 
