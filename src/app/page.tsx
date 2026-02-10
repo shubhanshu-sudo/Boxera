@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Programs from "@/components/Programs";
+import GalleryPreview from "@/components/GalleryPreview";
 import Marquee from "@/components/Marquee";
 import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
@@ -7,7 +8,6 @@ import Contact from "@/components/Contact";
 import Studios from "@/components/Studios";
 import PreFooter from "@/components/PreFooter";
 import Footer from "@/components/Footer";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -23,6 +23,9 @@ export default function Home() {
 
       {/* Programs Section - The Action */}
       <Programs />
+
+      {/* Gallery Preview - Visual Energy */}
+      <GalleryPreview />
 
       {/* Testimonials Section - Social Proof */}
       <Testimonials />
