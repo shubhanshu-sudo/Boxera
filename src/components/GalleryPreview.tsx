@@ -36,6 +36,11 @@ const galleryImages = [
         alt: "Community moments at Boxxera",
         span: "md:col-span-2 md:row-span-1",
     },
+    {
+        src: "/IMG_20200820_9.webp",
+        alt: "Intense training session",
+        span: "md:col-span-1 md:row-span-1",
+    },
 ];
 
 export default function GalleryPreview() {
