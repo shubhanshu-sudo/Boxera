@@ -8,25 +8,25 @@ const quickLinks = [
         title: "PACKAGES",
         description: "CHOOSE THE PLAN THAT MATCHES YOUR AMBITION.",
         icon: <Package size={20} />,
-        link: "#",
+        link: "/#programs",
     },
     {
         title: "JOURNEY",
         description: "SEE HOW WE TRANSFORM BEGINNERS INTO WARRIORS.",
         icon: <Trophy size={20} />,
-        link: "#",
+        link: "/gallery",
     },
     {
         title: "GALLERY",
         description: "EXPLORE OUR ELITE TRAINING FACILITY IN ACTION.",
         icon: <ImageIcon size={20} />,
-        link: "#",
+        link: "/gallery",
     },
     {
         title: "CONTACT US",
         description: "GET IN TOUCH WITH OUR ELITE COACHING TEAM.",
         icon: <Phone size={20} />,
-        link: "#",
+        link: "/#contact",
     },
 ];
 
