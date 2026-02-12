@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { TransitionLink } from "@/components/transitions/TransitionLink";
 import { MoveRight } from "lucide-react";
 
 const galleryImages = [
@@ -138,7 +138,7 @@ export default function GalleryPreview() {
                     transition={{ delay: 0.5 }}
                     className="mt-16 flex justify-start"
                 >
-                    <Link
+                    <TransitionLink
                         href="/gallery"
                         className="group flex items-center gap-4 text-accent font-black uppercase tracking-[0.3em] text-xs md:text-sm transition-all"
                     >
@@ -146,7 +146,7 @@ export default function GalleryPreview() {
                         <div className="relative flex items-center justify-center w-10 h-10 border border-accent/30 rounded-full transition-all group-hover:border-accent group-hover:bg-accent group-hover:text-white">
                             <MoveRight size={16} className="transition-transform group-hover:translate-x-1" />
                         </div>
-                    </Link>
+                    </TransitionLink>
                 </motion.div>
             </div>
         </section>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Anton } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import { TransitionProvider } from "@/components/transitions/TransitionProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -31,11 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} antialiased`}
-      >
-        <Navbar />
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} antialiased`}>
+        <TransitionProvider>
+          <Navbar />
+          {children}
+        </TransitionProvider>
       </body>
 
     </html>

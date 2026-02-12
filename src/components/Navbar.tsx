@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { TransitionLink } from "@/components/transitions/TransitionLink";
 import { usePathname, useRouter } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -57,20 +58,20 @@ export default function Navbar() {
                 <div className="container mx-auto px-6 h-full flex items-center justify-between">
                     {/* Left: Logo */}
                     <div className="flex-1 flex justify-start">
-                        <Link href="/" className="relative w-12 h-12 md:w-16 md:h-16 z-[101]">
+                        <TransitionLink href="/" className="relative w-12 h-12 md:w-16 md:h-16 z-[101]">
                             <Image
                                 src="/logo.png"
                                 alt="BOXXERA Logo"
                                 fill
                                 className="object-contain invert"
                             />
-                        </Link>
+                        </TransitionLink>
                     </div>
 
                     {/* Desktop Links - Perfectly Centered */}
                     <div className="hidden lg:flex flex-none items-center gap-10 text-[10px] font-black uppercase tracking-[0.2em]">
                         {navLinks.map((link) => (
-                            <Link
+                            <TransitionLink
                                 key={link.name}
                                 href={link.href}
                                 onClick={(e) => handleLinkClick(e, link.href)}
@@ -78,13 +79,13 @@ export default function Navbar() {
                             >
                                 {link.name}
                                 <span className={`absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent transition-all duration-300 group-hover:w-full ${pathname === link.href ? "w-full" : ""}`} />
-                            </Link>
+                            </TransitionLink>
                         ))}
                     </div>
 
                     {/* Right: Actions */}
                     <div className="flex-1 flex items-center justify-end gap-3 md:gap-6">
-                        <Link href="/#contact" onClick={(e) => handleLinkClick(e, "/#contact")}>
+                        <TransitionLink href="/#contact" onClick={(e) => handleLinkClick(e, "/#contact")}>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -92,7 +93,7 @@ export default function Navbar() {
                             >
                                 JOIN THE ERA NOW
                             </motion.button>
-                        </Link>
+                        </TransitionLink>
 
                         {/* Mobile Toggle */}
                         <button
@@ -134,7 +135,7 @@ export default function Navbar() {
                                     }}
                                     className="w-full"
                                 >
-                                    <Link
+                                    <TransitionLink
                                         href={link.href}
                                         onClick={(e) => {
                                             handleLinkClick(e, link.href);
@@ -146,7 +147,7 @@ export default function Navbar() {
                                             {pathname === link.href && <motion.div layoutId="nav-line" className="w-8 h-[2px] bg-accent" />}
                                             {link.name}
                                         </span>
-                                    </Link>
+                                    </TransitionLink>
                                 </motion.div>
                             ))}
 

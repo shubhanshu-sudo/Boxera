@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { TransitionLink } from "@/components/transitions/TransitionLink";
 import { ArrowUpRight, Package, Trophy, Image as ImageIcon, Phone } from "lucide-react";
 
 const quickLinks = [
@@ -83,32 +84,36 @@ export default function PreFooter() {
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
                 >
                     {quickLinks.map((item) => (
-                        <motion.a
+                        <TransitionLink
                             key={item.title}
                             href={item.link}
-                            variants={{
-                                hidden: { opacity: 0, y: 30 },
-                                show: { opacity: 1, y: 0 }
-                            }}
                             className="group bg-zinc-900/40 backdrop-blur-sm border border-white/5 p-8 rounded-xl hover:border-accent/40 transition-all hover:-translate-y-2 flex flex-col justify-between h-full"
                         >
-                            <div>
-                                <div className="text-accent mb-6 group-hover:scale-110 transition-transform origin-left">
-                                    {item.icon}
+                            <motion.div
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    show: { opacity: 1, y: 0 }
+                                }}
+                                className="flex flex-col h-full justify-between"
+                            >
+                                <div>
+                                    <div className="text-accent mb-6 group-hover:scale-110 transition-transform origin-left">
+                                        {item.icon}
+                                    </div>
+                                    <h3 className="text-xl font-anton uppercase tracking-widest text-white mb-3 group-hover:text-accent transition-colors">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-white/40 text-[10px] md:text-xs leading-relaxed uppercase tracking-wider mb-8">
+                                        {item.description}
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-anton uppercase tracking-widest text-white mb-3 group-hover:text-accent transition-colors">
-                                    {item.title}
-                                </h3>
-                                <p className="text-white/40 text-[10px] md:text-xs leading-relaxed uppercase tracking-wider mb-8">
-                                    {item.description}
-                                </p>
-                            </div>
 
-                            <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.3em] text-white/60 group-hover:text-white transition-colors">
-                                EXPLORE NOW <ArrowUpRight size={14} className="text-accent" />
-                                <div className="h-px bg-white/10 flex-grow group-hover:bg-accent/50 transition-colors" />
-                            </div>
-                        </motion.a>
+                                <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.3em] text-white/60 group-hover:text-white transition-colors">
+                                    EXPLORE NOW <ArrowUpRight size={14} className="text-accent" />
+                                    <div className="h-px bg-white/10 flex-grow group-hover:bg-accent/50 transition-colors" />
+                                </div>
+                            </motion.div>
+                        </TransitionLink>
                     ))}
                 </motion.div>
             </div>
