@@ -102,35 +102,37 @@ export default function GroupClasses() {
                                 className={`group flex flex-col ${item.layout === "left" ? "lg:flex-row-reverse" : "lg:flex-row"} items-stretch gap-8 lg:gap-16`}
                             >
                                 {/* Text Content */}
-                                <div className="flex-1 flex flex-col justify-center bg-[#0e0e0e] p-8 md:p-12 rounded-sm border border-white/5 group-hover:border-accent/30 group-hover:shadow-[0_0_40px_rgba(67,67,209,0.1)] transition-all duration-500 relative">
-                                    <span className="text-[5rem] font-anton text-white/5 absolute -top-4 -left-2 leading-none pointer-events-none select-none">
+                                <div className="flex-1 flex flex-col justify-center bg-[#0e0e0e] p-8 md:p-12 lg:p-16 rounded-sm border border-white/5 group-hover:border-accent/30 group-hover:shadow-[0_0_40px_rgba(67,67,209,0.1)] transition-all duration-500 relative overflow-hidden">
+                                    <span className={`text-[8rem] md:text-[12rem] font-anton text-white/[0.03] absolute top-1/2 -translate-y-1/2 ${item.layout === "left" ? "right-4" : "left-4"} leading-none pointer-events-none select-none transition-all duration-700 group-hover:text-accent/[0.05]`}>
                                         {item.id}
                                     </span>
 
-                                    <h3 className="text-3xl md:text-5xl font-anton uppercase text-white mb-6 relative z-10 leading-tight">
-                                        {item.title}
-                                    </h3>
+                                    <div className="relative z-10">
+                                        <h3 className="text-3xl md:text-5xl font-anton uppercase text-white mb-6 leading-tight">
+                                            {item.title}
+                                        </h3>
 
-                                    <p className="text-white/60 text-base md:text-lg leading-relaxed mb-8 font-light">
-                                        {item.description}
-                                    </p>
+                                        <p className="text-white/60 text-base md:text-lg leading-relaxed mb-8 font-light max-w-xl">
+                                            {item.description}
+                                        </p>
 
-                                    <ul className="space-y-4 mb-10">
-                                        {item.highlights.map((highlight, hIdx) => (
-                                            <li key={hIdx} className="flex items-center gap-3 text-xs md:text-sm font-bold uppercase tracking-widest text-white/80">
-                                                <span className="w-1.5 h-1.5 bg-accent rounded-full shadow-[0_0_10px_#4343D1]" />
-                                                {highlight}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                        <ul className="space-y-4 mb-10">
+                                            {item.highlights.map((highlight, hIdx) => (
+                                                <li key={hIdx} className="flex items-center gap-3 text-xs md:text-sm font-bold uppercase tracking-widest text-white/80">
+                                                    <span className="w-1.5 h-1.5 bg-accent rounded-full shadow-[0_0_10px_#4343D1]" />
+                                                    {highlight}
+                                                </li>
+                                            ))}
+                                        </ul>
 
-                                    <button className="self-start text-accent text-[10px] font-black uppercase tracking-[0.4em] flex items-center gap-4 group/btn">
-                                        VIEW SCHEDULE <MoveRight size={14} className="group-hover/btn:translate-x-2 transition-transform" />
-                                    </button>
+                                        <button className="self-start text-accent text-[10px] font-black uppercase tracking-[0.4em] flex items-center gap-4 group/btn">
+                                            VIEW SCHEDULE <MoveRight size={14} className="group-hover/btn:translate-x-2 transition-transform" />
+                                        </button>
+                                    </div>
                                 </div>
 
                                 {/* Image Section */}
-                                <div className="flex-1 relative min-h-[350px] md:min-h-[450px] overflow-hidden rounded-sm group-hover:shadow-[0_0_50px_rgba(67,67,209,0.2)] transition-shadow duration-700">
+                                <div className="flex-1 relative min-h-[400px] lg:min-h-[550px] overflow-hidden rounded-sm group-hover:shadow-[0_0_50px_rgba(67,67,209,0.2)] transition-shadow duration-700">
                                     <Image
                                         src={item.image}
                                         alt={item.title}

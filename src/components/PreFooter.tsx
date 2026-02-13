@@ -9,7 +9,7 @@ const quickLinks = [
         title: "PACKAGES",
         description: "CHOOSE THE PLAN THAT MATCHES YOUR AMBITION.",
         icon: <Package size={20} />,
-        link: "/#programs",
+        link: "/pricing",
     },
     {
         title: "JOURNEY",
