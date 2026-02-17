@@ -200,7 +200,7 @@ export default function GalleryPage() {
                         src="/IMG_5062.jpg"
                         alt="Gallery Hero"
                         fill
-                        className="object-cover opacity-60"
+                        className="object-cover opacity-60 object-[center_25%]"
                         priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />

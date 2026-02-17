@@ -249,14 +249,25 @@ export default function Programs() {
                                                 </ul>
 
                                                 {/* EXPLORE NOW Button */}
-                                                <motion.button
-                                                    initial={{ opacity: 0, y: 20 }}
-                                                    animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                                    transition={{ delay: 0.4, duration: 0.5 }}
-                                                    className="bg-white text-black px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all hover:bg-accent hover:text-white hover:gap-5"
+                                                <TransitionLink
+                                                    href="/pricing"
+                                                    className="inline-block"
                                                 >
-                                                    EXPLORE NOW <MoveRight size={16} />
-                                                </motion.button>
+                                                    <motion.button
+                                                        initial={{ opacity: 0, y: 20 }}
+                                                        animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                                        transition={{ delay: 0.4, duration: 0.5 }}
+                                                        className="bg-white text-black px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all hover:bg-accent hover:text-white hover:gap-5"
+                                                    >
+                                                        EXPLORE NOW <MoveRight size={16} />
+                                                    </motion.button>
+                                                </TransitionLink>
+                                            </div>
+
+                                            <div className={`mt-auto transition-opacity duration-500 ${isActive ? "opacity-0 invisible" : "opacity-100 visible"}`}>
+                                                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/50 flex items-center gap-2">
+                                                    EXPLORE <ArrowUpRight className="w-3 h-3" />
+                                                </span>
                                             </div>
                                         </div>
                                     )}
