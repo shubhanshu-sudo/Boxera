@@ -56,7 +56,7 @@ export default function GroupClasses() {
             <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/programs_bg.png"
+                        src="/DSC_0259.jpeg"
                         alt="Hero Background"
                         fill
                         className="object-cover opacity-40 grayscale"

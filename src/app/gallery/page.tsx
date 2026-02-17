@@ -92,8 +92,65 @@ const galleryData = [
         title: "Skill Sharpening",
         location: "Speed Bag Corner",
         span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 11,
+        src: "/trans9.jpg",
+        category: "TRANSFORMATIONS",
+        title: "Elite Progress",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 12,
+        src: "/trans10.jpg",
+        category: "TRANSFORMATIONS",
+        title: "Body Recomposition",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 13,
+        src: "/transformation5.jpg",
+        category: "TRANSFORMATIONS",
+        title: "Strength Evolution",
+        location: "Transformation Centre",
+        span: "md:col-span-2 md:row-span-1"
+    },
+    {
+        id: 14,
+        src: "/fatlossjeeth.jpg",
+        category: "TRANSFORMATIONS",
+        title: "Jeeth's Journey",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-2"
+    },
+    {
+        id: 15,
+        src: "/photo-output.jpg",
+        category: "TRANSFORMATIONS",
+        title: "Client Success",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 16,
+        src: "/photo-output(1).jpg",
+        category: "TRANSFORMATIONS",
+        title: "Peak Performance",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 17,
+        src: "/photo-output(1).jpg",
+        category: "TRANSFORMATIONS",
+        title: "Mental Evolution",
+        location: "Transformation Centre",
+        span: "md:col-span-2 md:row-span-1"
     }
 ];
+
 
 export default function GalleryPage() {
     const [filter, setFilter] = useState("ALL");
@@ -140,7 +197,7 @@ export default function GalleryPage() {
             <section className="relative h-[65vh] md:h-[80vh] flex items-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/programs_bg.png"
+                        src="/IMG_5062.jpg"
                         alt="Gallery Hero"
                         fill
                         className="object-cover opacity-60"
@@ -369,8 +426,53 @@ export default function GalleryPage() {
                             ))}
                         </div>
                     </div>
+
+                    {/* Secondary Transformation Grid */}
+                    <div className="mt-24 md:mt-32">
+                        <div className="flex items-center gap-6 mb-12 md:mb-16">
+                            <h3 className="text-2xl md:text-4xl font-anton uppercase text-white tracking-wider">MORE RESULTS</h3>
+                            <div className="h-[1px] flex-grow bg-white/10" />
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+                            {galleryData
+                                .filter(img => img.category === "TRANSFORMATIONS" && img.src !== "/himanshutransf.webp")
+                                .map((image, idx) => (
+                                    <motion.div
+                                        key={image.id}
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: (idx % 3) * 0.1 }}
+                                        className="group relative h-[400px] md:h-[500px] overflow-hidden border border-white/5 cursor-pointer bg-zinc-900"
+                                        onClick={() => openLightbox(image.id)}
+                                    >
+                                        <Image
+                                            src={image.src}
+                                            alt={image.title}
+                                            fill
+                                            className="object-cover transition-transform duration-[1.5s] ease-out lg:group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
+                                        <div className="absolute bottom-6 left-6 right-6">
+                                            <h4 className="text-xl md:text-2xl font-anton uppercase text-white mb-2 leading-tight">{image.title}</h4>
+                                            <div className="flex items-center gap-4 text-[9px] font-black text-accent tracking-[0.2em] uppercase">
+                                                <span>{image.location}</span>
+                                                <div className="w-1 h-1 bg-white/30 rounded-full" />
+                                                <span className="text-white/40">RESULT DRIVEN</span>
+                                            </div>
+                                        </div>
+                                        <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <Maximize2 size={16} className="text-white/60" />
+                                        </div>
+                                    </motion.div>
+                                ))}
+                        </div>
+                    </div>
                 </div>
             </section>
+
+
 
             {/* SECTION 6: CTA – END OF PAGE */}
             <section className="py-32 md:py-48 relative overflow-hidden">

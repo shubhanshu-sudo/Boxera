@@ -12,7 +12,7 @@ const slides = [
         description: "FIGHT CLUB & TRANSFORMATION CENTRE",
         primaryCTA: "START YOUR JOURNEY",
         secondaryCTA: "VIEW SCHEDULE",
-        image: "/hero.png",
+        image: "/hero_new.jpg",
     },
     {
         tagline: "ALL SENSES ON",
@@ -24,7 +24,7 @@ const slides = [
         description: "by – Jeeth Sanghavi",
         primaryCTA: "ENROLL NOW",
         secondaryCTA: "EXPLORE TRAINING",
-        image: "/training.png",
+        image: "/IMG_5062.jpg",
         ghostText: "TRANSFORMATION EXPERT"
     },
     {
