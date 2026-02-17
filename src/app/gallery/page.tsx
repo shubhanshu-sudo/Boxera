@@ -95,7 +95,7 @@ const galleryData = [
     },
     {
         id: 11,
-        src: "/trans9.jpg",
+        src: "/9331ecd7-ad25-4c6e-8324-ced7d3407998.jpg",
         category: "TRANSFORMATIONS",
         title: "Elite Progress",
         location: "Transformation Centre",
@@ -103,7 +103,7 @@ const galleryData = [
     },
     {
         id: 12,
-        src: "/trans10.jpg",
+        src: "/b3f35b39-9589-42ff-aa5f-ce72736a97e3.JPG",
         category: "TRANSFORMATIONS",
         title: "Body Recomposition",
         location: "Transformation Centre",
@@ -111,7 +111,7 @@ const galleryData = [
     },
     {
         id: 13,
-        src: "/transformation5.jpg",
+        src: "/ba5cfe46-74c5-455c-a882-8f0e05adcfc8.JPG",
         category: "TRANSFORMATIONS",
         title: "Strength Evolution",
         location: "Transformation Centre",
