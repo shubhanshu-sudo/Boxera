@@ -16,7 +16,7 @@ export default function Marquee() {
             >
                 {[...Array(10)].map((_, i) => (
                     <span key={i} className="text-4xl md:text-7xl font-anton uppercase tracking-widest pl-4">
-                        <span className="text-accent">BOXXERA</span> • NO EXCUSES • TRAIN HARD • STAY HUMBLE • LIMITLESS •
+                        <span className="text-accent">BOXX-ERA</span> • NO EXCUSES • TRAIN HARD • STAY HUMBLE • LIMITLESS •
                     </span>
                 ))}
             </motion.div>

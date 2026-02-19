@@ -32,7 +32,7 @@ export default function PricingPage() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/hero.png" // Using existing hero image
-                        alt="Boxxera Gym"
+                        alt="Boxx-Era Gym"
                         fill
                         className="object-cover grayscale opacity-40"
                         priority

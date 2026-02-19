@@ -9,25 +9,25 @@ const testimonials = [
         id: 1,
         name: "Richa Mehrotra",
         rating: 5,
-        text: "Boxx Era is not an easy space for people who are not ready to improve themselves. It’s a place where you unlearn and relearn the techniques of living your life in a free-spirited environment. The coaches don’t just train your body, they work on your mindset.",
+        text: "Boxx-Era is not an easy space for people who are not ready to improve themselves. It’s a place where you unlearn and relearn the techniques of living your life in a free-spirited environment. The coaches don’t just train your body, they work on your mindset.",
     },
     {
         id: 2,
         name: "Namrata Arya",
         rating: 5,
-        text: "Training at Boxxera has been such a great experience. The gym has a really positive vibe, and the coaches are patient, knowledgeable, and genuinely invested in your progress. Every session feels purposeful and motivating.",
+        text: "Training at Boxx-Era has been such a great experience. The gym has a really positive vibe, and the coaches are patient, knowledgeable, and genuinely invested in your progress. Every session feels purposeful and motivating.",
     },
     {
         id: 3,
         name: "Dilip Varma",
         rating: 5,
-        text: "The vibe at Boxx Era is uniquely elevating — a perfect blend of high energy and positive support. It makes every training session something to genuinely look forward to.",
+        text: "The vibe at Boxx-Era is uniquely elevating — a perfect blend of high energy and positive support. It makes every training session something to genuinely look forward to.",
     },
     {
         id: 4,
         name: "Ratika Srivastava",
         rating: 5,
-        text: "Boxxera isn’t just a gym — it’s a life-changing space. I’ve been training here for over a year, and the transformation through the Dream Body Series has been incredible, both physically and mentally.",
+        text: "Boxx-Era isn’t just a gym — it’s a life-changing space. I’ve been training here for over a year, and the transformation through the Dream Body Series has been incredible, both physically and mentally.",
     },
     {
         id: 5,
@@ -92,7 +92,7 @@ export default function Testimonials() {
                             WHAT OUR <br /> <span className="text-white">MEMBERS SAY</span>
                         </h2>
                         <p className="text-white/40 text-xs md:text-sm uppercase tracking-[0.2em] leading-relaxed max-w-md">
-                            Unfiltered experiences from real people who trained at Boxxera.
+                            Unfiltered experiences from real people who trained at Boxx-Era.
                         </p>
                     </motion.div>
 

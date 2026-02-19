@@ -386,7 +386,7 @@ export default function GalleryPage() {
                                 {
                                     title: "THE PHILOSOPHY",
                                     icon: "01",
-                                    text: "Boxxera didn't just change my physique; it changed how I approach life. The coaches push you to a level you didn't know existed, focusing on mental resilience as much as physical peak performance.",
+                                    text: "Boxx-Era didn't just change my physique; it changed how I approach life. The coaches push you to a level you didn't know existed, focusing on mental resilience as much as physical peak performance.",
                                     author: "HIMANSHU G., MEMBER SINCE 2023"
                                 },
                                 {

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { TransitionLink } from "@/components/transitions/TransitionLink";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
@@ -30,7 +30,7 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "Training", href: "/#programs" },
-        { name: "Coaches", href: "/#coaches" },
+        { name: "Coaches", href: "/articles#coach-jeeth" },
         { name: "Gallery", href: "/gallery" },
         { name: "Articles", href: "/articles" },
         { name: "Pricing", href: "/pricing" },
@@ -61,7 +61,7 @@ export default function Navbar() {
                         <TransitionLink href="/" className="relative w-12 h-12 md:w-16 md:h-16 z-[101]">
                             <Image
                                 src="/logo.png"
-                                alt="BOXXERA Logo"
+                                alt="BOXX-ERA Logo"
                                 fill
                                 className="object-contain invert"
                             />
@@ -157,17 +157,24 @@ export default function Navbar() {
                                 transition={{ delay: 0.5 }}
                                 className="w-full mt-10"
                             >
-                                <button className="w-full bg-accent text-white py-5 px-6 text-[10px] font-black uppercase tracking-[0.4em] shadow-[0_15px_40px_rgba(67,67,209,0.3)] hover:bg-white hover:text-black transition-all duration-500 transform active:scale-[0.98] text-left flex justify-between items-center group/mb">
-                                    <span>JOIN THE ERA NOW</span>
+                                <TransitionLink href="/#contact" onClick={() => setIsOpen(false)}>
+                                    <button className="w-full bg-accent text-white py-5 px-6 text-[10px] font-black uppercase tracking-[0.4em] shadow-[0_15px_40px_rgba(67,67,209,0.3)] hover:bg-white hover:text-black transition-all duration-500 transform active:scale-[0.98] text-left flex justify-between items-center group/mb">
+                                        <span>JOIN THE ERA NOW</span>
+                                        <ArrowUpRight size={16} className="group-hover/mb:translate-x-1 group-hover/mb:-translate-y-1 transition-transform" />
+                                    </button>
+                                </TransitionLink>
 
-                                </button>
-
-                                <div className="mt-16 flex gap-8 text-white/20 text-[9px] font-black uppercase tracking-[0.3em]">
-                                    {["Instagram", "Youtube", "Twitter"].map((social) => (
-                                        <span key={social} className="hover:text-accent cursor-pointer transition-colors whitespace-nowrap">
-                                            {social}
-                                        </span>
-                                    ))}
+                                <div className="mt-16 flex gap-8 text-[9px] font-black uppercase tracking-[0.3em]">
+                                    <a
+                                        href="https://www.instagram.com/boxxera.in?igsh=MWZ4MWRoaHh1ZjVsaQ%3D%3D&utm_source=qr"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-white hover:text-accent transition-colors"
+                                    >
+                                        Instagram
+                                    </a>
+                                    <span className="text-white/20">Twitter</span>
+                                    <span className="text-white/20">Youtube</span>
                                 </div>
                             </motion.div>
                         </div>

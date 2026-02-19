@@ -80,13 +80,15 @@ export default function GroupClasses() {
                         <p className="text-xs md:text-sm font-black uppercase tracking-[0.5em] text-accent mb-12">
                             High intensity. Structured programming. Zero excuses.
                         </p>
-                        <motion.button
-                            whileHover={{ scale: 1.05, backgroundColor: "#3333A1" }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-accent text-white px-10 md:px-14 py-5 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs transition-all shadow-[0_0_30px_rgba(67,67,209,0.3)]"
-                        >
-                            JOIN A CLASS
-                        </motion.button>
+                        <TransitionLink href="/#contact">
+                            <motion.button
+                                whileHover={{ scale: 1.05, backgroundColor: "#3333A1" }}
+                                whileTap={{ scale: 0.95 }}
+                                className="bg-accent text-white px-10 md:px-14 py-5 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs transition-all shadow-[0_0_30px_rgba(67,67,209,0.3)]"
+                            >
+                                JOIN A CLASS
+                            </motion.button>
+                        </TransitionLink>
                     </motion.div>
                 </div>
             </section>
@@ -125,9 +127,9 @@ export default function GroupClasses() {
                                             ))}
                                         </ul>
 
-                                        <button className="self-start text-accent text-[10px] font-black uppercase tracking-[0.4em] flex items-center gap-4 group/btn">
+                                        <TransitionLink href="/#contact" className="self-start text-accent text-[10px] font-black uppercase tracking-[0.4em] flex items-center gap-4 group/btn">
                                             VIEW SCHEDULE <MoveRight size={14} className="group-hover/btn:translate-x-2 transition-transform" />
-                                        </button>
+                                        </TransitionLink>
                                     </div>
                                 </div>
 

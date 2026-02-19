@@ -55,13 +55,15 @@ export default function PreFooter() {
                             LET US HELP YOU
                         </span>
 
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-accent text-white px-10 md:px-16 py-5 md:py-6 font-black uppercase tracking-[0.4em] text-xs md:text-sm hover:bg-white hover:text-black transition-all shadow-[0_0_30px_rgba(67,67,209,0.35)]"
-                        >
-                            GET YOUR FIRST CLASS
-                        </motion.button>
+                        <TransitionLink href="/#contact">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="bg-accent text-white px-10 md:px-16 py-5 md:py-6 font-black uppercase tracking-[0.4em] text-xs md:text-sm hover:bg-white hover:text-black transition-all shadow-[0_0_30px_rgba(67,67,209,0.35)]"
+                            >
+                                GET YOUR FIRST CLASS
+                            </motion.button>
+                        </TransitionLink>
                     </motion.div>
                 </div>
 

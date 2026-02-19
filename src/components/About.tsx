@@ -26,7 +26,7 @@ export default function About() {
                         <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Our Core</span>
                     </div>
                     <h2 className="text-6xl md:text-8xl font-anton uppercase leading-[1] tracking-tighter text-white mb-8">
-                        About <br /> <span className="text-transparent" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.3)" }}>Boxxera</span>
+                        About <br /> <span className="text-transparent" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.3)" }}>Boxx-Era</span>
                     </h2>
                     <div className="hidden lg:flex flex-col gap-6 mt-16 opacity-30">
                         <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-bold tracking-[0.5em] uppercase">Discipline First</span>
@@ -44,7 +44,7 @@ export default function About() {
                 >
                     <div className="relative">
                         <h3 className="text-3xl md:text-5xl font-anton uppercase text-white leading-[1.1] mb-2 relative z-10">
-                            BOXXERA IS A <span className="text-accent">SERIOUS</span>, RESULT-ORIENTED STUDIO.
+                            BOXX-ERA IS A <span className="text-accent">SERIOUS</span>, RESULT-ORIENTED STUDIO.
                         </h3>
                         <div className="absolute -left-4 -top-4 w-20 h-20 bg-accent/10 rounded-full blur-3xl" />
                     </div>

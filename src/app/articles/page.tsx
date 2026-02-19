@@ -66,7 +66,7 @@ export default function ArticlesPage() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-accent text-[10px] md:text-xs font-black uppercase tracking-[0.6em] mb-8 block"
                     >
-                        Boxxera Press Archive
+                        Boxx-Era Press Archive
                     </motion.span>
                     <motion.h1
                         initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -97,7 +97,7 @@ export default function ArticlesPage() {
             </section>
 
             {/* SECTION 2: FEATURED STORY */}
-            <section className="py-24 border-b border-white/5">
+            <section id="coach-jeeth" className="py-24 border-b border-white/5">
                 <div className="container mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         {/* Visual */}
@@ -258,7 +258,7 @@ export default function ArticlesPage() {
                         viewport={{ once: true }}
                         className="text-white text-3xl md:text-5xl lg:text-7xl font-anton uppercase leading-[1.3] tracking-tighter max-w-5xl mx-auto"
                     >
-                        “<span className="text-accent">Boxxera</span> isn’t just a gym. It’s a movement built on discipline, resilience, and transformation.”
+                        “<span className="text-accent">Boxx-Era</span> isn’t just a gym. It’s a movement built on discipline, resilience, and transformation.”
 
                     </motion.p>
                 </div>
@@ -273,9 +273,9 @@ export default function ArticlesPage() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
                         <Link href="/#contact" className="w-full sm:w-auto bg-accent text-white px-12 py-5 font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all text-center">
-                            JOIN BOXXERA
+                            JOIN BOXX-ERA
                         </Link>
-                        <Link href="/#coaches" className="w-full sm:w-auto border-2 border-white/20 text-white px-12 py-5 font-black uppercase tracking-widest text-xs hover:border-accent hover:text-accent transition-all text-center">
+                        <Link href="/articles#coach-jeeth" className="w-full sm:w-auto border-2 border-white/20 text-white px-12 py-5 font-black uppercase tracking-widest text-xs hover:border-accent hover:text-accent transition-all text-center">
                             MEET THE COACHES
                         </Link>
                     </div>

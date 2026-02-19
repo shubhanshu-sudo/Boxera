@@ -4,14 +4,17 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
+import { TransitionLink } from "@/components/transitions/TransitionLink";
 
 const slides = [
     {
         tagline: "",
-        headline: "BOXXERA",
+        headline: "BOXX-ERA",
         description: "FIGHT CLUB & TRANSFORMATION CENTRE",
         primaryCTA: "START YOUR JOURNEY",
+        primaryLink: "/pricing",
         secondaryCTA: "VIEW SCHEDULE",
+        secondaryLink: "/#programs",
         image: "/hero_new.jpg",
     },
     {
@@ -23,7 +26,9 @@ const slides = [
         ),
         description: "by – Jeeth Sanghavi",
         primaryCTA: "ENROLL NOW",
+        primaryLink: "/pricing",
         secondaryCTA: "EXPLORE TRAINING",
+        secondaryLink: "/#programs",
         image: "/IMG_5062.jpg",
         ghostText: "TRANSFORMATION EXPERT"
     },
@@ -37,7 +42,9 @@ const slides = [
             </>
         ),
         primaryCTA: "GET YOUR FIRST CLASS",
+        primaryLink: "/#contact",
         secondaryCTA: "CONTACT US",
+        secondaryLink: "/#contact",
         image: "/ring.png",
     },
 ];
@@ -211,20 +218,24 @@ export default function Hero() {
                                     }}
                                     className="flex flex-col sm:flex-row gap-6 md:gap-10 w-full sm:w-auto"
                                 >
-                                    <motion.button
-                                        whileHover={{ scale: 1.05, backgroundColor: "#ffffff", color: "#000000", borderColor: "#ffffff" }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className="bg-accent text-white px-10 md:px-14 py-4 md:py-6 font-black uppercase tracking-widest text-xs md:text-sm flex items-center justify-center gap-4 transition-all shadow-[0_0_30px_rgba(67,67,209,0.35)] border-2 border-accent hover:border-white"
-                                    >
-                                        {slides[current].primaryCTA} <MoveRight size={18} />
-                                    </motion.button>
-                                    <motion.button
-                                        whileHover={{ scale: 1.05, borderColor: "#4343D1", color: "#4343D1" }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className="border-2 border-white/20 text-white/60 px-10 md:px-14 py-4 md:py-6 font-black uppercase tracking-widest text-xs md:text-sm transition-all hover:bg-white/5"
-                                    >
-                                        {slides[current].secondaryCTA}
-                                    </motion.button>
+                                    <TransitionLink href={slides[current].primaryLink || "/#contact"}>
+                                        <motion.button
+                                            whileHover={{ scale: 1.05, backgroundColor: "#ffffff", color: "#000000", borderColor: "#ffffff" }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className="bg-accent text-white px-10 md:px-14 py-4 md:py-6 font-black uppercase tracking-widest text-xs md:text-sm flex items-center justify-center gap-4 transition-all shadow-[0_0_30px_rgba(67,67,209,0.35)] border-2 border-accent hover:border-white w-full sm:w-auto"
+                                        >
+                                            {slides[current].primaryCTA} <MoveRight size={18} />
+                                        </motion.button>
+                                    </TransitionLink>
+                                    <TransitionLink href={slides[current].secondaryLink || "/#contact"}>
+                                        <motion.button
+                                            whileHover={{ scale: 1.05, borderColor: "#4343D1", color: "#4343D1" }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className="border-2 border-white/20 text-white/60 px-10 md:px-14 py-4 md:py-6 font-black uppercase tracking-widest text-xs md:text-sm transition-all hover:bg-white/5 w-full sm:w-auto"
+                                        >
+                                            {slides[current].secondaryCTA}
+                                        </motion.button>
+                                    </TransitionLink>
                                 </motion.div>
 
                             </div>
@@ -254,7 +265,7 @@ export default function Hero() {
 
             {/* Decorative vertical words - Slide Context */}
             <div className="absolute left-8 md:left-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-12 items-center opacity-20 pointer-events-none">
-                <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-bold tracking-[0.5em] uppercase">Boxxera</span>
+                <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-bold tracking-[0.5em] uppercase">Boxx-Era</span>
                 <div className="w-[1px] h-20 bg-white" />
                 <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-bold tracking-[0.5em] uppercase text-[#4343D1]">Elite</span>
             </div>

@@ -197,7 +197,7 @@ export default function Programs() {
                                                 <TransitionLink
                                                     href={
                                                         program.id === "01" ? "/training/group-classes" :
-                                                            program.id === "03" ? "/training/dream-body-series" : "#"
+                                                            program.id === "03" ? "/training/dream-body-series" : "/pricing"
                                                     }
                                                     className="inline-block"
                                                 >

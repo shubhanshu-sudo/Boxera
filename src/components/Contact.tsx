@@ -83,7 +83,7 @@ export default function Contact() {
                                 <div>
                                     <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-2">Connect</h4>
                                     <p className="text-white/40 uppercase tracking-tighter text-[10px]">
-                                        +91 99999 99999
+                                        +91 72908 20211
                                     </p>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@ export default function Contact() {
                                 <div>
                                     <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-2">Email</h4>
                                     <p className="text-white/40 uppercase tracking-tighter text-[10px]">
-                                        enquiry@boxxera.com
+                                        boxxera.in@gmail.com
                                     </p>
                                 </div>
                             </div>

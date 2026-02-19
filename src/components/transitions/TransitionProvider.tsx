@@ -77,7 +77,7 @@ export const TransitionProvider = ({ children }: { children: React.ReactNode }) 
                             className="absolute top-0 left-0 h-[2px] bg-accent shadow-[0_0_15px_#4343D1] z-50"
                         />
 
-                        {/* Centered BOXXERA Logo & Text */}
+                        {/* Centered BOXX-ERA Logo & Text */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -88,7 +88,7 @@ export const TransitionProvider = ({ children }: { children: React.ReactNode }) 
                             <div className="relative w-20 h-20 md:w-28 md:h-28">
                                 <Image
                                     src="/logo.png"
-                                    alt="Boxxera Logo"
+                                    alt="Boxx-Era Logo"
                                     fill
                                     className="object-contain invert"
                                 />
@@ -97,7 +97,7 @@ export const TransitionProvider = ({ children }: { children: React.ReactNode }) 
                                 className="text-white text-3xl md:text-6xl font-anton uppercase tracking-[0.8em] text-center ml-[0.8em]"
                                 style={{ textShadow: "0 0 30px rgba(67,67,209,0.4)" }}
                             >
-                                BOXXERA
+                                BOXX-ERA
                             </h2>
                         </motion.div>
                     </motion.div>
