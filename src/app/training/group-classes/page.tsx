@@ -10,33 +10,65 @@ import Footer from "@/components/Footer";
 const classes = [
     {
         id: "01",
-        title: "SWEAT X SCULPT",
-        description: "Combine 20-25 minutes of HIIT with 20-25 minutes of dumbbell and kettlebell conditioning for a full-body sculpting workout that maximizes fat burn.",
-        highlights: ["20-25 mins HIIT", "Dumbbell & kettlebell conditioning", "Maximum fat burn"],
-        image: "/training.png",
+        title: "BOXING",
+        description: "Learn boxing from real fighters. Our coaches will give you knowledge as well as professional techniques in every session. The feeling of empowerment and motivation will keep you coming back for more.",
+        highlights: ["Professional Techniques", "Real Fighters", "Empowerment"],
+        image: "/ring.png",
         layout: "right",
     },
     {
         id: "02",
-        title: "AFTERBURNER: FUNCTIONAL HIIT",
-        description: "Sweat it out with high-intensity, functional movements in a dynamic circuit. Use various equipment like rowers and battle ropes to challenge your strength and endurance.",
-        highlights: ["Functional circuits", "Rowers & battle ropes", "Strength + endurance"],
-        image: "/hero.png",
+        title: "DARK ROOM TRAININGS",
+        description: "Working out in the dark removes all the elements of comparison or competition. It's a beautiful opportunity to go inward, as darkness facilitates that intimate connection with oneself.",
+        highlights: ["Mental Connection", "No Comparison", "India's First"],
+        image: "/training.png",
         layout: "left",
     },
     {
         id: "03",
-        title: "WOD CHALLENGE",
-        description: "Test your limits with dynamic EMOMs and AMRAPs in this cross-training inspired class. Experience a supportive environment while pushing your HIIT and strength training to new heights.",
-        highlights: ["EMOM", "AMRAP", "Cross-training format"],
+        title: "WOD CHIPPER",
+        description: "Inspired by cross training, expect “EMOMs” and “AMRAPs” as standard and be prepared to dig deep and push hard. Encouraging and motivating environment.",
+        highlights: ["EMOMs & AMRAPs", "High Intensity", "Strength Work"],
         image: "/programs_bg.png",
         layout: "right",
     },
     {
         id: "04",
-        title: "BOXING",
-        description: "Train like an athlete in our boxing class, improving cardio and total body performance. Suitable for all levels, it emphasizes progressive techniques. Remember to bring your own wraps!",
-        highlights: ["Progressive techniques", "All levels welcome", "Bring your own wraps"],
+        title: "FORMULA3",
+        description: "A competitive, high intensity circuit with 3 targeted blocks, for a full spectrum workout. The Formula to get you fit, fast.",
+        highlights: ["3 Targeted Blocks", "Fit Fast", "High Intensity"],
+        image: "/hero.png",
+        layout: "left",
+    },
+    {
+        id: "05",
+        title: "LIFT",
+        description: "Create a strong, athletic and powerful body using progressively heavier weights under the careful instruction of your trainer.",
+        highlights: ["Progressive Weights", "Form & Technique", "Body Sculpting"],
+        image: "/training.png",
+        layout: "right",
+    },
+    {
+        id: "06",
+        title: "FITNESS FOR CHILDREN",
+        description: "Short classes to maintain junior athletes active and engaged, featuring martial arts, sports conditioning, dance and yoga.",
+        highlights: ["Junior Athletes", "30-45 Mins", "Engaging"],
+        image: "/DSC_0525.webp",
+        layout: "left",
+    },
+    {
+        id: "07",
+        title: "POWER STRETCHING",
+        description: "Reboot post-performance with the stretch class your muscles deserve. Balance out stressed and tight muscles.",
+        highlights: ["Post-Performance", "Techniques & Equipment", "Muscle Recovery"],
+        image: "/programs_bg.png",
+        layout: "right",
+    },
+    {
+        id: "08",
+        title: "EXPRESS ABS",
+        description: "Improve your core strength and posture in order to look AB-solute best. This focused workout does it.",
+        highlights: ["Core Strength", "Posture Correction", "Focused Workout"],
         image: "/ring.png",
         layout: "left",
     },
@@ -93,61 +125,6 @@ export default function GroupClasses() {
                 </div>
             </section>
 
-            {/* 2️⃣ MAIN SECTION – CLASS DETAILS GRID */}
-            <section className="py-24 md:py-32 bg-black overflow-hidden">
-                <div className="container mx-auto max-w-[1200px] px-6">
-                    <div className="grid grid-cols-1 gap-12 md:gap-24">
-                        {classes.map((item, idx) => (
-                            <motion.div
-                                key={item.id}
-                                {...fadeIn}
-                                className={`group flex flex-col ${item.layout === "left" ? "lg:flex-row-reverse" : "lg:flex-row"} items-stretch gap-8 lg:gap-16`}
-                            >
-                                {/* Text Content */}
-                                <div className="flex-1 flex flex-col justify-center bg-[#0e0e0e] p-8 md:p-12 lg:p-16 rounded-sm border border-white/5 group-hover:border-accent/30 group-hover:shadow-[0_0_40px_rgba(67,67,209,0.1)] transition-all duration-500 relative overflow-hidden">
-                                    <span className={`text-[8rem] md:text-[12rem] font-anton text-white/[0.03] absolute top-1/2 -translate-y-1/2 ${item.layout === "left" ? "right-4" : "left-4"} leading-none pointer-events-none select-none transition-all duration-700 group-hover:text-accent/[0.05]`}>
-                                        {item.id}
-                                    </span>
-
-                                    <div className="relative z-10">
-                                        <h3 className="text-3xl md:text-5xl font-anton uppercase text-white mb-6 leading-tight">
-                                            {item.title}
-                                        </h3>
-
-                                        <p className="text-white/60 text-base md:text-lg leading-relaxed mb-8 font-light max-w-xl">
-                                            {item.description}
-                                        </p>
-
-                                        <ul className="space-y-4 mb-10">
-                                            {item.highlights.map((highlight, hIdx) => (
-                                                <li key={hIdx} className="flex items-center gap-3 text-xs md:text-sm font-bold uppercase tracking-widest text-white/80">
-                                                    <span className="w-1.5 h-1.5 bg-accent rounded-full shadow-[0_0_10px_#4343D1]" />
-                                                    {highlight}
-                                                </li>
-                                            ))}
-                                        </ul>
-
-                                        <TransitionLink href="/#contact" className="self-start text-accent text-[10px] font-black uppercase tracking-[0.4em] flex items-center gap-4 group/btn">
-                                            VIEW SCHEDULE <MoveRight size={14} className="group-hover/btn:translate-x-2 transition-transform" />
-                                        </TransitionLink>
-                                    </div>
-                                </div>
-
-                                {/* Image Section */}
-                                <div className="flex-1 relative min-h-[400px] lg:min-h-[550px] overflow-hidden rounded-sm group-hover:shadow-[0_0_50px_rgba(67,67,209,0.2)] transition-shadow duration-700">
-                                    <Image
-                                        src={item.image}
-                                        alt={item.title}
-                                        fill
-                                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors" />
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* 2.5️⃣ MORE THAN A WORKOUT SECTION */}
             <section className="py-24 md:py-40 bg-zinc-950 border-y border-white/5 relative overflow-hidden">
@@ -164,14 +141,14 @@ export default function GroupClasses() {
                         <h2 className="text-5xl md:text-8xl font-anton uppercase mb-10 tracking-tighter leading-none">
                             MORE THAN A <br /> <span className="text-accent underline decoration-1 underline-offset-8">WORKOUT</span>
                         </h2>
-                        <p className="text-xl md:text-2xl font-light text-white/70 leading-relaxed uppercase tracking-wide">
-                            Fitness classes at Boxx Era are experiences, created and developed by the industry’s best minds bringing results through innovation.
+                        <p className="text-xl md:text-2xl font-light text-white/70 leading-relaxed uppercase tracking-wide italic">
+                            Fitness classes at Boxx Era are experiences, created, and developed by the industry’s best minds bringing results through innovation.
                         </p>
                     </motion.div>
 
                     {/* Split Blocks */}
                     <div className="space-y-32 md:space-y-48">
-                        {/* 🔹 BLOCK 1 – BOXING (Detailed) */}
+                        {/* 🔹 BLOCK 1 – BOXING */}
                         <motion.div {...fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                             <div className="relative aspect-[4/5] lg:aspect-square overflow-hidden rounded-sm group">
                                 <Image
@@ -185,7 +162,7 @@ export default function GroupClasses() {
                             <div className="flex flex-col gap-8">
                                 <div className="flex items-center gap-4">
                                     <div className="w-12 h-[1px] bg-accent" />
-                                    <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Knowledge & Tech</span>
+                                    <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Empowerment</span>
                                 </div>
                                 <h3 className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight">BOXING</h3>
                                 <p className="text-lg md:text-xl font-normal text-white/80 leading-relaxed max-w-xl">
@@ -212,11 +189,149 @@ export default function GroupClasses() {
                             <div className="lg:order-1 flex flex-col gap-8 lg:text-right lg:items-end">
                                 <div className="flex items-center gap-4 lg:flex-row-reverse">
                                     <div className="w-12 h-[1px] bg-accent" />
-                                    <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Mental Reset</span>
+                                    <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Inward Connection</span>
                                 </div>
                                 <h3 className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight">DARK ROOM <br /> TRAININGS</h3>
                                 <p className="text-lg md:text-xl font-normal text-white/80 leading-relaxed max-w-xl">
-                                    We are pioneers. Working out in the dark removes all elements of comparison or competition. The dark room allows athletes to lose themselves and go inward, without distraction. It is a powerful mental and physical reset.
+                                    We are pioneers. Working out in the dark removes all the elements of comparison or competition, which is the main reason why we have curated this training modality. The dark room allows athletes to lose themselves in such a way, that people around them stops being a concern. It&apos;s a beautiful opportunity to go inward, as darkness facilitates that intimate connection with oneself. All of these perks have made us create the first dark room training facility from India.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* 🔹 BLOCK 3 – FITNESS FOR CHILDREN */}
+                        <motion.div {...fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                            <div className="relative aspect-[4/5] lg:aspect-square overflow-hidden rounded-sm group">
+                                <Image
+                                    src="/DSC_0525.webp"
+                                    alt="Fitness for Children"
+                                    fill
+                                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
+                            </div>
+                            <div className="flex flex-col gap-8">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-[1px] bg-accent" />
+                                    <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Junior Athletes</span>
+                                </div>
+                                <h3 className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight">FITNESS FOR <br /> CHILDREN</h3>
+                                <p className="text-lg md:text-xl font-normal text-white/80 leading-relaxed max-w-xl">
+                                    These classes are kept short in order to maintain junior athletes active and engaged. One 30 to 45 minute session features everything from martial arts and sports conditioning to dance and yoga.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* 🔹 BLOCK 4 – WOD CHIPPER */}
+                        <motion.div {...fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                            <div className="lg:order-2 relative aspect-[4/5] lg:aspect-square overflow-hidden rounded-sm group">
+                                <Image
+                                    src="/programs_bg.png"
+                                    alt="WOD Chipper"
+                                    fill
+                                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
+                            </div>
+                            <div className="lg:order-1 flex flex-col gap-8 lg:text-right lg:items-end">
+                                <div className="flex items-center gap-4 lg:flex-row-reverse">
+                                    <div className="w-12 h-[1px] bg-accent" />
+                                    <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Cross Training</span>
+                                </div>
+                                <h3 className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight">WOD CHIPPER</h3>
+                                <p className="text-lg md:text-xl font-normal text-white/80 leading-relaxed max-w-xl">
+                                    Inspired by cross training, expect &ldquo;EMOMs&rdquo; and &ldquo;AMRAPs&rdquo; as standard and be prepared to dig deep and push hard. The WOD combines effective high intensity training and strength work in an encouraging and motivating environment.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* 🔹 BLOCK 5 – FORMULA3 */}
+                        <motion.div {...fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                            <div className="relative aspect-[4/5] lg:aspect-square overflow-hidden rounded-sm group">
+                                <Image
+                                    src="/hero.png"
+                                    alt="Formula3"
+                                    fill
+                                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
+                            </div>
+                            <div className="flex flex-col gap-8">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-[1px] bg-accent" />
+                                    <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Fit Fast</span>
+                                </div>
+                                <h3 className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight">FORMULA3</h3>
+                                <p className="text-lg md:text-xl font-normal text-white/80 leading-relaxed max-w-xl">
+                                    This is the Formula to get you fit, fast. A competitive, high intensity circuit with 3 targeted blocks, for a full spectrum workout.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* 🔹 BLOCK 6 – LIFT */}
+                        <motion.div {...fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                            <div className="lg:order-2 relative aspect-[4/5] lg:aspect-square overflow-hidden rounded-sm group">
+                                <Image
+                                    src="/training.png"
+                                    alt="Lift Class"
+                                    fill
+                                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
+                            </div>
+                            <div className="lg:order-1 flex flex-col gap-8 lg:text-right lg:items-end">
+                                <div className="flex items-center gap-4 lg:flex-row-reverse">
+                                    <div className="w-12 h-[1px] bg-accent" />
+                                    <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Athletic Power</span>
+                                </div>
+                                <h3 className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight">LIFT</h3>
+                                <p className="text-lg md:text-xl font-normal text-white/80 leading-relaxed max-w-xl">
+                                    Create a strong, athletic and powerful body using progressively heavier weights under the careful instruction of your trainer. Improve your form and technique, building confidence in lifting weights whilst you sculpt your body. Leave the class feeling stronger and more powerful than ever.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* 🔹 BLOCK 7 – POWER STRETCHING */}
+                        <motion.div {...fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                            <div className="relative aspect-[4/5] lg:aspect-square overflow-hidden rounded-sm group">
+                                <Image
+                                    src="/programs_bg.png"
+                                    alt="Power Stretching"
+                                    fill
+                                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
+                            </div>
+                            <div className="flex flex-col gap-8">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-[1px] bg-accent" />
+                                    <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Recovery</span>
+                                </div>
+                                <h3 className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight">POWER <br /> STRETCHING</h3>
+                                <p className="text-lg md:text-xl font-normal text-white/80 leading-relaxed max-w-xl">
+                                    Reboot post-performance with the stretch class your muscles deserve. Apply a variety of techniques and equipment to balance out stressed and tight muscles, leaving you perfectly prepped to rise to your next challenge.
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* 🔹 BLOCK 8 – EXPRESS ABS */}
+                        <motion.div {...fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                            <div className="lg:order-2 relative aspect-[4/5] lg:aspect-square overflow-hidden rounded-sm group">
+                                <Image
+                                    src="/ring.png"
+                                    alt="Express Abs"
+                                    fill
+                                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
+                            </div>
+                            <div className="lg:order-1 flex flex-col gap-8 lg:text-right lg:items-end">
+                                <div className="flex items-center gap-4 lg:flex-row-reverse">
+                                    <div className="w-12 h-[1px] bg-accent" />
+                                    <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Core Strength</span>
+                                </div>
+                                <h3 className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight">EXPRESS ABS</h3>
+                                <p className="text-lg md:text-xl font-normal text-white/80 leading-relaxed max-w-xl">
+                                    Don&apos;t expect to just lie on the floor during this class. If you want to improve your core strength and posture in order to look AB-solute best, this focused workout does it.
                                 </p>
                             </div>
                         </motion.div>
