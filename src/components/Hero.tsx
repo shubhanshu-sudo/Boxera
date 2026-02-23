@@ -9,7 +9,7 @@ import { TransitionLink } from "@/components/transitions/TransitionLink";
 const slides = [
     {
         tagline: "",
-        headline: "BOXX-ERA",
+        headline: "BOXX ERA",
         description: "FIGHT CLUB & TRANSFORMATION CENTRE",
         primaryCTA: "START YOUR JOURNEY",
         primaryLink: "/pricing",
@@ -265,7 +265,7 @@ export default function Hero() {
 
             {/* Decorative vertical words - Slide Context */}
             <div className="absolute left-8 md:left-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-12 items-center opacity-20 pointer-events-none">
-                <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-bold tracking-[0.5em] uppercase">Boxx-Era</span>
+                <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-bold tracking-[0.5em] uppercase">Boxx Era</span>
                 <div className="w-[1px] h-20 bg-white" />
                 <span className="[writing-mode:vertical-lr] rotate-180 text-[10px] font-bold tracking-[0.5em] uppercase text-[#4343D1]">Elite</span>
             </div>

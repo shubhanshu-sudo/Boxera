@@ -61,7 +61,7 @@ export default function Navbar() {
                         <TransitionLink href="/" className="relative w-12 h-12 md:w-16 md:h-16 z-[101]">
                             <Image
                                 src="/logo.png"
-                                alt="BOXX-ERA Logo"
+                                alt="BOXX ERA Logo"
                                 fill
                                 className="object-contain invert"
                             />

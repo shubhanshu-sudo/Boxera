@@ -8,17 +8,17 @@ import { MoveRight } from "lucide-react";
 const galleryImages = [
     {
         src: "/DSC_0118.webp",
-        alt: "Boxx-Era training session",
+        alt: "Boxx Era training session",
         span: "md:col-span-2 md:row-span-2",
     },
     {
         src: "/DSC_0087.webp",
-        alt: "Coach correction at Boxx-Era",
+        alt: "Coach correction at Boxx Era",
         span: "md:col-span-1 md:row-span-1",
     },
     {
         src: "/DSC_0525.webp",
-        alt: "Boxx-Era studio atmosphere",
+        alt: "Boxx Era studio atmosphere",
         span: "md:col-span-1 md:row-span-1",
     },
     {
@@ -28,12 +28,12 @@ const galleryImages = [
     },
     {
         src: "/2025-04-02.webp",
-        alt: "Boxx-Era boxing energy",
+        alt: "Boxx Era boxing energy",
         span: "md:col-span-1 md:row-span-2",
     },
     {
         src: "/2021-08-17.webp",
-        alt: "Community moments at Boxx-Era",
+        alt: "Community moments at Boxx Era",
         span: "md:col-span-2 md:row-span-1",
     },
     {
@@ -64,7 +64,7 @@ export default function GalleryPreview() {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-6xl font-anton uppercase text-white mb-4 leading-none"
                     >
-                        Inside the Grind <br className="hidden md:block" /> at Boxx-Era
+                        Inside the Grind <br className="hidden md:block" /> at Boxx Era
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
