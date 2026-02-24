@@ -6,9 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { MoveRight, ArrowUpRight } from "lucide-react";
 import Footer from "@/components/Footer";
-import { articles, featuredArticle, Article } from "@/data/articles";
+import { articles, Article } from "@/data/articles";
 
-const categories = ["ALL", "MEDIA", "INTERVIEWS", "COMMUNITY", "TRANSFORMATION"];
+const categories = ["ALL", "MEDIA", "COMMUNITY", "TRANSFORMATION"];
 
 function MediaLogo({ src, alt, color, className }: { src?: string; alt: string; color?: string; className?: string }) {
     const [error, setError] = useState(!src);
