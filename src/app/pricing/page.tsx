@@ -27,7 +27,7 @@ export default function PricingPage() {
     return (
         <main className="min-h-screen bg-black text-white selection:bg-accent selection:text-white">
             {/* SECTION 1: HERO */}
-            <section className="relative h-[70vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden">
+            <section className="relative h-[70vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden pt-20 md:pt-24">
                 {/* Background Overlay */}
                 <div className="absolute inset-0 z-0">
                     <Image
@@ -58,7 +58,7 @@ export default function PricingPage() {
                         >
                             <Link
                                 href="#enroll"
-                                className="inline-flex items-center gap-4 bg-accent text-white px-10 py-5 text-xs font-black uppercase tracking-[0.3em] transition-all hover:bg-white hover:text-black shadow-[0_0_30px_rgba(67,67,209,0.4)]"
+                                className="inline-flex items-center gap-4 bg-accent text-black px-10 py-5 text-xs font-black uppercase tracking-[0.3em] transition-all hover:bg-white hover:text-black shadow-[0_0_30px_rgba(255,222,2,0.3)]"
                             >
                                 JOIN THE ERA NOW <MoveRight size={18} />
                             </Link>
@@ -97,23 +97,34 @@ export default function PricingPage() {
                             variants={fadeIn}
                             whileHover={{
                                 y: -10,
-                                borderColor: "rgba(67, 67, 209, 0.5)",
-                                boxShadow: "0 0 30px rgba(67, 67, 209, 0.2)"
+                                borderColor: "rgba(255, 222, 2, 0.3)",
+                                backgroundColor: "rgba(255, 222, 2, 0.02)"
                             }}
-                            className="bg-[#0A0A0A] border border-white/5 p-8 md:p-10 flex flex-col h-full transition-all duration-300"
+                            className="bg-zinc-900/20 border border-white/5 p-10 flex flex-col h-full transition-all duration-300 relative group overflow-hidden"
                         >
-                            <h3 className="font-anton text-2xl uppercase tracking-tight mb-6">{item.title}</h3>
-                            <div className="mb-10">
-                                <span className="text-4xl md:text-5xl font-black text-white tracking-tighter">
+                            {/* Accent indicator on hover */}
+                            <div className="absolute top-0 left-0 w-full h-1 bg-accent transform translate-y-[-100%] group-hover:translate-y-0 transition-transform duration-500" />
+
+                            <h3 className="font-anton text-2xl uppercase tracking-tighter mb-8 text-white/90 group-hover:text-accent transition-colors">
+                                {item.title}
+                            </h3>
+
+                            <div className="mb-12 flex flex-col items-start gap-1">
+                                <span className="text-5xl lg:text-6xl font-anton text-white tracking-tighter">
                                     ₹{item.price.toLocaleString()}
                                 </span>
-                                {item.duration && <span className="text-white/40 text-sm ml-2 font-bold uppercase tracking-widest">{item.duration}</span>}
+                                {item.duration && (
+                                    <span className="text-accent text-[10px] font-black uppercase tracking-[0.3em]">
+                                        {item.duration}
+                                    </span>
+                                )}
                             </div>
                             <div className="mt-auto pt-8 border-t border-white/5">
                                 <motion.a
                                     href="https://rzp.io/l/XmEfQIuP1"
+                                    whileHover={{ backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 25px rgba(212,0,0,0.4)" }}
                                     whileTap={{ scale: 0.98 }}
-                                    className="w-full inline-flex justify-center items-center bg-accent text-white py-4 text-[10px] font-black uppercase tracking-[0.25em] transition-all hover:bg-white hover:text-black text-center"
+                                    className="w-full inline-flex justify-center items-center bg-accent text-black py-4.5 text-[11px] font-black uppercase tracking-[0.3em] transition-all text-center shadow-[0_10px_30px_rgba(255,222,2,0.15)]"
                                 >
                                     ENROLL NOW
                                 </motion.a>
@@ -152,38 +163,44 @@ export default function PricingPage() {
                     {/* PT Package 1 */}
                     <motion.div
                         variants={fadeIn}
-                        className="group relative bg-[#0A0A0A] border border-white/5 p-10 flex flex-col items-start"
+                        whileHover={{ y: -5, borderColor: "rgba(255, 222, 2, 0.2)" }}
+                        className="group relative bg-zinc-900/20 border border-white/5 p-10 flex flex-col items-start transition-all duration-300"
                     >
-                        <div className="mb-8">
-                            <Zap className="text-accent mb-4" size={32} />
-                            <h3 className="font-anton text-3xl uppercase tracking-tight">Standard Package <span className="text-accent/60">(Solo)</span></h3>
+                        <div className="mb-10 w-full">
+                            <div className="flex justify-between items-start mb-6">
+                                <Zap className="text-accent" size={32} />
+                                <span className="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">Package 01</span>
+                            </div>
+                            <h3 className="font-anton text-3xl uppercase tracking-tighter">Standard Package <br /><span className="text-accent">Solo</span></h3>
                         </div>
 
                         <div className="space-y-6 w-full mb-12">
                             <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                                <span className="text-white/40 font-bold uppercase tracking-widest text-xs">1 Session</span>
-                                <span className="text-2xl font-black">₹2,500</span>
+                                <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">1 Session</span>
+                                <span className="text-2xl font-anton">₹2,500</span>
                             </div>
                             <div className="flex justify-between items-end pb-4 border-b border-white/5">
                                 <div>
-                                    <span className="text-white/40 font-bold uppercase tracking-widest text-xs block">12 Sessions</span>
-                                    <span className="text-[10px] text-accent font-black uppercase tracking-widest">Validity 1 Month</span>
+                                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block line-through decoration-accent/30 opacity-40">₹30,000</span>
+                                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">12 Sessions</span>
+                                    <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 1 Month</span>
                                 </div>
-                                <span className="text-2xl font-black">₹27,500</span>
+                                <span className="text-2xl font-anton text-accent">₹27,500</span>
                             </div>
                             <div className="flex justify-between items-end pb-4 border-b border-white/5">
                                 <div>
-                                    <span className="text-white/40 font-bold uppercase tracking-widest text-xs block">36 Sessions</span>
-                                    <span className="text-[10px] text-accent font-black uppercase tracking-widest">Validity 3 Months</span>
+                                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block line-through decoration-accent/30 opacity-40">₹90,000</span>
+                                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">36 Sessions</span>
+                                    <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 3 Months</span>
                                 </div>
-                                <span className="text-2xl font-black">₹60,000</span>
+                                <span className="text-2xl font-anton text-accent">₹60,000</span>
                             </div>
                         </div>
 
                         <motion.a
                             href="https://rzp.io/l/KuMhkTpH"
-                            whileHover={{ x: 5 }}
-                            className="mt-auto inline-flex items-center gap-3 text-accent text-[10px] font-black uppercase tracking-[0.3em] group/btn"
+                            whileHover={{ x: 5, color: "#D40000" }}
+                            className="mt-auto inline-flex items-center gap-3 text-accent text-[10px] font-black uppercase tracking-[0.3em] group/btn transition-colors"
                         >
                             BOOK CONSULTATION <ChevronRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
                         </motion.a>
@@ -192,25 +209,29 @@ export default function PricingPage() {
                     {/* PT Package 2 */}
                     <motion.div
                         variants={fadeIn}
-                        className="group relative bg-[#0A0A0A] border border-white/5 p-10 flex flex-col items-start"
+                        whileHover={{ y: -5, borderColor: "rgba(255, 222, 2, 0.2)" }}
+                        className="group relative bg-zinc-900/20 border border-white/5 p-10 flex flex-col items-start transition-all duration-300"
                     >
-                        <div className="mb-8">
-                            <Flame className="text-accent mb-4" size={32} />
-                            <h3 className="font-anton text-3xl uppercase tracking-tight">Premium + Nutrition <span className="text-accent/60">(Solo)</span></h3>
+                        <div className="mb-10 w-full">
+                            <div className="flex justify-between items-start mb-6">
+                                <Flame className="text-accent" size={32} />
+                                <span className="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">Package 02</span>
+                            </div>
+                            <h3 className="font-anton text-3xl uppercase tracking-tighter">Premium + Nutrition <br /><span className="text-accent">Solo</span></h3>
                         </div>
 
                         <div className="space-y-6 w-full mb-12">
                             <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                                <span className="text-white/40 font-bold uppercase tracking-widest text-xs">1 Session</span>
-                                <span className="text-2xl font-black">₹3,500</span>
+                                <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">1 Session</span>
+                                <span className="text-2xl font-anton">₹3,500</span>
                             </div>
                             <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                                <span className="text-white/40 font-bold uppercase tracking-widest text-xs">12 Sessions</span>
-                                <span className="text-2xl font-black">₹36,000</span>
+                                <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">12 Sessions</span>
+                                <span className="text-2xl font-anton text-accent">₹36,000</span>
                             </div>
                             <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                                <span className="text-white/40 font-bold uppercase tracking-widest text-xs">36 Sessions</span>
-                                <span className="text-2xl font-black">₹99,000</span>
+                                <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">36 Sessions</span>
+                                <span className="text-2xl font-anton text-accent">₹99,000</span>
                             </div>
                         </div>
 
@@ -226,9 +247,9 @@ export default function PricingPage() {
                     {/* PT Package 3: Highlighted */}
                     <motion.div
                         variants={fadeIn}
-                        className="group relative bg-black border-2 border-accent p-10 flex flex-col items-start shadow-[0_0_40px_rgba(67,67,209,0.15)] scale-105 lg:scale-110 z-10"
+                        className="group relative bg-black border-2 border-accent p-10 flex flex-col items-start shadow-[0_0_40px_rgba(255,222,2,0.15)] scale-105 lg:scale-110 z-10"
                     >
-                        <div className="absolute top-0 right-0 bg-accent text-white px-4 py-1.5 text-[9px] font-black uppercase tracking-[0.2em]">
+                        <div className="absolute top-0 right-0 bg-accent-red text-white px-4 py-1.5 text-[9px] font-black uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(212,0,0,0.4)]">
                             EXCLUSIVE
                         </div>
                         <div className="mb-8">
@@ -241,20 +262,22 @@ export default function PricingPage() {
                                 <p className="text-white/60 text-sm font-medium mb-2 leading-relaxed">
                                     Work directly with our head transformation specialist for complete physiological and elite performance results.
                                 </p>
-                                <div className="flex justify-between items-end mt-6">
-                                    <div>
-                                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">36 Sessions</span>
-                                        <span className="text-[10px] text-accent font-black uppercase tracking-widest">Validity 3 Months</span>
+                                <div className="flex flex-col items-start mt-6 gap-2">
+                                    <span className="text-5xl font-anton text-accent tracking-tighter">₹1,95,000</span>
+                                    <div className="flex items-center gap-4">
+                                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">36 Sessions</span>
+                                        <span className="w-1 h-1 bg-accent/40 rounded-full" />
+                                        <span className="text-[10px] text-accent/60 font-black uppercase tracking-widest">Validity 3 Months</span>
                                     </div>
-                                    <span className="text-3xl font-black text-accent">₹1,95,000</span>
                                 </div>
                             </div>
                         </div>
 
                         <motion.a
                             href="https://rzp.io/l/KuMhkTpH"
+                            whileHover={{ scale: 1.02, backgroundColor: "#D40000", color: "#ffffff" }}
                             whileTap={{ scale: 0.95 }}
-                            className="w-full mt-auto inline-flex justify-center items-center bg-accent text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] transition-all hover:bg-white hover:text-black"
+                            className="w-full mt-auto inline-flex justify-center items-center bg-accent text-black py-5 text-[10px] font-black uppercase tracking-[0.3em] transition-all"
                         >
                             BOOK CONSULTATION
                         </motion.a>
@@ -306,9 +329,9 @@ export default function PricingPage() {
 
                             <motion.a
                                 href="https://rzp.io/l/XmEfQIuP1"
-                                whileHover={{ scale: 1.05 }}
+                                whileHover={{ scale: 1.05, backgroundColor: "#D40000", boxShadow: "0 0 30px rgba(212, 0, 0, 0.4)" }}
                                 whileTap={{ scale: 0.95 }}
-                                className="inline-flex items-center gap-4 bg-accent text-white px-12 py-6 text-xs font-black uppercase tracking-[0.3em] transition-all hover:bg-white hover:text-black shadow-[0_15px_40px_rgba(67,67,209,0.3)]"
+                                className="inline-flex items-center gap-4 bg-accent text-black px-12 py-6 text-xs font-black uppercase tracking-[0.3em] transition-all shadow-[0_15px_40px_rgba(255,222,2,0.1)]"
                             >
                                 APPLY FOR DBS <MoveRight size={18} />
                             </motion.a>

@@ -13,7 +13,7 @@ const quickLinks = [
     },
     {
         title: "JOURNEY",
-        description: "SEE HOW WE TRANSFORM BEGINNERS INTO WARRIORS.",
+        description: "SEE HOW WE TRANSFORM BEGINNERS INTO THEIR ELITE SELF.",
         icon: <Trophy size={20} />,
         link: "/gallery",
     },
@@ -57,9 +57,9 @@ export default function PreFooter() {
 
                         <TransitionLink href="/#contact">
                             <motion.button
-                                whileHover={{ scale: 1.05 }}
+                                whileHover={{ scale: 1.05, backgroundColor: "#D40000", color: "#ffffff" }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-accent text-white px-10 md:px-16 py-5 md:py-6 font-black uppercase tracking-[0.4em] text-xs md:text-sm hover:bg-white hover:text-black transition-all shadow-[0_0_30px_rgba(67,67,209,0.35)]"
+                                className="bg-accent text-black px-10 md:px-16 py-5 md:py-6 font-black uppercase tracking-[0.4em] text-xs md:text-sm transition-all shadow-[0_0_30px_rgba(255,222,2,0.2)]"
                             >
                                 GET YOUR FIRST CLASS
                             </motion.button>
@@ -89,7 +89,7 @@ export default function PreFooter() {
                         <TransitionLink
                             key={item.title}
                             href={item.link}
-                            className="group bg-zinc-900/40 backdrop-blur-sm border border-white/5 p-8 rounded-xl hover:border-accent/40 transition-all hover:-translate-y-2 flex flex-col justify-between h-full"
+                            className="group bg-zinc-900/40 backdrop-blur-sm border border-white/5 p-8 rounded-xl hover:border-accent-red/40 transition-all hover:-translate-y-2 flex flex-col justify-between h-full hover:bg-zinc-900/60"
                         >
                             <motion.div
                                 variants={{
@@ -99,10 +99,10 @@ export default function PreFooter() {
                                 className="flex flex-col h-full justify-between"
                             >
                                 <div>
-                                    <div className="text-accent mb-6 group-hover:scale-110 transition-transform origin-left">
+                                    <div className="text-accent mb-6 group-hover:text-accent-red transition-colors group-hover:scale-110 origin-left">
                                         {item.icon}
                                     </div>
-                                    <h3 className="text-xl font-anton uppercase tracking-widest text-white mb-3 group-hover:text-accent transition-colors">
+                                    <h3 className="text-xl font-anton uppercase tracking-widest text-white mb-3 group-hover:text-accent-red transition-colors">
                                         {item.title}
                                     </h3>
                                     <p className="text-white/40 text-[10px] md:text-xs leading-relaxed uppercase tracking-wider mb-8">
@@ -111,8 +111,8 @@ export default function PreFooter() {
                                 </div>
 
                                 <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.3em] text-white/60 group-hover:text-white transition-colors">
-                                    EXPLORE NOW <ArrowUpRight size={14} className="text-accent" />
-                                    <div className="h-px bg-white/10 flex-grow group-hover:bg-accent/50 transition-colors" />
+                                    EXPLORE NOW <ArrowUpRight size={14} className="text-accent group-hover:text-accent-red transition-colors" />
+                                    <div className="h-px bg-white/10 flex-grow group-hover:bg-accent-red/30 transition-colors" />
                                 </div>
                             </motion.div>
                         </TransitionLink>

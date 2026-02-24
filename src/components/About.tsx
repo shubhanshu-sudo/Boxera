@@ -44,7 +44,7 @@ export default function About() {
                 >
                     <div className="relative">
                         <h3 className="text-3xl md:text-5xl font-anton uppercase text-white leading-[1.1] mb-2 relative z-10">
-                            BOXX ERA IS A <span className="text-accent">SERIOUS</span>, RESULT-ORIENTED STUDIO.
+                            BOXX ERA IS AN <span className="text-accent">ELITE</span> TRANSFORMATION POWERHOUSE.
                         </h3>
                         <div className="absolute -left-4 -top-4 w-20 h-20 bg-accent/10 rounded-full blur-3xl" />
                     </div>
@@ -55,7 +55,7 @@ export default function About() {
                         </p>
 
                         <p className="text-lg md:text-xl font-normal text-white/85 leading-relaxed">
-                            Many times, we honestly ask people to join other gyms or studios if what they are looking for is not something we provide. Yes, it is true — <span className="border-b border-accent/30 pb-1">we carefully select our clients.</span> We do not train non-athletes.
+                            Many times, we honestly ask people to join other gyms or studios if what they are looking for is not something we provide. Yes, it is true — <span className="border-b border-accent/30 pb-1">we carefully select our clients.</span> We prioritize those committed to a complete metamorphosis.
                         </p>
 
                         <p className="text-lg md:text-xl font-normal text-white/85 leading-relaxed">
@@ -80,6 +80,60 @@ export default function About() {
                         </p>
                     </div>
                 </motion.div>
+            </div>
+
+            {/* The Hard Filter Section (Strategic Red & Yellow use) */}
+            <div className="container mx-auto mt-32 md:mt-48 relative z-10 px-4 md:px-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 border border-white/5">
+                    {/* Yellow: For You */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-zinc-900/50 p-10 md:p-16"
+                    >
+                        <span className="text-accent font-black uppercase tracking-[0.3em] text-[10px] mb-6 block">Inclusion</span>
+                        <h4 className="text-3xl md:text-4xl font-anton uppercase text-white mb-8">This is <span className="text-accent underline decoration-accent/30 underline-offset-8">for you</span> if:</h4>
+                        <ul className="space-y-4">
+                            {[
+                                "You are looking for a complete life transformation.",
+                                "You value discipline over short-term trends.",
+                                "You want to train in an elite, focused environment.",
+                                "You are ready to be coached by pros, not business owners."
+                            ].map((item, i) => (
+                                <li key={i} className="flex gap-4 items-start text-white/70 uppercase tracking-wider text-[11px] md:text-xs">
+                                    <div className="w-1.5 h-1.5 bg-accent rounded-full mt-1 flex-shrink-0" />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
+
+                    {/* Red: NOT For You */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="bg-zinc-900/50 p-10 md:p-16 border-t md:border-t-0 md:border-l border-white/5"
+                    >
+                        <span className="text-accent-red font-black uppercase tracking-[0.3em] text-[10px] mb-6 block">Exclusion</span>
+                        <h4 className="text-3xl md:text-4xl font-anton uppercase text-white mb-8">This is <span className="text-red-600 underline decoration-red-600/30 underline-offset-8">NOT for you</span> if:</h4>
+                        <ul className="space-y-4">
+                            {[
+                                "You want to train shirtless or socialize for hours.",
+                                "You are looking for 'mirrors' and 'Instagram lighting'.",
+                                "You cannot commit to the required discipline.",
+                                "You are looking for shortcuts or trendy crash diets."
+                            ].map((item, i) => (
+                                <li key={i} className="flex gap-4 items-start text-white/70 uppercase tracking-wider text-[11px] md:text-xs">
+                                    <div className="w-1.5 h-1.5 bg-accent-red rounded-full mt-1 flex-shrink-0 shadow-[0_0_8px_rgba(255,0,0,0.5)]" />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );

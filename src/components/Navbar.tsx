@@ -30,10 +30,9 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "Training", href: "/#programs" },
-        { name: "Coaches", href: "/articles#coach-jeeth" },
-        { name: "Gallery", href: "/gallery" },
         { name: "Articles", href: "/articles" },
         { name: "Pricing", href: "/pricing" },
+        { name: "Gallery", href: "/gallery" },
         { name: "Contact", href: "/#contact" },
     ];
 
@@ -75,10 +74,10 @@ export default function Navbar() {
                                 key={link.name}
                                 href={link.href}
                                 onClick={(e) => handleLinkClick(e, link.href)}
-                                className={`transition-all duration-300 hover:text-accent relative group ${pathname === link.href ? "text-accent" : "text-white"}`}
+                                className={`transition-all duration-300 hover:text-accent relative group ${pathname === link.href ? "text-accent-red" : "text-white"}`}
                             >
                                 {link.name}
-                                <span className={`absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent transition-all duration-300 group-hover:w-full ${pathname === link.href ? "w-full" : ""}`} />
+                                <span className={`absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent transition-all duration-300 group-hover:w-full ${pathname === link.href ? "w-full bg-accent-red shadow-[0_0_8px_rgba(212,0,0,0.6)]" : ""}`} />
                             </TransitionLink>
                         ))}
                     </div>
@@ -87,9 +86,9 @@ export default function Navbar() {
                     <div className="flex-1 flex items-center justify-end gap-3 md:gap-6">
                         <TransitionLink href="/#contact" onClick={(e) => handleLinkClick(e, "/#contact")}>
                             <motion.button
-                                whileHover={{ scale: 1.05 }}
+                                whileHover={{ scale: 1.05, backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 25px rgba(212,0,0,0.4)" }}
                                 whileTap={{ scale: 0.95 }}
-                                className="hidden xs:flex bg-accent text-white px-6 md:px-10 py-2.5 md:py-3.5 text-[10px] md:text-[11px] font-black uppercase tracking-[0.25em] shadow-[0_10px_30px_rgba(67,67,209,0.3)] hover:bg-white hover:text-black transition-all duration-500 items-center justify-center whitespace-nowrap"
+                                className="hidden xs:flex bg-accent text-black px-6 md:px-10 py-2.5 md:py-3.5 text-[10px] md:text-[11px] font-black uppercase tracking-[0.25em] shadow-[0_10px_30px_rgba(255,222,2,0.2)] transition-all duration-500 items-center justify-center whitespace-nowrap"
                             >
                                 JOIN THE ERA NOW
                             </motion.button>
@@ -158,7 +157,7 @@ export default function Navbar() {
                                 className="w-full mt-10"
                             >
                                 <TransitionLink href="/#contact" onClick={() => setIsOpen(false)}>
-                                    <button className="w-full bg-accent text-white py-5 px-6 text-[10px] font-black uppercase tracking-[0.4em] shadow-[0_15px_40px_rgba(67,67,209,0.3)] hover:bg-white hover:text-black transition-all duration-500 transform active:scale-[0.98] text-left flex justify-between items-center group/mb">
+                                    <button className="w-full bg-accent text-black py-5 px-6 text-[10px] font-black uppercase tracking-[0.4em] shadow-[0_15px_40px_rgba(255,222,2,0.2)] hover:bg-accent-red hover:text-white transition-all duration-500 transform active:scale-[0.98] text-left flex justify-between items-center group/mb">
                                         <span>JOIN THE ERA NOW</span>
                                         <ArrowUpRight size={16} className="group-hover/mb:translate-x-1 group-hover/mb:-translate-y-1 transition-transform" />
                                     </button>

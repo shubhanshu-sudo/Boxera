@@ -184,7 +184,8 @@ export default function Contact() {
                                         <motion.button
                                             key="submit"
                                             disabled={status === "loading"}
-                                            className="w-full bg-accent text-white py-5 font-black uppercase tracking-[.3em] text-xs flex items-center justify-center gap-4 transition-all hover:bg-white hover:text-black disabled:opacity-50 group"
+                                            whileHover={{ scale: 1.02, backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 25px rgba(212,0,0,0.4)" }}
+                                            className="w-full bg-accent text-black py-5 font-black uppercase tracking-[.3em] text-xs flex items-center justify-center gap-4 transition-all disabled:opacity-50 group shadow-[0_10px_30px_rgba(255,222,2,0.15)]"
                                         >
                                             {status === "loading" ? "SENDING..." : (
                                                 <>SEND ENQUIRY <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></>

@@ -33,7 +33,7 @@ export default function DreamBodySeriesPage() {
     return (
         <main className="bg-black text-white min-h-screen selection:bg-accent selection:text-white">
             {/* 1️⃣ HERO SECTION */}
-            <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+            <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden pt-20 md:pt-24">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/training.png"
@@ -57,7 +57,7 @@ export default function DreamBodySeriesPage() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-accent text-[10px] md:text-xs font-black uppercase tracking-[0.6em] mb-10 md:mb-12 block"
+                            className="text-accent text-[10px] md:text-xs font-black uppercase tracking-[0.6em] mb-6 md:mb-8 block"
                         >
                             ELITE TRANSFORMATION PROGRAM
                         </motion.span>
@@ -67,7 +67,7 @@ export default function DreamBodySeriesPage() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4 }}
-                            className="text-[clamp(3.5rem,14vw,10rem)] font-anton uppercase leading-[1.1] tracking-tighter mb-10 md:mb-14"
+                            className="text-[clamp(2.5rem,10vw,7.5rem)] font-anton uppercase leading-[1.0] tracking-tighter mb-8 md:mb-10"
                         >
                             <span className="block mb-2 md:mb-4">DREAM BODY</span>
                             <span className="text-accent block">SERIES</span>
@@ -78,7 +78,7 @@ export default function DreamBodySeriesPage() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6 }}
-                            className="text-base md:text-xl lg:text-2xl font-light uppercase tracking-[0.25em] text-white/60 max-w-4xl mx-auto mb-16 md:mb-20 leading-relaxed px-4"
+                            className="text-sm md:text-lg lg:text-xl font-light uppercase tracking-[0.25em] text-white/60 max-w-4xl mx-auto mb-12 md:mb-16 leading-relaxed px-4"
                         >
                             A 51-Day Physiological & Mental Evolution<br className="hidden sm:block" /> Designed For The Dedicated.
                         </motion.p>
@@ -92,9 +92,9 @@ export default function DreamBodySeriesPage() {
                         >
                             <motion.a
                                 href="https://rzp.io/l/XmEfQIuP1"
-                                whileHover={{ scale: 1.05 }}
+                                whileHover={{ scale: 1.05, backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 50px rgba(212,0,0,0.4)" }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-accent text-white px-12 md:px-16 py-5 md:py-6 font-black uppercase tracking-[0.35em] text-[10px] md:text-xs shadow-[0_0_40px_rgba(67,67,209,0.4)] hover:shadow-[0_0_60px_rgba(67,67,209,0.6)] transition-all duration-500"
+                                className="bg-accent text-black px-12 md:px-16 py-5 md:py-6 font-black uppercase tracking-[0.35em] text-[10px] md:text-xs transition-all duration-500"
                             >
                                 START YOUR EVOLUTION
                             </motion.a>
@@ -165,7 +165,7 @@ export default function DreamBodySeriesPage() {
                                     { title: "Clinical Nutrition", text: "Science-backed meal protocols that fuel performance and maximize aesthetic results." }
                                 ].map((item, i) => (
                                     <div key={i} className="flex gap-6 group">
-                                        <div className="w-12 h-[1px] bg-accent mt-4 group-hover:w-16 transition-all" />
+                                        <div className="w-12 h-[1px] bg-accent-red mt-4 group-hover:w-16 transition-all" />
                                         <div>
                                             <h4 className="text-xl font-anton uppercase text-white mb-3 tracking-wider">{item.title}</h4>
                                             <p className="text-sm text-white/40 leading-relaxed font-bold uppercase tracking-widest">{item.text}</p>
@@ -206,7 +206,7 @@ export default function DreamBodySeriesPage() {
                             </div>
                             <motion.a
                                 href="https://rzp.io/l/XmEfQIuP1"
-                                className="w-full bg-white text-black py-5 font-black uppercase tracking-[0.3em] text-xs hover:bg-accent hover:text-white transition-all"
+                                className="w-full bg-accent text-black py-5 font-black uppercase tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all"
                             >
                                 RESERVE STUDIO SLOT
                             </motion.a>
@@ -225,7 +225,7 @@ export default function DreamBodySeriesPage() {
                             </div>
                             <motion.a
                                 href="https://rzp.io/l/XmEfQIuP1"
-                                className="w-full bg-accent text-white py-5 font-black uppercase tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all"
+                                className="w-full bg-accent text-black py-5 font-black uppercase tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all"
                             >
                                 START ONLINE PROGRAM
                             </motion.a>
@@ -256,7 +256,7 @@ export default function DreamBodySeriesPage() {
                                 transition={{ delay: idx * 0.05 }}
                                 className="flex items-start gap-6 group"
                             >
-                                <div className="flex-shrink-0 w-8 h-8 rounded-full border border-accent/40 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-all duration-500">
+                                <div className="flex-shrink-0 w-8 h-8 rounded-full border border-accent/40 flex items-center justify-center group-hover:bg-accent-red group-hover:border-accent-red transition-all duration-500">
                                     <Check size={14} className="text-accent group-hover:text-white transition-colors" />
                                 </div>
                                 <p className="text-sm md:text-base font-bold uppercase tracking-widest text-white/60 group-hover:text-white transition-colors leading-relaxed pt-1">
@@ -299,9 +299,9 @@ export default function DreamBodySeriesPage() {
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
                             <motion.a
                                 href="https://rzp.io/l/XmEfQIuP1"
-                                whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(67,67,209,0.5)" }}
+                                whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(255,222,2,0.4)" }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-accent text-white px-16 py-7 font-black uppercase tracking-[0.5em] text-xs transition-all w-full sm:w-auto"
+                                className="bg-accent text-black px-16 py-7 font-black uppercase tracking-[0.5em] text-xs transition-all w-full sm:w-auto"
                             >
                                 APPLY FOR DBS
                             </motion.a>

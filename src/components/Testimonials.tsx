@@ -132,7 +132,7 @@ export default function Testimonials() {
                                     viewport={{ once: true }}
                                     className="bg-zinc-900/30 border border-white/5 p-8 md:p-10 rounded-sm flex flex-col justify-between h-full hover:border-accent/40 hover:bg-zinc-900/50 transition-all duration-500 group relative overflow-hidden"
                                 >
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity" />
 
                                     <div>
                                         <div className="flex gap-1 mb-8">
@@ -202,14 +202,15 @@ export default function Testimonials() {
                         </div>
                     </div>
 
-                    <a
+                    <motion.a
                         href="https://www.google.com/search?client=safari&hs=yCz9&sca_esv=c6630c33b2d75486&hl=en-in&cs=1&sxsrf=ANbL-n4scfqjcoasdUD0aUsT0DEuJlPyoQ:1770633134158&q=boxx+era+fitness+studio+reviews&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOSZQaM4ths956hJQtjt83JL9LGEo9NMATAZww-O97BYyA42v6jomKrq25M2fPVnQ8aUO1ACm8-HF6k-IDmlrForkvgaFwydKUIpjIgjQVOL5VpMY0g%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white text-black px-10 py-5 font-black uppercase tracking-widest text-[10px] md:text-xs flex items-center gap-4 transition-all hover:bg-accent hover:text-white hover:gap-6 group"
+                        whileHover={{ scale: 1.05, backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 25px rgba(212,0,0,0.4)" }}
+                        className="bg-accent text-black px-10 py-5 font-black uppercase tracking-widest text-[10px] md:text-xs flex items-center gap-4 transition-all group"
                     >
                         VIEW MORE REVIEWS <MoveRight size={18} className="translate-x-0 group-hover:translate-x-1 transition-transform" />
-                    </a>
+                    </motion.a>
                 </motion.div>
             </div>
         </section>

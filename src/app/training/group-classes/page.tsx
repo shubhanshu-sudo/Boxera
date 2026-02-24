@@ -85,7 +85,7 @@ export default function GroupClasses() {
     return (
         <main className="bg-black text-white min-h-screen selection:bg-accent selection:text-white">
             {/* 1️⃣ HERO SECTION */}
-            <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+            <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden pt-20 md:pt-24">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/DSC_0259.jpeg"
@@ -103,20 +103,20 @@ export default function GroupClasses() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, ease: "easeOut" }}
                     >
-                        <h1 className="text-[clamp(3.5rem,10vw,8rem)] font-anton uppercase leading-none tracking-tighter mb-6">
+                        <h1 className="text-[clamp(2.5rem,8vw,6.5rem)] font-anton uppercase leading-none tracking-tighter mb-4">
                             GROUP CLASSES
                         </h1>
-                        <p className="text-xl md:text-2xl font-light uppercase tracking-[0.2em] text-white/80 mb-4">
+                        <p className="text-lg md:text-xl font-light uppercase tracking-[0.2em] text-white/80 mb-3">
                             Train Together. Perform Like Athletes.
                         </p>
-                        <p className="text-xs md:text-sm font-black uppercase tracking-[0.5em] text-accent mb-12">
+                        <p className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.5em] text-accent mb-10">
                             High intensity. Structured programming. Zero excuses.
                         </p>
                         <TransitionLink href="/#contact">
                             <motion.button
-                                whileHover={{ scale: 1.05, backgroundColor: "#3333A1" }}
+                                whileHover={{ scale: 1.05, backgroundColor: "#FFFFFF", color: "#000000" }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-accent text-white px-10 md:px-14 py-5 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs transition-all shadow-[0_0_30px_rgba(67,67,209,0.3)]"
+                                className="bg-accent text-black px-10 md:px-14 py-5 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs transition-all shadow-[0_0_30px_rgba(255,222,2,0.3)]"
                             >
                                 JOIN A CLASS
                             </motion.button>
@@ -237,7 +237,7 @@ export default function GroupClasses() {
                                     <div className="w-12 h-[1px] bg-accent" />
                                     <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Cross Training</span>
                                 </div>
-                                <h3 className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight">WOD CHIPPER</h3>
+                                <h3 className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight">WOD <span className="text-accent-red">CHIPPER</span></h3>
                                 <p className="text-lg md:text-xl font-normal text-white/80 leading-relaxed max-w-xl">
                                     Inspired by cross training, expect &ldquo;EMOMs&rdquo; and &ldquo;AMRAPs&rdquo; as standard and be prepared to dig deep and push hard. The WOD combines effective high intensity training and strength work in an encouraging and motivating environment.
                                 </p>
@@ -260,7 +260,7 @@ export default function GroupClasses() {
                                     <div className="w-12 h-[1px] bg-accent" />
                                     <span className="text-accent text-xs font-black uppercase tracking-[0.4em]">Fit Fast</span>
                                 </div>
-                                <h3 className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight">FORMULA3</h3>
+                                <h3 className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight">FORMULA<span className="text-accent-red">3</span></h3>
                                 <p className="text-lg md:text-xl font-normal text-white/80 leading-relaxed max-w-xl">
                                     This is the Formula to get you fit, fast. A competitive, high intensity circuit with 3 targeted blocks, for a full spectrum workout.
                                 </p>
@@ -340,7 +340,7 @@ export default function GroupClasses() {
             </section>
 
             {/* 3️⃣ FINAL CTA SECTION */}
-            <section className="py-32 md:py-48 px-6 bg-[radial-gradient(circle_at_bottom,rgba(67,67,209,0.15)_0%,transparent_70%)] text-center border-t border-white/5 overflow-hidden">
+            <section className="py-32 md:py-48 px-6 bg-[radial-gradient(circle_at_bottom,rgba(255,222,2,0.1)_0%,transparent_70%)] text-center border-t border-white/5 overflow-hidden">
                 <div className="container mx-auto">
                     <motion.div {...fadeIn}>
                         <h2 className="text-5xl md:text-[6rem] lg:text-[7.5rem] font-anton uppercase mb-12 leading-[0.9] tracking-tighter text-white">
@@ -357,10 +357,12 @@ export default function GroupClasses() {
                             <motion.button
                                 whileHover={{
                                     scale: 1.05,
-                                    boxShadow: "0 0 40px rgba(67,67,209,0.6)"
+                                    backgroundColor: "#D40000",
+                                    color: "#ffffff",
+                                    boxShadow: "0 0 40px rgba(212,0,0,0.5)"
                                 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-accent text-white px-12 md:px-16 py-6 md:py-7 font-black uppercase tracking-[0.4em] text-[10px] md:text-xs transition-all"
+                                className="bg-accent text-black px-12 md:px-16 py-6 md:py-7 font-black uppercase tracking-[0.4em] text-[10px] md:text-xs transition-all"
                             >
                                 JOIN THE ERA NOW
                             </motion.button>

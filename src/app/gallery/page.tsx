@@ -194,7 +194,7 @@ export default function GalleryPage() {
             <Navbar />
 
             {/* SECTION 1: GALLERY HERO */}
-            <section className="relative h-[65vh] md:h-[80vh] flex items-center overflow-hidden">
+            <section className="relative h-[65vh] md:h-[80vh] flex items-center overflow-hidden pt-20 md:pt-24">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/IMG_5062.jpg"
@@ -206,7 +206,7 @@ export default function GalleryPage() {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />
                 </div>
 
-                <div className="container mx-auto px-6 relative z-10 pt-20">
+                <div className="container mx-auto px-6 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -216,9 +216,9 @@ export default function GalleryPage() {
                         <span className="text-accent text-xs font-black tracking-[0.6em] uppercase mb-8 block md:text-sm">
                             GALLERY
                         </span>
-                        <h1 className="text-4xl xs:text-5xl md:text-8xl lg:text-9xl font-anton uppercase leading-[1.1] md:leading-[0.9] mb-8 md:mb-12 flex flex-col items-start md:items-center">
+                        <h1 className="text-4xl xs:text-5xl md:text-7xl lg:text-8xl font-anton uppercase leading-[1.1] md:leading-[0.9] mb-6 md:mb-10 flex flex-col items-start md:items-center">
                             <span>REAL PEOPLE.</span>
-                            <span className="md:my-2">REAL TRAINING.</span>
+                            <span className="md:my-1">REAL TRAINING.</span>
                             <span className="text-accent">REAL RESULTS.</span>
                         </h1>
                         <div className="flex items-center justify-start md:justify-center gap-6 mt-8 md:mt-12">
@@ -240,14 +240,14 @@ export default function GalleryPage() {
                             <button
                                 key={cat}
                                 onClick={() => setFilter(cat)}
-                                className={`text-[10px] md:text-xs font-black tracking-[0.2em] uppercase transition-all relative py-2 px-2 min-h-[44px] flex items-center justify-center ${filter === cat ? "text-accent" : "text-white/40 hover:text-white"
+                                className={`text-[10px] md:text-xs font-black tracking-[0.2em] uppercase transition-all relative py-2 px-2 min-h-[44px] flex items-center justify-center ${filter === cat ? "text-accent-red" : "text-white/40 hover:text-accent"
                                     }`}
                             >
                                 {cat}
                                 {filter === cat && (
                                     <motion.div
                                         layoutId="filter-pill"
-                                        className="absolute bottom-0 left-0 w-full h-[2px] bg-accent"
+                                        className="absolute bottom-0 left-0 w-full h-[2px] bg-accent-red shadow-[0_0_8px_rgba(212,0,0,0.6)]"
                                         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                     />
                                 )}
@@ -287,12 +287,12 @@ export default function GalleryPage() {
 
                                     {/* Overlay */}
                                     <div className="absolute inset-0 bg-black/40 lg:bg-black/50 lg:group-hover:bg-black/20 transition-all duration-700" />
-                                    <div className="absolute inset-0 border border-accent/0 lg:group-hover:border-accent/40 lg:group-hover:shadow-[inset_0_0_50px_rgba(67,67,209,0.1)] transition-all duration-500 pointer-events-none" />
+                                    <div className="absolute inset-0 border border-accent/0 lg:group-hover:border-accent/40 lg:group-hover:shadow-[inset_0_0_50px_rgba(255,222,2,0.1)] transition-all duration-500 pointer-events-none" />
 
                                     {/* Info Overlay - Desktop (Hover) */}
                                     <div className="hidden lg:flex absolute inset-0 flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-black/80 via-transparent to-transparent">
                                         <div className="flex items-center gap-3 mb-3">
-                                            <span className="text-[10px] font-black text-white bg-accent px-2 py-1 tracking-widest uppercase">
+                                            <span className="text-[10px] font-black text-black bg-accent px-2 py-1 tracking-widest uppercase">
                                                 {image.category}
                                             </span>
                                         </div>
@@ -368,7 +368,7 @@ export default function GalleryPage() {
                             <div className="absolute bottom-8 left-8 right-8 md:bottom-12 md:left-12">
                                 <motion.span
                                     whileHover={{ scale: 1.05 }}
-                                    className="inline-block px-4 py-2 bg-accent text-white text-[10px] font-black uppercase tracking-widest mb-6 cursor-default md:text-xs"
+                                    className="inline-block px-4 py-2 bg-accent text-black text-[10px] font-black uppercase tracking-widest mb-6 cursor-default md:text-xs"
                                 >
                                     MEMBER CASE STUDY
                                 </motion.span>
@@ -491,12 +491,16 @@ export default function GalleryPage() {
                         </h2>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10">
-                            <Link href="/#contact" className="w-full sm:w-auto bg-accent text-white px-10 md:px-16 py-5 md:py-6 text-[10px] md:text-xs font-black uppercase tracking-[0.4em] shadow-[0_20px_60px_rgba(67,67,209,0.3)] hover:bg-white hover:text-black transition-all duration-500 transform hover:-translate-y-2">
-                                GET YOUR FIRST CLASS
-                            </Link>
-                            <Link href="/#contact" className="w-full sm:w-auto border-2 border-accent/40 text-white px-10 md:px-16 py-5 md:py-6 text-[10px] md:text-xs font-black uppercase tracking-[0.4em] hover:bg-accent hover:border-accent transition-all duration-500 transform hover:-translate-y-2">
-                                CONTACT US
-                            </Link>
+                            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
+                                <Link href="/#contact" className="inline-block w-full bg-accent text-black px-10 md:px-16 py-5 md:py-6 text-[10px] md:text-xs font-black uppercase tracking-[0.4em] shadow-[0_20px_60px_rgba(255,222,2,0.2)] hover:bg-accent-red hover:text-white transition-all duration-500">
+                                    GET YOUR FIRST CLASS
+                                </Link>
+                            </motion.div>
+                            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
+                                <Link href="/#contact" className="inline-block w-full border-2 border-accent/40 text-white px-10 md:px-16 py-5 md:py-6 text-[10px] md:text-xs font-black uppercase tracking-[0.4em] hover:bg-accent-red hover:border-accent-red hover:text-white transition-all duration-500">
+                                    CONTACT US
+                                </Link>
+                            </motion.div>
                         </div>
                     </motion.div>
                 </div>

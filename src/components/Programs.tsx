@@ -111,7 +111,7 @@ export default function Programs() {
                             TRAINING DISCIPLINE
                         </span>
                         <h2 className="text-5xl md:text-7xl lg:text-8xl font-anton uppercase tracking-tight leading-[0.9]">
-                            ELITE <br /> <span className="text-white">PROGRAMS</span>
+                            ELITE <br /> <span className="text-white">TRANSFORMATIONS</span>
                         </h2>
                     </motion.div>
 
@@ -123,8 +123,8 @@ export default function Programs() {
                     >
                         <div className="w-12 h-1 bg-accent mb-6 md:block hidden" />
                         <p className="text-white/40 text-xs md:text-sm leading-relaxed uppercase tracking-[0.2em]">
-                            WE DON&apos;T DO &quot;FITNESS CLASSES.&quot; WE TRAIN PEOPLE TO BECOME WEAPONS.
-                            CHOOSE YOUR PATH AND FORGE YOUR LEGACY IN THE RING.
+                            WE DON&apos;T JUST TEACH BOXING. WE ENGINEER PHYSICAL AND MENTAL EVOLUTION.
+                            CHOOSE YOUR PATH AND REDEFINE WHAT YOUR BODY IS CAPABLE OF.
                         </p>
                     </motion.div>
                 </div>
@@ -148,7 +148,7 @@ export default function Programs() {
                                 onMouseLeave={() => !isMobile && setHoveredIndex(null)}
                                 className={`group relative h-[550px] md:h-[650px] lg:h-[750px] bg-zinc-900 overflow-hidden border transition-all duration-700 rounded-sm cursor-pointer flex-shrink-0 w-[85vw] sm:w-[60vw] lg:w-auto snap-center lg:snap-align-none
                                     ${!isMobile && hoveredIndex !== null && hoveredIndex !== index ? "opacity-30 grayscale blur-[1px]" : "opacity-100 grayscale-0 blur-0"}
-                                    ${isActive ? "border-accent shadow-[0_0_40px_rgba(67,67,209,0.35)]" : "border-white/5"}
+                                    ${isActive ? "border-accent shadow-[0_0_40px_rgba(255,222,2,0.25)]" : "border-white/5"}
                                 `}
                             >
                                 <div className="absolute inset-0">
@@ -186,7 +186,7 @@ export default function Programs() {
                                                         <motion.div
                                                             key={tIdx}
                                                             variants={itemVariants}
-                                                            className="border border-white/20 bg-white/5 backdrop-blur-md px-4 py-3 md:py-3 py-2.5 text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] transform transition-all duration-300 hover:border-accent hover:bg-white/10"
+                                                            className="border border-white/20 bg-white/5 backdrop-blur-md px-4 py-3 md:py-3 py-2.5 text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] transform transition-all duration-300 hover:border-accent-red hover:bg-accent-red/10"
                                                         >
                                                             {tag}
                                                         </motion.div>
@@ -205,7 +205,8 @@ export default function Programs() {
                                                         initial={{ opacity: 0, y: 20 }}
                                                         animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                                         transition={{ delay: 0.4, duration: 0.5 }}
-                                                        className="mt-2 md:mt-4 bg-white text-black px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all hover:bg-accent hover:text-white hover:gap-5"
+                                                        whileHover={{ backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 25px rgba(212,0,0,0.4)" }}
+                                                        className="mt-2 md:mt-4 bg-accent text-black px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all shadow-[0_5px_15px_rgba(0,0,0,0.2)]"
                                                     >
                                                         EXPLORE NOW <MoveRight size={16} />
                                                     </motion.button>
@@ -240,8 +241,8 @@ export default function Programs() {
                                                 <ul className="flex flex-col gap-3 md:gap-4 items-start mb-8 md:mb-10 w-fit mx-auto">
                                                     {program.features?.map((f, fIdx) => (
                                                         f ? (
-                                                            <li key={fIdx} className="text-white/60 text-[9px] md:text-[10px] uppercase tracking-[0.2em] flex items-center gap-3">
-                                                                <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 shadow-[0_0_8px_rgba(67,67,209,0.6)]" />
+                                                            <li key={fIdx} className="text-white/60 text-[9px] md:text-[10px] uppercase tracking-[0.2em] flex items-center gap-3 group/li">
+                                                                <span className="w-1.5 h-1.5 rounded-full bg-accent-red flex-shrink-0 shadow-[0_0_8px_rgba(212,0,0,0.6)] group-hover/li:bg-accent group-hover/li:shadow-[0_0_8px_rgba(255,222,2,0.6)] transition-all" />
                                                                 {f}
                                                             </li>
                                                         ) : null
@@ -257,7 +258,8 @@ export default function Programs() {
                                                         initial={{ opacity: 0, y: 20 }}
                                                         animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                                         transition={{ delay: 0.4, duration: 0.5 }}
-                                                        className="bg-white text-black px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all hover:bg-accent hover:text-white hover:gap-5"
+                                                        whileHover={{ backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 25px rgba(212,0,0,0.4)" }}
+                                                        className="bg-accent text-black px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all shadow-[0_5px_15px_rgba(0,0,0,0.2)]"
                                                     >
                                                         EXPLORE NOW <MoveRight size={16} />
                                                     </motion.button>
