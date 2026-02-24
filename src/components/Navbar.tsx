@@ -30,7 +30,6 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "Training", href: "/#programs" },
-        { name: "Coaches", href: "/articles#coach-jeeth" },
         { name: "Gallery", href: "/gallery" },
         { name: "Articles", href: "/articles" },
         { name: "Pricing", href: "/pricing" },

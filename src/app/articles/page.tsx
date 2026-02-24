@@ -40,8 +40,8 @@ export default function ArticlesPage() {
     const [activeCategory, setActiveCategory] = useState("ALL");
 
     const filteredArticles = activeCategory === "ALL"
-        ? articles.filter(a => a.id !== featuredArticle.id)
-        : articles.filter(a => a.category === activeCategory && a.id !== featuredArticle.id);
+        ? articles
+        : articles.filter(a => a.category === activeCategory);
 
     return (
         <main className="min-h-screen bg-black text-white selection:bg-accent selection:text-white">
@@ -96,73 +96,6 @@ export default function ArticlesPage() {
                 </div>
             </section>
 
-            {/* SECTION 2: FEATURED STORY */}
-            <section id="coach-jeeth" className="py-24 border-b border-white/5">
-                <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                        {/* Visual */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="relative aspect-[4/5] md:aspect-video lg:aspect-[4/5] overflow-hidden group cursor-pointer"
-                        >
-                            <Image
-                                src="/training.png" // Placeholder for Jeeth image
-                                alt={featuredArticle.headline}
-                                fill
-                                className="object-cover grayscale group-hover:scale-105 transition-transform duration-700"
-                            />
-                            <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </motion.div>
-
-                        {/* Content */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                        >
-                            <span className="inline-block px-4 py-1.5 bg-accent text-white text-[10px] font-black uppercase tracking-widest mb-8">
-                                FEATURED
-                            </span>
-                            <h2 className="text-4xl md:text-6xl lg:text-8xl font-anton uppercase leading-[1.0] mb-10 tracking-tighter">
-                                {featuredArticle.headline.split(':').length > 1 ? (
-                                    <>
-                                        {featuredArticle.headline.split(':')[0]} :<br />
-                                        <span className="text-accent">{featuredArticle.headline.split(':')[1].trim()}</span>
-                                    </>
-                                ) : (
-                                    featuredArticle.headline
-                                )}
-                            </h2>
-
-                            <div className="text-white/60 text-base md:text-lg mb-12 leading-relaxed max-w-2xl whitespace-pre-line space-y-4">
-                                {featuredArticle.excerpt}
-                            </div>
-
-
-                            <div className="flex items-center gap-6 mb-12">
-                                <MediaLogo
-                                    src={featuredArticle.sourceLogo}
-                                    alt={featuredArticle.source}
-                                    color={featuredArticle.brandColor}
-                                    className="h-10 w-56"
-                                />
-                                <div className="w-1 h-1 rounded-full bg-accent" />
-                                <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">{featuredArticle.year}</span>
-                            </div>
-
-                            <Link
-                                href={featuredArticle.link}
-                                target="_blank"
-                                className="group inline-flex items-center gap-4 text-xs font-black uppercase tracking-[0.2em] border-b-2 border-accent pb-2 hover:text-accent transition-colors"
-                            >
-                                READ FULL STORY <MoveRight className="group-hover:translate-x-2 transition-transform" />
-                            </Link>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
 
             {/* SECTION 4: CATEGORY FILTER */}
             <section className="py-12 sticky top-20 md:top-24 bg-black/90 backdrop-blur-md z-40 border-b border-white/5">
@@ -274,9 +207,6 @@ export default function ArticlesPage() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
                         <Link href="/#contact" className="w-full sm:w-auto bg-accent text-white px-12 py-5 font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all text-center">
                             JOIN BOXX ERA
-                        </Link>
-                        <Link href="/articles#coach-jeeth" className="w-full sm:w-auto border-2 border-white/20 text-white px-12 py-5 font-black uppercase tracking-widest text-xs hover:border-accent hover:text-accent transition-all text-center">
-                            MEET THE COACHES
                         </Link>
                     </div>
                 </div>
