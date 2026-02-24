@@ -6,9 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { MoveRight, ArrowUpRight } from "lucide-react";
 import Footer from "@/components/Footer";
-import { articles, featuredArticle, Article } from "@/data/articles";
+import { articles, Article } from "@/data/articles";
 
-const categories = ["ALL", "MEDIA", "INTERVIEWS", "COMMUNITY", "TRANSFORMATION"];
+const categories = ["ALL", "MEDIA", "COMMUNITY", "TRANSFORMATION"];
 
 function MediaLogo({ src, alt, color, className }: { src?: string; alt: string; color?: string; className?: string }) {
     const [error, setError] = useState(!src);
@@ -40,8 +40,8 @@ export default function ArticlesPage() {
     const [activeCategory, setActiveCategory] = useState("ALL");
 
     const filteredArticles = activeCategory === "ALL"
-        ? articles.filter(a => a.id !== featuredArticle.id)
-        : articles.filter(a => a.category === activeCategory && a.id !== featuredArticle.id);
+        ? articles
+        : articles.filter(a => a.category === activeCategory);
 
     return (
         <main className="min-h-screen bg-black text-white selection:bg-accent selection:text-white">

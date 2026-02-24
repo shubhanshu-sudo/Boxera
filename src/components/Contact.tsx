@@ -7,34 +7,28 @@ import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle } from "lucide-rea
 export default function Contact() {
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setStatus("loading");
 
         const formData = new FormData(e.currentTarget);
-        const data = Object.fromEntries(formData.entries());
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const phone = formData.get("phone");
+        const interest = formData.get("interest");
+        const message = formData.get("message");
 
-        try {
-            // Using Formspree as a simple, zero-config backend for the user
-            // In a real scenario, the user would replace 'your-form-id' with their actual ID
-            const response = await fetch("https://formspree.io/f/xvgzlowy", {
-                method: "POST",
-                body: JSON.stringify(data),
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
-                }
-            });
+        const subject = "New Enquiry from Boxera Website";
+        const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0AInterest: ${interest}%0D%0A%0D%0AMessage:%0D%0A${message}`;
 
-            if (response.ok) {
-                setStatus("success");
-                (e.target as HTMLFormElement).reset();
-            } else {
-                setStatus("error");
-            }
-        } catch (error) {
-            setStatus("error");
-        }
+        const mailtoLink = `mailto:boxxera.in@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+        // Artificial delay for UX animation consistency
+        setTimeout(() => {
+            window.location.href = mailtoLink;
+            setStatus("success");
+            (e.target as HTMLFormElement).reset();
+        }, 800);
     };
 
     return (
