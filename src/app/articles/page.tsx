@@ -16,8 +16,8 @@ function MediaLogo({ src, alt, color, className }: { src?: string; alt: string; 
     if (error || !src) {
         return (
             <div className={`flex items-center gap-2 ${className}`}>
-                <div className="w-1.5 h-6" style={{ backgroundColor: color || '#FFDE02' }} />
-                <span className="text-[10px] font-black uppercase tracking-widest text-white/50">{alt}</span>
+                <div className="w-1 h-4" style={{ backgroundColor: color || '#FFDE02' }} />
+                <span className="text-[9px] font-black uppercase tracking-widest text-black/60">{alt}</span>
             </div>
         );
     }
@@ -28,7 +28,7 @@ function MediaLogo({ src, alt, color, className }: { src?: string; alt: string; 
                 src={src}
                 alt={alt}
                 fill
-                className="object-contain object-left filter brightness-110"
+                className="object-contain object-left transition-all duration-300"
                 onError={() => setError(true)}
                 unoptimized
             />
@@ -127,7 +127,7 @@ export default function ArticlesPage() {
                 <div className="container mx-auto px-6">
                     <motion.div
                         layout
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-y-16"
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-y-16"
                     >
                         <AnimatePresence mode="popLayout">
                             {filteredArticles.map((article) => (
@@ -138,43 +138,70 @@ export default function ArticlesPage() {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, scale: 0.9 }}
                                     transition={{ duration: 0.4 }}
-                                    className="group relative flex flex-col h-full border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-accent/40 transition-all duration-500 p-8 pt-10"
+                                    className="group relative flex flex-col h-full bg-white/[0.02] border border-white/5 hover:border-accent/30 hover:-translate-y-2 transition-all duration-500 overflow-hidden shadow-2xl"
                                 >
-                                    {/* Accent Line */}
-                                    <div className="absolute top-0 left-0 w-[2px] h-0 group-hover:h-full bg-accent transition-all duration-500" />
+                                    {/* Article Image Section */}
+                                    <div className="relative aspect-[16/10] w-full overflow-hidden">
+                                        {article.image ? (
+                                            <Image
+                                                src={article.image}
+                                                alt={article.headline}
+                                                fill
+                                                className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                                            />
+                                        ) : (
+                                            <div className="absolute inset-0 bg-neutral-900 flex items-center justify-center">
+                                                <span className="text-white/10 font-anton text-4xl">BOXX ERA</span>
+                                            </div>
+                                        )}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
 
-                                    <div className="flex justify-between items-center mb-10">
-                                        <MediaLogo
-                                            src={article.sourceLogo}
-                                            alt={article.source}
-                                            color={article.brandColor}
-                                            className="h-6 w-28"
-                                        />
-                                        <div className="flex flex-col items-end gap-1">
-                                            <span className="text-[9px] font-black tracking-widest text-accent/60 px-2 py-0.5 border border-accent/20">
-                                                {article.category}
-                                            </span>
-                                            <span className="text-[9px] font-bold text-white/20 tracking-widest">
-                                                {article.year}
-                                            </span>
+                                        {/* Publication Logo - Improved Visibility */}
+                                        <div className="absolute top-6 left-6 z-10">
+                                            <div className="flex items-center justify-start w-48 md:w-64 h-8 md:h-10 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+                                                <MediaLogo
+                                                    src={article.sourceLogo}
+                                                    alt={article.source}
+                                                    color={article.brandColor}
+                                                    className="w-full h-full relative invert brightness-200 contrast-200"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <h3 className="text-2xl font-anton uppercase leading-[1.1] mb-6 group-hover:text-accent transition-colors tracking-tight">
-                                        {article.headline}
-                                    </h3>
+                                    <div className="p-8 md:p-10 flex flex-col flex-grow relative">
+                                        {/* Accent Line */}
+                                        <div className="absolute top-0 left-0 w-[2px] h-0 group-hover:h-full bg-accent transition-all duration-500" />
 
-                                    <p className="text-white/40 text-sm leading-relaxed mb-10 flex-grow font-medium">
-                                        {article.excerpt}
-                                    </p>
+                                        <div className="flex justify-between items-center mb-6">
+                                            <span className="text-[9px] font-black tracking-[0.2em] text-accent/80 uppercase px-2 py-1 border border-accent/20">
+                                                {article.category}
+                                            </span>
+                                            <span className="text-[9px] font-bold text-white/20 tracking-widest uppercase">
+                                                {article.year}
+                                            </span>
+                                        </div>
 
-                                    <Link
-                                        href={article.link}
-                                        target="_blank"
-                                        className="group/btn inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] mt-auto transition-all text-white/60 hover:text-white"
-                                    >
-                                        READ FULL ARTICLE <ArrowUpRight size={14} className="text-accent group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                                    </Link>
+                                        <h3 className="text-xl md:text-2xl font-anton uppercase leading-[1.1] mb-6 text-white group-hover:text-accent transition-colors tracking-tight line-clamp-2">
+                                            {article.headline}
+                                        </h3>
+
+                                        <p className="text-white/40 text-[13px] md:text-sm leading-relaxed mb-10 flex-grow font-medium line-clamp-3">
+                                            {article.excerpt}
+                                        </p>
+
+                                        <Link
+                                            href={article.link}
+                                            target="_blank"
+                                            className="group/cta inline-flex items-center gap-3 text-[10px] md:text-xs font-black uppercase tracking-[0.3em] mt-auto transition-all text-accent-red"
+                                        >
+                                            <span className="relative group-hover:drop-shadow-[0_0_8px_rgba(255,222,2,0.8)] transition-all duration-300">
+                                                READ FULL ARTICLE
+                                                <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-red transition-all duration-500 group-hover:w-full" />
+                                            </span>
+                                            <ArrowUpRight size={14} className="text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                                        </Link>
+                                    </div>
                                 </motion.article>
                             ))}
                         </AnimatePresence>

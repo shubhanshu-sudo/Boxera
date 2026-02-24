@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Programs from "@/components/Programs";
+import MediaPreview from "@/components/MediaPreview";
 import GalleryPreview from "@/components/GalleryPreview";
 import Marquee from "@/components/Marquee";
 import About from "@/components/About";
@@ -23,6 +24,9 @@ export default function Home() {
 
       {/* Programs Section - The Action */}
       <Programs />
+
+      {/* Media Coverage - Authority & Credibility */}
+      <MediaPreview />
 
       {/* Gallery Preview - Visual Energy */}
       <GalleryPreview />

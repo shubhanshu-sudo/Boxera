@@ -6,7 +6,9 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'upload.wikimedia.org' },
       { protocol: 'https', hostname: 'im.whatshot.in' },
+      { protocol: 'https', hostname: 'www.whatshot.in' },
       { protocol: 'https', hostname: 'www.mid-day.com' },
+      { protocol: 'https', hostname: 'static.mid-day.com' },
       { protocol: 'https', hostname: 'socity.in' },
       { protocol: 'https', hostname: 'lockerroom.in' },
       { protocol: 'https', hostname: 'english.cdn.zeenews.com' },
@@ -19,6 +21,10 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'smartbusinesnews.com' },
       { protocol: 'https', hostname: 'contentmediasolution.com' },
       { protocol: 'https', hostname: 'logo.clearbit.com' },
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'imgmediagumlet.lbb.in' },
+      { protocol: 'https', hostname: 'res.cloudinary.com' },
+      { protocol: 'https', hostname: 'so.city' },
     ],
   },
 

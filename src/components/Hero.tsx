@@ -11,7 +11,7 @@ const slides = [
         tagline: "",
         headline: "BOXX ERA",
         description: "ELITE TRANSFORMATION CENTRE & RESULT DRIVEN STUDIO",
-        primaryCTA: "START YOUR EVOLUTION",
+        primaryCTA: "START YOUR TRANSFORMATION",
         primaryLink: "/pricing",
         secondaryCTA: "VIEW SCHEDULE",
         secondaryLink: "/#programs",
