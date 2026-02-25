@@ -112,6 +112,12 @@ const transformations = [
         result: "ELITE BODY TRANSFORMATION",
         image: "/WhatsApp Image 2026-02-25 at 12.08.14 PM.jpeg",
     },
+    {
+        id: 18,
+        name: "ELITE MEMBER",
+        result: "COMPLETE PHYSICAL EVOLUTION",
+        image: "/WhatsApp Image 2026-02-25 at 12.09.58 PM.jpeg",
+    },
 ];
 
 interface ParallaxProps {
