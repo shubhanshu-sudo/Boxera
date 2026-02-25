@@ -23,12 +23,10 @@ export default function Home() {
       {/* About Section - The Philosophy */}
       <About />
 
-      {/* Transformations Section - The Proof */}
-
-
       {/* Programs Section - The Action */}
       <Programs />
 
+      {/* Transformations Section - The Proof */}
       <Transformations />
 
       {/* Media Coverage - Authority & Credibility */}

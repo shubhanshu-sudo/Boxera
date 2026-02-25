@@ -88,6 +88,30 @@ const transformations = [
         result: "TOTAL BODY EVOLUTION",
         image: "/5673DACD-3E9F-41DD-8667-E1CB867C08EC.JPEG",
     },
+    {
+        id: 14,
+        name: "ELITE MEMBER",
+        result: "ELITE PROGRESSION",
+        image: "/WhatsApp Image 2026-02-25 at 12.05.56 PM.jpeg",
+    },
+    {
+        id: 15,
+        name: "ELITE MEMBER",
+        result: "TRANSFORMATION JOURNEY",
+        image: "/WhatsApp Image 2026-02-25 at 12.06.52 PM.jpeg",
+    },
+    {
+        id: 16,
+        name: "ELITE MEMBER",
+        result: "ATHLETIC RECOMPOSITION",
+        image: "/WhatsApp Image 2026-02-25 at 12.07.50 PM.jpeg",
+    },
+    {
+        id: 17,
+        name: "ELITE MEMBER",
+        result: "ELITE BODY TRANSFORMATION",
+        image: "/WhatsApp Image 2026-02-25 at 12.08.14 PM.jpeg",
+    },
 ];
 
 interface ParallaxProps {
