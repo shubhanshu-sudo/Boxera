@@ -218,10 +218,10 @@ export default function ArticlesPage() {
 
                                     <div className="relative aspect-square w-full grayscale opacity-20 overflow-hidden rounded-sm group">
                                         <Image
-                                            src="/logo.png"
+                                            src="/Boxx Era-01 (1).png"
                                             alt="Boxx Era Seal"
                                             fill
-                                            className="object-contain p-12 group-hover:scale-110 transition-transform duration-1000"
+                                            className="object-contain p-12 group-hover:scale-110 transition-transform duration-1000 invert"
                                         />
                                     </div>
                                 </div>

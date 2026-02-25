@@ -85,20 +85,15 @@ export const TransitionProvider = ({ children }: { children: React.ReactNode }) 
                             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                             className="flex flex-col items-center gap-8 relative z-10"
                         >
-                            <div className="relative w-20 h-20 md:w-28 md:h-28">
+                            <div className="relative w-48 h-48 md:w-64 md:h-64">
                                 <Image
-                                    src="/logo.png"
-                                    alt="Boxx Era Logo"
+                                    src="/Boxx Era-01 (1).png"
+                                    alt="BOXX ERA Logo"
                                     fill
                                     className="object-contain invert"
+                                    priority
                                 />
                             </div>
-                            <h2
-                                className="text-white text-3xl md:text-6xl font-anton uppercase tracking-[0.8em] text-center ml-[0.8em]"
-                                style={{ textShadow: "0 0 30px rgba(67,67,209,0.4)" }}
-                            >
-                                BOXX ERA
-                            </h2>
                         </motion.div>
                     </motion.div>
                 )}

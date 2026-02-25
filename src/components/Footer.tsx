@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center opacity-40 text-[10px] font-bold uppercase tracking-[0.2em] gap-8">
                 <div className="flex items-center gap-4">
                     <div className="relative w-8 h-8 opacity-60">
-                        <Image src="/logo.png" alt="Logo" fill className="object-contain" />
+                        <Image src="/Boxx Era-01 (1).png" alt="Logo" fill className="object-contain invert" />
                     </div>
                     <span>BOXX ERA GYM © 2024</span>
                 </div>

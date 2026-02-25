@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Boxx Era | All Senses On",
   description: "Elite Transformation Centre & Boxing Club",
   icons: {
-    icon: "/logo.png",
+    icon: "/Boxx Era-01 (1).png",
   },
 };
 

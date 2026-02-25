@@ -59,7 +59,7 @@ export default function Navbar() {
                     <div className="flex-1 flex justify-start">
                         <TransitionLink href="/" className="relative w-12 h-12 md:w-16 md:h-16 z-[101]">
                             <Image
-                                src="/logo.png"
+                                src="/Boxx Era-01 (1).png"
                                 alt="BOXX ERA Logo"
                                 fill
                                 className="object-contain invert"

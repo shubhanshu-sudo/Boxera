@@ -79,7 +79,7 @@ export default function VideoCarousel() {
                                     className="object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-110 transition-all duration-700"
                                     onError={(e) => {
                                         const target = e.target as HTMLImageElement;
-                                        target.src = "/logo.png";
+                                        target.src = "/Boxx Era-01 (1).png";
                                         target.className = "object-contain p-20 opacity-20";
                                     }}
                                 />
