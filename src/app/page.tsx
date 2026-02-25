@@ -1,9 +1,10 @@
 import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Transformations from "@/components/Transformations";
 import Programs from "@/components/Programs";
 import MediaPreview from "@/components/MediaPreview";
 import GalleryPreview from "@/components/GalleryPreview";
 import Marquee from "@/components/Marquee";
-import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Studios from "@/components/Studios";
@@ -22,8 +23,13 @@ export default function Home() {
       {/* About Section - The Philosophy */}
       <About />
 
+      {/* Transformations Section - The Proof */}
+
+
       {/* Programs Section - The Action */}
       <Programs />
+
+      <Transformations />
 
       {/* Media Coverage - Authority & Credibility */}
       <MediaPreview />

@@ -8,7 +8,7 @@ import { MoveRight, ArrowUpRight } from "lucide-react";
 import Footer from "@/components/Footer";
 import { articles, Article } from "@/data/articles";
 
-const categories = ["ALL", "MEDIA", "COMMUNITY", "TRANSFORMATION"];
+const categories = ["ALL", "HIGHLIGHTS", "COMMUNITY", "TRANSFORMATION"];
 
 function MediaLogo({ src, alt, color, className }: { src?: string; alt: string; color?: string; className?: string }) {
     const [error, setError] = useState(!src);
@@ -109,7 +109,7 @@ export default function ArticlesPage() {
                                 className={`text-[10px] font-black uppercase tracking-[0.2em] transition-all relative py-2 ${activeCategory === cat ? "text-accent" : "text-white/40 hover:text-white"
                                     }`}
                             >
-                                {cat}
+                                {cat === "HIGHLIGHTS" ? "LEGACY TALKS" : cat}
                                 {activeCategory === cat && (
                                     <motion.div
                                         layoutId="active-cat"
@@ -175,7 +175,7 @@ export default function ArticlesPage() {
 
                                         <div className="flex justify-between items-center mb-6">
                                             <span className="text-[9px] font-black tracking-[0.2em] text-accent/80 uppercase px-2 py-1 border border-accent/20">
-                                                {article.category}
+                                                {article.category === "HIGHLIGHTS" ? "LEGACY TALKS" : article.category}
                                             </span>
                                             <span className="text-[9px] font-bold text-white/20 tracking-widest uppercase">
                                                 {article.year}
@@ -220,7 +220,6 @@ export default function ArticlesPage() {
                         className="text-white text-3xl md:text-5xl lg:text-7xl font-anton uppercase leading-[1.3] tracking-tighter max-w-5xl mx-auto"
                     >
                         “<span className="text-accent">Boxx Era</span> isn’t just a gym. It’s a movement built on discipline, resilience, and transformation.”
-
                     </motion.p>
                 </div>
             </section>

@@ -30,7 +30,7 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "Training", href: "/#programs" },
-        { name: "Articles", href: "/articles" },
+        { name: "Legacy", href: "/articles" },
         { name: "Pricing", href: "/pricing" },
         { name: "Gallery", href: "/gallery" },
         { name: "Contact", href: "/#contact" },

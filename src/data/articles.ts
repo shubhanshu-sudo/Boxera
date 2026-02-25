@@ -7,7 +7,7 @@ export interface Article {
     excerpt: string;
     year: string;
     link: string;
-    category: "MEDIA" | "INTERVIEWS" | "COMMUNITY" | "TRANSFORMATION";
+    category: "HIGHLIGHTS" | "INTERVIEWS" | "COMMUNITY" | "TRANSFORMATION";
     image?: string;
 }
 
@@ -21,7 +21,7 @@ export const articles: Article[] = [
         excerpt: "Experience high-performance training with a dedicated team of experts in the heart of South Delhi.",
         year: "2023",
         link: "https://lbb.in/delhi/join-Boxx-Era-fitness-studio-in-south-delhi-with-female-trainers/",
-        category: "MEDIA",
+        category: "HIGHLIGHTS",
         image: "https://imgmediagumlet.lbb.in/media/2019/10/5d9f96453dc1e916a83879e5_1570739781948.jpg",
     },
     {
@@ -33,7 +33,7 @@ export const articles: Article[] = [
         excerpt: "A fresh perspective on fitness arrives in Hauz Khas, offering a unique blend of intensity and wellness.",
         year: "2023",
         link: "https://www.whatshot.in/amp/delhi-ncr/boxx-era-fitness-studio-is-a-new-workout-space-in-hauz-khas-v-158230",
-        category: "MEDIA",
+        category: "HIGHLIGHTS",
         image: "https://im.whatshot.in/img/2020/Jan/media-image-1-1579596255.jpg",
     },
     {
@@ -45,7 +45,7 @@ export const articles: Article[] = [
         excerpt: "How Boxx Era is redefining the fitness landscape with its holistic and high-performance approach.",
         year: "2023",
         link: "https://www.mid-day.com/amp/brand-media/article/the-rise-of-boxx-era-breaking-barriers-in-the-world-of-fitness-23264290",
-        category: "MEDIA",
+        category: "HIGHLIGHTS",
         image: "https://imgmediagumlet.lbb.in/media/2019/10/5da9c53eecc80c1886aa8194_1571407166395.jpg",
     },
     {
@@ -57,7 +57,7 @@ export const articles: Article[] = [
         excerpt: "Discover the elite training experience that everyone in Delhi is talking about.",
         year: "2023",
         link: "https://so.city/amp/delhi/this-posh-new-gym-in-hauz-khas-offers-dark-room-training-more-for-the-fitness-freak-in-you.html",
-        category: "MEDIA",
+        category: "HIGHLIGHTS",
         image: "https://res.cloudinary.com/purnesh/image/upload/f_auto/v1564050878/box-era-1.jpg",
     },
     {
@@ -81,7 +81,7 @@ export const articles: Article[] = [
         excerpt: "A deep dive into why Boxx Era is the go-to destination for those seeking a total transformation.",
         year: "2023",
         link: "https://zeenews.india.com/india/boxx-era-the-ultimate-fitness-studio-for-holistic-wellness-2583014.html/amp",
-        category: "MEDIA",
+        category: "HIGHLIGHTS",
         image: "https://english.cdn.zeenews.com/sites/default/files/styles/zm_500x286/public/2023/03/13/1166571-boxx-era.jpg",
     },
     {

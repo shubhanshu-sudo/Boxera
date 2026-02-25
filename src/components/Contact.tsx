@@ -95,14 +95,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <div className="mt-20 pt-12 border-t border-white/5">
-                            <p className="text-accent font-anton uppercase italic tracking-widest text-xl opacity-30">
-                                No music. No mirrors. No shortcuts.
-                            </p>
-                            <p className="mt-4 text-[10px] font-black uppercase tracking-[0.3em] text-white/20">
-                                Rated 4.8★ on Google by 150+ members
-                            </p>
-                        </div>
+
                     </motion.div>
 
                     {/* Right Side: Form */}

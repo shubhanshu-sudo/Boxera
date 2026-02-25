@@ -9,7 +9,7 @@ import { articles } from "@/data/articles";
 const MediaPreview = () => {
     // We only want 3 featured articles for this section
     const featuredArticles = articles
-        .filter((article) => article.category === "MEDIA")
+        .filter((article) => article.category === "HIGHLIGHTS")
         .slice(0, 3);
 
     // Fallback images - including the generated one
@@ -30,7 +30,7 @@ const MediaPreview = () => {
                         viewport={{ once: true }}
                         className="text-accent text-[10px] md:text-xs font-black uppercase tracking-[0.5em] mb-4 block"
                     >
-                        IN THE MEDIA
+                        BOXX ERA
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,16 @@ const MediaPreview = () => {
                         transition={{ delay: 0.1 }}
                         className="text-[clamp(2.5rem,8vw,5rem)] font-anton uppercase text-white mb-6 leading-[0.9] tracking-tighter"
                     >
-                        BOXX ERA <span className="text-white">IN THE NEWS</span>
+                        LEGACY <span className="relative inline-block text-accent">
+                            TALKS
+                            <motion.span
+                                initial={{ width: 0 }}
+                                whileInView={{ width: "100%" }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.8, duration: 1, ease: "circOut" }}
+                                className="absolute -bottom-2 md:-bottom-4 left-0 h-[8px] md:h-[12px] bg-accent/40 rounded-full"
+                            />
+                        </span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -102,6 +111,9 @@ const MediaPreview = () => {
 
                                 {/* Content Area */}
                                 <div className="p-8 md:p-10 flex flex-col flex-grow">
+                                    <span className="text-accent text-[9px] font-black tracking-[0.2em] uppercase mb-3 block">
+                                        {article.category === "HIGHLIGHTS" ? "LEGACY TALKS" : article.category}
+                                    </span>
                                     <h3 className="text-xl md:text-2xl font-anton uppercase leading-[1.1] mb-4 text-white line-clamp-2 transition-colors duration-300">
                                         {article.headline}
                                     </h3>
