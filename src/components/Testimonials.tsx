@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, MoveRight, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
     {
@@ -10,6 +11,7 @@ const testimonials = [
         name: "Richa Mehrotra",
         rating: 5,
         text: "Boxx Era is not an easy space for people who are not ready to improve themselves. It’s a place where you unlearn and relearn the techniques of living your life in a free-spirited environment. The coaches don’t just train your body, they work on your mindset.",
+        image: "/unnamed.png",
     },
     {
         id: 2,
@@ -28,6 +30,7 @@ const testimonials = [
         name: "Ratika Srivastava",
         rating: 5,
         text: "Boxx Era isn’t just a gym — it’s a life-changing space. I’ve been training here for over a year, and the transformation through the Dream Body Series has been incredible, both physically and mentally.",
+        image: "/unnamed (1).png",
     },
     {
         id: 5,
@@ -35,7 +38,41 @@ const testimonials = [
         rating: 5,
         text: "More than just physical results — it’s been a complete mindset shift. Since joining the DBS challenge, my relationship with fitness has changed completely. Workouts no longer feel like a chore.",
     },
+    {
+        id: 6,
+        name: "Pria Sethi",
+        rating: 5,
+        text: "So I signed up for the Dream Body Series (DBS – 51 days) at Boxx Era Hauz Khas, and wow… what a ride. 😅 I went in thinking, “okay, maybe I’ll lose a couple of kgs,” but what I actually walked out with was way more — better stamina, real strength, and a whole lot of inch loss (my clothes are literally thanking me)😬😬\nThe workouts were no joke — there were days I thought my body would give up, but the coaches kept me going and somehow made it fun too. Somewhere between all the sweat and sore muscles, I actually started enjoying it.\nNow, 51 days later, I feel lighter, stronger, and way more confident. Dropping my before & after here because even I can’t believe the difference sometimes 🙈",
+        image: "/unnamed (2).png",
+    },
 ];
+
+function TestimonialText({ text }: { text: string }) {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const CHAR_LIMIT = 180;
+
+    if (text.length <= CHAR_LIMIT) {
+        return (
+            <p className="text-white/80 text-sm md:text-base leading-relaxed mb-12 font-medium italic">
+                &quot;{text}&quot;
+            </p>
+        );
+    }
+
+    return (
+        <div className="mb-12">
+            <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium italic">
+                &quot;{isExpanded ? text : `${text.slice(0, CHAR_LIMIT)}...`}&quot;
+            </p>
+            <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-accent text-[10px] font-black uppercase tracking-widest mt-4 hover:text-white transition-colors"
+            >
+                {isExpanded ? "Read Less -" : "Read More +"}
+            </button>
+        </div>
+    );
+}
 
 export default function Testimonials() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -119,7 +156,7 @@ export default function Testimonials() {
                         animate={{ x: `calc(-${currentIndex * (100 / visibleItems)}% - ${currentIndex * (32 / visibleItems)}px)` }}
                         transition={{ type: "spring", stiffness: 100, damping: 20 }}
                     >
-                        {testimonials.map((item, index) => (
+                        {testimonials.map((item) => (
                             <div
                                 key={item.id}
                                 className="flex-shrink-0"
@@ -140,14 +177,16 @@ export default function Testimonials() {
                                                 <Star key={i} size={14} className="fill-accent text-accent group-hover:scale-110 transition-transform duration-300" style={{ transitionDelay: `${i * 50}ms` }} />
                                             ))}
                                         </div>
-                                        <p className="text-white/80 text-sm md:text-base leading-relaxed mb-12 font-medium italic">
-                                            &quot;{item.text}&quot;
-                                        </p>
+                                        <TestimonialText text={item.text} />
                                     </div>
 
                                     <div className="flex items-center gap-4 pt-8 border-t border-white/5">
-                                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-zinc-900 text-white font-anton text-lg tracking-tighter group-hover:border-accent/50 group-hover:text-accent transition-colors duration-500">
-                                            {item.name.split(' ').map(n => n[0]).join('')}
+                                        <div className="relative w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-zinc-900 text-white font-anton text-lg tracking-tighter group-hover:border-accent/50 group-hover:text-accent transition-colors duration-500 overflow-hidden">
+                                            {item.image ? (
+                                                <Image src={item.image} alt={item.name} fill className="object-cover" />
+                                            ) : (
+                                                item.name.split(' ').map(n => n[0]).join('')
+                                            )}
                                         </div>
                                         <div>
                                             <h4 className="text-white font-bold uppercase tracking-[0.2em] text-xs">
@@ -184,10 +223,14 @@ export default function Testimonials() {
                 >
                     <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                         <div className="flex -space-x-3">
-                            {[1, 2, 3, 4].map((i) => (
-                                <div key={i} className="w-10 h-10 rounded-full border-2 border-black bg-zinc-800 flex items-center justify-center text-[10px] font-black uppercase text-white/50 overflow-hidden relative">
+                            {testimonials.slice(0, 4).map((item) => (
+                                <div key={item.id} className="w-10 h-10 rounded-full border-2 border-black bg-zinc-800 flex items-center justify-center text-[10px] font-black uppercase text-white/50 overflow-hidden relative">
                                     <div className="w-full h-full bg-accent/10 flex items-center justify-center uppercase">
-                                        {['R', 'N', 'D', 'M'][i - 1]}
+                                        {item.image ? (
+                                            <Image src={item.image} alt={item.name} fill className="object-cover opacity-60" />
+                                        ) : (
+                                            item.name[0]
+                                        )}
                                     </div>
                                 </div>
                             ))}
