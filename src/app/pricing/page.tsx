@@ -58,7 +58,7 @@ export default function PricingPage() {
                         >
                             <Link
                                 href="#enroll"
-                                className="inline-flex items-center gap-4 bg-accent text-black px-10 py-5 text-xs font-black uppercase tracking-[0.3em] transition-all hover:bg-white hover:text-black shadow-[0_0_30px_rgba(255,222,2,0.3)]"
+                                className="inline-flex items-center gap-4 bg-accent text-black px-10 py-5 text-xs font-black uppercase tracking-[0.3em] transition-all hover:bg-white hover:text-black shadow-[0_0_30px_rgba(29,194,193,0.3)]"
                             >
                                 JOIN THE ERA NOW <MoveRight size={18} />
                             </Link>
@@ -97,8 +97,8 @@ export default function PricingPage() {
                             variants={fadeIn}
                             whileHover={{
                                 y: -10,
-                                borderColor: "rgba(255, 222, 2, 0.3)",
-                                backgroundColor: "rgba(255, 222, 2, 0.02)"
+                                borderColor: "rgba(29, 194, 193, 0.3)",
+                                backgroundColor: "rgba(29, 194, 193, 0.02)"
                             }}
                             className="bg-zinc-900/20 border border-white/5 p-10 flex flex-col h-full transition-all duration-300 relative group overflow-hidden"
                         >
@@ -124,7 +124,7 @@ export default function PricingPage() {
                                     href="https://rzp.io/l/XmEfQIuP1"
                                     whileHover={{ backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 25px rgba(212,0,0,0.4)" }}
                                     whileTap={{ scale: 0.98 }}
-                                    className="w-full inline-flex justify-center items-center bg-accent text-black py-4.5 text-[11px] font-black uppercase tracking-[0.3em] transition-all text-center shadow-[0_10px_30px_rgba(255,222,2,0.15)]"
+                                    className="w-full inline-flex justify-center items-center bg-accent text-black py-4.5 text-[11px] font-black uppercase tracking-[0.3em] transition-all text-center shadow-[0_10px_30px_rgba(29,194,193,0.15)]"
                                 >
                                     ENROLL NOW
                                 </motion.a>
@@ -163,7 +163,7 @@ export default function PricingPage() {
                     {/* PT Package 1 */}
                     <motion.div
                         variants={fadeIn}
-                        whileHover={{ y: -5, borderColor: "rgba(255, 222, 2, 0.2)" }}
+                        whileHover={{ y: -5, borderColor: "rgba(29, 194, 193, 0.2)" }}
                         className="group relative bg-zinc-900/20 border border-white/5 p-10 flex flex-col items-start transition-all duration-300"
                     >
                         <div className="mb-10 w-full">
@@ -209,7 +209,7 @@ export default function PricingPage() {
                     {/* PT Package 2 */}
                     <motion.div
                         variants={fadeIn}
-                        whileHover={{ y: -5, borderColor: "rgba(255, 222, 2, 0.2)" }}
+                        whileHover={{ y: -5, borderColor: "rgba(29, 194, 193, 0.2)" }}
                         className="group relative bg-zinc-900/20 border border-white/5 p-10 flex flex-col items-start transition-all duration-300"
                     >
                         <div className="mb-10 w-full">
@@ -247,7 +247,7 @@ export default function PricingPage() {
                     {/* PT Package 3: Highlighted */}
                     <motion.div
                         variants={fadeIn}
-                        className="group relative bg-black border-2 border-accent p-10 flex flex-col items-start shadow-[0_0_40px_rgba(255,222,2,0.15)] scale-105 lg:scale-110 z-10"
+                        className="group relative bg-black border-2 border-accent p-10 flex flex-col items-start shadow-[0_0_40px_rgba(29,194,193,0.15)] scale-105 lg:scale-110 z-10"
                     >
                         <div className="absolute top-0 right-0 bg-accent-red text-white px-4 py-1.5 text-[9px] font-black uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(212,0,0,0.4)]">
                             EXCLUSIVE
@@ -331,7 +331,7 @@ export default function PricingPage() {
                                 href="https://rzp.io/l/XmEfQIuP1"
                                 whileHover={{ scale: 1.05, backgroundColor: "#D40000", boxShadow: "0 0 30px rgba(212, 0, 0, 0.4)" }}
                                 whileTap={{ scale: 0.95 }}
-                                className="inline-flex items-center gap-4 bg-accent text-black px-12 py-6 text-xs font-black uppercase tracking-[0.3em] transition-all shadow-[0_15px_40px_rgba(255,222,2,0.1)]"
+                                className="inline-flex items-center gap-4 bg-accent text-black px-12 py-6 text-xs font-black uppercase tracking-[0.3em] transition-all shadow-[0_15px_40px_rgba(29,194,193,0.1)]"
                             >
                                 APPLY FOR DBS <MoveRight size={18} />
                             </motion.a>

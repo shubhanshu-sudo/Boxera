@@ -13,7 +13,7 @@ const classes = [
         title: "BOXING",
         description: "Learn boxing from real fighters. Our coaches will give you knowledge as well as professional techniques in every session. The feeling of empowerment and motivation will keep you coming back for more.",
         highlights: ["Professional Techniques", "Real Fighters", "Empowerment"],
-        image: "/ring.png",
+        image: "/WhatsApp Image 2026-02-25 at 11.59.48 AM.jpeg",
         layout: "right",
     },
     {
@@ -21,7 +21,7 @@ const classes = [
         title: "DARK ROOM TRAININGS",
         description: "Working out in the dark removes all the elements of comparison or competition. It's a beautiful opportunity to go inward, as darkness facilitates that intimate connection with oneself.",
         highlights: ["Mental Connection", "No Comparison", "India's First"],
-        image: "/training.png",
+        image: "/WhatsApp Image 2026-02-25 at 12.16.27 PM.jpeg",
         layout: "left",
     },
     {
@@ -116,7 +116,7 @@ export default function GroupClasses() {
                             <motion.button
                                 whileHover={{ scale: 1.05, backgroundColor: "#FFFFFF", color: "#000000" }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-accent text-black px-10 md:px-14 py-5 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs transition-all shadow-[0_0_30px_rgba(255,222,2,0.3)]"
+                                className="bg-accent text-black px-10 md:px-14 py-5 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs transition-all shadow-[0_0_30px_rgba(29,194,193,0.3)]"
                             >
                                 JOIN A CLASS
                             </motion.button>
@@ -152,7 +152,7 @@ export default function GroupClasses() {
                         <motion.div {...fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                             <div className="relative aspect-[4/5] lg:aspect-square overflow-hidden rounded-sm group">
                                 <Image
-                                    src="/ring.png"
+                                    src="/WhatsApp Image 2026-02-25 at 11.59.48 AM.jpeg"
                                     alt="Boxing Training"
                                     fill
                                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
@@ -179,7 +179,7 @@ export default function GroupClasses() {
                         <motion.div {...fadeIn} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                             <div className="lg:order-2 relative aspect-[4/5] lg:aspect-square overflow-hidden rounded-sm group">
                                 <Image
-                                    src="/training.png"
+                                    src="/WhatsApp Image 2026-02-25 at 12.16.27 PM.jpeg"
                                     alt="Dark Room Training"
                                     fill
                                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
@@ -340,7 +340,7 @@ export default function GroupClasses() {
             </section>
 
             {/* 3️⃣ FINAL CTA SECTION */}
-            <section className="py-32 md:py-48 px-6 bg-[radial-gradient(circle_at_bottom,rgba(255,222,2,0.1)_0%,transparent_70%)] text-center border-t border-white/5 overflow-hidden">
+            <section className="py-32 md:py-48 px-6 bg-[radial-gradient(circle_at_bottom,rgba(29,194,193,0.1)_0%,transparent_70%)] text-center border-t border-white/5 overflow-hidden">
                 <div className="container mx-auto">
                     <motion.div {...fadeIn}>
                         <h2 className="text-5xl md:text-[6rem] lg:text-[7.5rem] font-anton uppercase mb-12 leading-[0.9] tracking-tighter text-white">

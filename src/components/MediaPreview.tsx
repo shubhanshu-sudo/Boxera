@@ -75,7 +75,7 @@ const MediaPreview = () => {
                             <Link
                                 href={article.link}
                                 target="_blank"
-                                className="group relative flex flex-col h-full bg-white/[0.02] border border-white/5 overflow-hidden transition-all duration-500 hover:border-accent/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5),0_0_20px_rgba(255,222,2,0.1)]"
+                                className="group relative flex flex-col h-full bg-white/[0.02] border border-white/5 overflow-hidden transition-all duration-500 hover:border-accent/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5),0_0_20px_rgba(29,194,193,0.1)]"
                             >
                                 {/* Image Section */}
                                 <div className="relative aspect-[16/10] w-full overflow-hidden">
@@ -123,7 +123,7 @@ const MediaPreview = () => {
 
                                     <div className="mt-auto">
                                         <span className="text-accent-red font-black text-[10px] md:text-xs uppercase tracking-[0.3em] flex items-center gap-2 group/cta transition-all duration-300">
-                                            <span className="relative inline-block group-hover:drop-shadow-[0_0_8px_rgba(255,222,2,0.8)] transition-all duration-300">
+                                            <span className="relative inline-block group-hover:drop-shadow-[0_0_8px_rgba(29,194,193,0.8)] transition-all duration-300">
                                                 READ ARTICLE
                                                 <span className="absolute bottom-[-4px] left-0 w-0 h-[1.5px] bg-accent-red transition-all duration-500 group-hover:w-full" />
                                             </span>

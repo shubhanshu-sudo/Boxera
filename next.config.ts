@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'imgmediagumlet.lbb.in' },
       { protocol: 'https', hostname: 'res.cloudinary.com' },
       { protocol: 'https', hostname: 'so.city' },
+      { protocol: 'https', hostname: 'img.youtube.com' },
     ],
   },
 

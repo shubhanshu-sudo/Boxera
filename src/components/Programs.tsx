@@ -14,7 +14,7 @@ const programs = [
         tagline: "COMMUNITY STRENGTH",
         tags: ["HIIT", "BODY TRAINING", "STRENGTH & POWER TRAINING"],
         icon: <Target className="w-6 h-6" />,
-        image: "/training.png",
+        image: "/WhatsApp Image 2026-02-25 at 11.59.48 AM.jpeg",
     },
     {
         id: "02",
@@ -29,7 +29,7 @@ const programs = [
             "Expert / Qualified Trainers"
         ],
         icon: <Zap className="w-6 h-6" />,
-        image: "/hero.png",
+        image: "/DSC_0087.webp",
     },
     {
         id: "03",
@@ -38,7 +38,7 @@ const programs = [
         tagline: "ELITE EVOLUTION",
         tags: ["Group / DBS", "1-1 / CONSULTATION"],
         icon: <Shield className="w-6 h-6" />,
-        image: "/programs_bg.png",
+        image: "/himanshutransf.webp",
     },
 ];
 
@@ -148,7 +148,7 @@ export default function Programs() {
                                 onMouseLeave={() => !isMobile && setHoveredIndex(null)}
                                 className={`group relative h-[550px] md:h-[650px] lg:h-[750px] bg-zinc-900 overflow-hidden border transition-all duration-700 rounded-sm cursor-pointer flex-shrink-0 w-[85vw] sm:w-[60vw] lg:w-auto snap-center lg:snap-align-none
                                     ${!isMobile && hoveredIndex !== null && hoveredIndex !== index ? "opacity-30 grayscale blur-[1px]" : "opacity-100 grayscale-0 blur-0"}
-                                    ${isActive ? "border-accent shadow-[0_0_40px_rgba(255,222,2,0.25)]" : "border-white/5"}
+                                    ${isActive ? "border-accent shadow-[0_0_40px_rgba(29,194,193,0.25)]" : "border-white/5"}
                                 `}
                             >
                                 <div className="absolute inset-0">
@@ -242,7 +242,7 @@ export default function Programs() {
                                                     {program.features?.map((f, fIdx) => (
                                                         f ? (
                                                             <li key={fIdx} className="text-white/60 text-[9px] md:text-[10px] uppercase tracking-[0.2em] flex items-center gap-3 group/li">
-                                                                <span className="w-1.5 h-1.5 rounded-full bg-accent-red flex-shrink-0 shadow-[0_0_8px_rgba(212,0,0,0.6)] group-hover/li:bg-accent group-hover/li:shadow-[0_0_8px_rgba(255,222,2,0.6)] transition-all" />
+                                                                <span className="w-1.5 h-1.5 rounded-full bg-accent-red flex-shrink-0 shadow-[0_0_8px_rgba(212,0,0,0.6)] group-hover/li:bg-accent group-hover/li:shadow-[0_0_8px_rgba(29,194,193,0.6)] transition-all" />
                                                                 {f}
                                                             </li>
                                                         ) : null

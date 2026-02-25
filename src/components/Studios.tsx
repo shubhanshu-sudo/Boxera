@@ -13,7 +13,7 @@ const locations = [
         image: "/image 1.png",
     },
     {
-        city: "Gurgaon",
+        city: "Gurugram",
         address: "C-524, BLOCK C, SUSHANT LOK PHASE I, SECTOR 43, GURUGRAM, HARYANA 122009",
         link: "https://www.google.com/maps/dir//Boxx+Era+Fitness+Studio,+C-524,+Block+C,+Sushant+Lok+Phase+I,+Sector+43,+Gurugram,+Haryana+122009/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x390d1945a840c91f:0xafb204df9668f70c?sa=X&ved=1t:57443&ictx=111",
         cta: "GET DIRECTIONS",

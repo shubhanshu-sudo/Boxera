@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { TransitionLink } from "@/components/transitions/TransitionLink";
 import { ArrowUpRight, Package, Trophy, Image as ImageIcon, Phone } from "lucide-react";
+import Button from "./Button";
 
 const quickLinks = [
     {
@@ -55,15 +56,11 @@ export default function PreFooter() {
                             LET US HELP YOU
                         </span>
 
-                        <TransitionLink href="/#contact">
-                            <motion.button
-                                whileHover={{ scale: 1.05, backgroundColor: "#D40000", color: "#ffffff" }}
-                                whileTap={{ scale: 0.95 }}
-                                className="bg-accent text-black px-10 md:px-16 py-5 md:py-6 font-black uppercase tracking-[0.4em] text-xs md:text-sm transition-all shadow-[0_0_30px_rgba(255,222,2,0.2)]"
-                            >
-                                GET YOUR FIRST CLASS
-                            </motion.button>
-                        </TransitionLink>
+                        <Button
+                            text="GET YOUR FIRST CLASS"
+                            href="/#contact"
+                            className="tracking-[0.4em]"
+                        />
                     </motion.div>
                 </div>
 

@@ -143,11 +143,123 @@ const galleryData = [
     },
     {
         id: 17,
-        src: "/photo-output(1).jpg",
+        src: "/f53db072-d38c-4e6c-b1e3-3173d4aa363a.JPG",
         category: "TRANSFORMATIONS",
-        title: "Mental Evolution",
+        title: "Recovery Progress",
         location: "Transformation Centre",
         span: "md:col-span-2 md:row-span-1"
+    },
+    {
+        id: 18,
+        src: "/e02c16f4-e854-4e50-b51f-f84f48337d02.JPG",
+        category: "TRANSFORMATIONS",
+        title: "Core Power",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 19,
+        src: "/CEEC597B-F2B5-4E8B-AE15-BCCE88CABE7C.JPEG",
+        category: "TRANSFORMATIONS",
+        title: "Elite Member Results",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 20,
+        src: "/c8e6f298-27dd-4542-8e45-a1c7be34c962.JPG",
+        category: "TRANSFORMATIONS",
+        title: "Disciplined Growth",
+        location: "Transformation Centre",
+        span: "md:col-span-2 md:row-span-1"
+    },
+    {
+        id: 21,
+        src: "/B1997CD9-1BE6-408D-B736-E47ABBC7B472.JPEG",
+        category: "TRANSFORMATIONS",
+        title: "Strength Gains",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 22,
+        src: "/5673DACD-3E9F-41DD-8667-E1CB867C08EC.JPEG",
+        category: "TRANSFORMATIONS",
+        title: "Total Evolution",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 23,
+        src: "/82B4E89B-28C3-44FE-A3C7-078EF16735FB.JPEG",
+        category: "TRANSFORMATIONS",
+        title: "Athletic Excellence",
+        location: "Transformation Centre",
+        span: "md:col-span-2 md:row-span-1"
+    },
+    {
+        id: 24,
+        src: "/9F1D0119-34BB-4C6E-BE43-78A36BEB4461.jpg",
+        category: "TRANSFORMATIONS",
+        title: "Result Focused",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-2"
+    },
+    {
+        id: 25,
+        src: "/FDF7CEA8-8C65-4B49-A12B-C5C012AFCA3A.JPEG",
+        category: "TRANSFORMATIONS",
+        title: "Peak Form",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 26,
+        src: "/WhatsApp Image 2026-02-25 at 12.05.56 PM.jpeg",
+        category: "TRANSFORMATIONS",
+        title: "Elite Progression",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 27,
+        src: "/WhatsApp Image 2026-02-25 at 12.06.52 PM.jpeg",
+        category: "TRANSFORMATIONS",
+        title: "Success Journey",
+        location: "Transformation Centre",
+        span: "md:col-span-2 md:row-span-1"
+    },
+    {
+        id: 28,
+        src: "/WhatsApp Image 2026-02-25 at 12.07.50 PM.jpeg",
+        category: "TRANSFORMATIONS",
+        title: "Body Metamorphosis",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 29,
+        src: "/WhatsApp Image 2026-02-25 at 12.08.14 PM.jpeg",
+        category: "TRANSFORMATIONS",
+        title: "Power Results",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 30,
+        src: "/WhatsApp Image 2026-02-25 at 12.09.58 PM.jpeg",
+        category: "TRANSFORMATIONS",
+        title: "Physical Evolution",
+        location: "Transformation Centre",
+        span: "md:col-span-2 md:row-span-1"
+    },
+    {
+        id: 31,
+        src: "/WhatsApp Image 2026-02-25 at 12.13.04 PM.jpeg",
+        category: "TRANSFORMATIONS",
+        title: "Result Driven",
+        location: "Transformation Centre",
+        span: "md:col-span-1 md:row-span-1"
     }
 ];
 
@@ -287,7 +399,7 @@ export default function GalleryPage() {
 
                                     {/* Overlay */}
                                     <div className="absolute inset-0 bg-black/40 lg:bg-black/50 lg:group-hover:bg-black/20 transition-all duration-700" />
-                                    <div className="absolute inset-0 border border-accent/0 lg:group-hover:border-accent/40 lg:group-hover:shadow-[inset_0_0_50px_rgba(255,222,2,0.1)] transition-all duration-500 pointer-events-none" />
+                                    <div className="absolute inset-0 border border-accent/0 lg:group-hover:border-accent/40 lg:group-hover:shadow-[inset_0_0_50px_rgba(29,194,193,0.1)] transition-all duration-500 pointer-events-none" />
 
                                     {/* Info Overlay - Desktop (Hover) */}
                                     <div className="hidden lg:flex absolute inset-0 flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-black/80 via-transparent to-transparent">
@@ -492,7 +604,7 @@ export default function GalleryPage() {
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10">
                             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
-                                <Link href="/#contact" className="inline-block w-full bg-accent text-black px-10 md:px-16 py-5 md:py-6 text-[10px] md:text-xs font-black uppercase tracking-[0.4em] shadow-[0_20px_60px_rgba(255,222,2,0.2)] hover:bg-accent-red hover:text-white transition-all duration-500">
+                                <Link href="/#contact" className="inline-block w-full bg-accent text-black px-10 md:px-16 py-5 md:py-6 text-[10px] md:text-xs font-black uppercase tracking-[0.4em] shadow-[0_20px_60px_rgba(29,194,193,0.2)] hover:bg-accent-red hover:text-white transition-all duration-500">
                                     GET YOUR FIRST CLASS
                                 </Link>
                             </motion.div>

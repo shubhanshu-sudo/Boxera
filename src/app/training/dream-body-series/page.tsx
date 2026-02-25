@@ -299,7 +299,7 @@ export default function DreamBodySeriesPage() {
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
                             <motion.a
                                 href="https://rzp.io/l/XmEfQIuP1"
-                                whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(255,222,2,0.4)" }}
+                                whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(29,194,193,0.4)" }}
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-accent text-black px-16 py-7 font-black uppercase tracking-[0.5em] text-xs transition-all w-full sm:w-auto"
                             >

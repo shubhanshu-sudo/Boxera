@@ -7,6 +7,7 @@ import Link from "next/link";
 import { MoveRight, ArrowUpRight } from "lucide-react";
 import Footer from "@/components/Footer";
 import { articles, Article } from "@/data/articles";
+import Button from "@/components/Button";
 
 const categories = ["ALL", "HIGHLIGHTS", "COMMUNITY", "TRANSFORMATION"];
 
@@ -16,7 +17,7 @@ function MediaLogo({ src, alt, color, className }: { src?: string; alt: string; 
     if (error || !src) {
         return (
             <div className={`flex items-center gap-2 ${className}`}>
-                <div className="w-1 h-4" style={{ backgroundColor: color || '#FFDE02' }} />
+                <div className="w-1 h-4" style={{ backgroundColor: color || '#1DC2C1' }} />
                 <span className="text-[9px] font-black uppercase tracking-widest text-black/60">{alt}</span>
             </div>
         );
@@ -72,9 +73,9 @@ export default function ArticlesPage() {
                         initial={{ opacity: 0, scale: 0.95, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-[clamp(3rem,10vw,7.5rem)] font-anton uppercase leading-[0.85] tracking-tighter text-white drop-shadow-[0_0_30px_rgba(255,222,2,0.3)]"
+                        className="text-[clamp(3rem,10vw,7.5rem)] font-anton uppercase leading-[0.85] tracking-tighter text-white drop-shadow-[0_0_30px_rgba(29,194,193,0.3)]"
                     >
-                        ARTICLES
+                        LEGACY TALKS
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -92,6 +93,140 @@ export default function ArticlesPage() {
                             transition={{ delay: 1, duration: 1 }}
                             className="w-[1px] bg-gradient-to-b from-accent to-transparent"
                         />
+                    </div>
+                </div>
+            </section>
+
+            {/* SECTION: FEATURED ARTICLE - COACH SPOTLIGHT */}
+            <section className="py-24 md:py-32 bg-black border-y border-white/5 relative overflow-hidden">
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="max-w-5xl mx-auto">
+                        {/* Hero Image */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1 }}
+                            className="relative aspect-[16/8] md:aspect-[21/9] w-full overflow-hidden rounded-sm mb-16 border border-white/5 shadow-2xl"
+                        >
+                            <Image
+                                src="/WhatsApp Image 2026-02-25 at 11.59.48 AM.jpeg"
+                                alt="Coach Shivani Dahiya"
+                                fill
+                                className="object-cover transition-transform duration-[3s] hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                            <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
+                                <span className="bg-accent text-black text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] px-4 py-2">
+                                    Meet Coach Shivani Dahiya —
+                                </span>
+                            </div>
+                        </motion.div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                            {/* Main Content */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                                className="lg:col-span-8"
+                            >
+                                <span className="text-accent text-[10px] md:text-xs font-black uppercase tracking-[0.5em] mb-6 block">
+                                    COACH SPOTLIGHT
+                                </span>
+
+                                <h2 className="text-4xl md:text-7xl font-anton uppercase leading-[0.9] tracking-tighter text-white mb-6">
+                                    Meet Coach Shivani Dahiya — <br />
+                                    <span className="text-accent">The Powerhouse Behind Boxx Era</span>
+                                </h2>
+
+                                <p className="text-lg md:text-xl text-white/60 font-medium uppercase tracking-[0.1em] mb-12">
+                                    Professional Boxer • Results-Driven Performance • Elite Transformation Coach
+                                </p>
+
+                                <div className="w-16 h-[2px] bg-accent/30 mb-16" />
+
+                                <div className="space-y-8 text-white/70 text-lg leading-relaxed font-light">
+                                    <p>
+                                        With a stellar career as an Indian professional boxer and a decorated record of victories in both national and international matches, <span className="text-white font-bold">Shivani Dahiya</span> is one of the most dynamic and results-driven coaches at Boxx Era. As a co-founder of the studio, she brings over a decade of comprehensive fitness expertise, backed by multiple certifications in various training disciplines.
+                                    </p>
+
+                                    <p>
+                                        Shivani&apos;s approach to fitness transcends conventional methods. Whether you&apos;re seeking general fitness, sport-specific training, or advanced athletic development, she combines scientific rigor with innovative techniques to ensure maximum results. Her workouts are crafted with precision, a tough attitude, and an unwavering focus on performance.
+                                    </p>
+
+                                    {/* Quote Block */}
+                                    <div className="my-16 py-12 px-8 md:px-12 border-l-2 border-accent bg-white/[0.02] relative">
+                                        <p className="text-2xl md:text-4xl font-anton uppercase text-white leading-[1.1] italic tracking-tight">
+                                            &ldquo;True strength isn&apos;t just about what your body can do—it&apos;s about the discipline to show up and the resilience to never break.&rdquo;
+                                        </p>
+                                        <div className="absolute top-4 right-8 text-accent/10 font-anton text-9xl leading-none select-none">
+                                            &ldquo;
+                                        </div>
+                                    </div>
+
+                                    <p>
+                                        Drawing from her world-class athletic background, Coach Shivani has developed a unique training philosophy rooted in authenticity and excellence. Her dedication to her own athletic journey fuels her passion for transforming individuals from all walks of life into true athletes. Her coaching style emphasizes pushing boundaries, inspiring discipline, and unlocking untapped potential.
+                                    </p>
+                                    <p>
+                                        At Boxx Era, Shivani&apos;s mission is clear: to empower every individual to surpass their limits and achieve their fitness goals. Whether you&apos;re a beginner or an aspiring athlete, her personalized, results-oriented training will help you unlock your true strength and resilience.
+                                    </p>
+
+                                    <div className="pt-10">
+                                        <p className="font-anton text-2xl uppercase tracking-tight text-white mb-12">
+                                            Join us at Boxx Era — <span className="text-accent underline decoration-1 underline-offset-8">where champions are made.</span>
+                                        </p>
+
+                                        <Button
+                                            text="START YOUR TRANSFORMATION"
+                                            href="/#contact"
+                                            className="w-full sm:w-auto px-12 py-7"
+                                        />
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                            {/* Sidebar Info */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                className="lg:col-span-4"
+                            >
+                                <div className="sticky top-40 space-y-12">
+                                    <div className="p-8 border border-white/5 bg-zinc-950/50 backdrop-blur-sm rounded-sm">
+                                        <h4 className="text-accent text-[10px] font-black uppercase tracking-[0.3em] mb-8 border-b border-accent/20 pb-4">
+                                            Expertise & Career
+                                        </h4>
+                                        <ul className="space-y-6">
+                                            {[
+                                                "Professional Boxing Career",
+                                                "10+ Years Elite Experience",
+                                                "Multi-Certified Master Coach",
+                                                "Co-Founder & Visionary",
+                                                "Advanced Sport Conditioning"
+                                            ].map((item, i) => (
+                                                <li key={i} className="flex gap-4 items-center text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-white/50 group">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-accent/30 group-hover:bg-accent transition-colors" />
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    <div className="relative aspect-square w-full grayscale opacity-20 overflow-hidden rounded-sm group">
+                                        <Image
+                                            src="/logo.png"
+                                            alt="Boxx Era Seal"
+                                            fill
+                                            className="object-contain p-12 group-hover:scale-110 transition-transform duration-1000"
+                                        />
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -195,7 +330,7 @@ export default function ArticlesPage() {
                                             target="_blank"
                                             className="group/cta inline-flex items-center gap-3 text-[10px] md:text-xs font-black uppercase tracking-[0.3em] mt-auto transition-all text-accent-red"
                                         >
-                                            <span className="relative group-hover:drop-shadow-[0_0_8px_rgba(255,222,2,0.8)] transition-all duration-300">
+                                            <span className="relative group-hover:drop-shadow-[0_0_8px_rgba(29,194,193,0.8)] transition-all duration-300">
                                                 READ FULL ARTICLE
                                                 <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent-red transition-all duration-500 group-hover:w-full" />
                                             </span>

@@ -65,7 +65,7 @@ export default function Contact() {
                                     <h4 className="text-white font-bold uppercase tracking-widest text-xs mb-2">Studios</h4>
                                     <p className="text-white/40 uppercase tracking-tighter text-[10px] leading-relaxed">
                                         HAUZ KHAS, NEW DELHI <br />
-                                        SECTOR 43, GURGAON
+                                        SECTOR 43, GURUGRAM
                                     </p>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@ export default function Contact() {
                                             key="submit"
                                             disabled={status === "loading"}
                                             whileHover={{ scale: 1.02, backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 25px rgba(212,0,0,0.4)" }}
-                                            className="w-full bg-accent text-black py-5 font-black uppercase tracking-[.3em] text-xs flex items-center justify-center gap-4 transition-all disabled:opacity-50 group shadow-[0_10px_30px_rgba(255,222,2,0.15)]"
+                                            className="w-full bg-accent text-black py-5 font-black uppercase tracking-[.3em] text-xs flex items-center justify-center gap-4 transition-all disabled:opacity-50 group shadow-[0_10px_30px_rgba(29,194,193,0.15)]"
                                         >
                                             {status === "loading" ? "SENDING..." : (
                                                 <>SEND ENQUIRY <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></>

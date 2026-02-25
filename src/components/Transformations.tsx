@@ -28,7 +28,6 @@ const transformations = [
     { id: 16, name: "ELITE MEMBER", result: "ATHLETIC PEAK", image: "/FDF7CEA8-8C65-4B49-A12B-C5C012AFCA3A.JPEG" },
     { id: 17, name: "ELITE MEMBER", result: "PERFORMANCE EVOLUTION", image: "/2021-08-17.webp" },
     { id: 18, name: "ELITE MEMBER", result: "DEDICATED GROWTH", image: "/2022-03-13.webp" },
-    { id: 19, name: "ELITE MEMBER", result: "THE BOXER JOURNEY", image: "/2025-04-02.webp" },
     { id: 20, name: "ELITE MEMBER", result: "ELITE PROGRESSION", image: "/WhatsApp Image 2026-02-25 at 12.05.56 PM.jpeg" },
     { id: 21, name: "ELITE MEMBER", result: "TRANSFORMATION JOURNEY", image: "/WhatsApp Image 2026-02-25 at 12.06.52 PM.jpeg" },
     { id: 22, name: "ELITE MEMBER", result: "ATHLETIC RECOMPOSITION", image: "/WhatsApp Image 2026-02-25 at 12.07.50 PM.jpeg" },
@@ -146,13 +145,13 @@ export default function Transformations() {
 
                                 {/* Transformation Badge */}
                                 <div className="absolute top-6 right-6 z-10">
-                                    <span className="bg-accent text-black text-[10px] font-black uppercase tracking-widest px-4 py-1.5 shadow-[0_5px_15px_rgba(255,222,2,0.3)]">
+                                    <span className="bg-accent text-black text-[10px] font-black uppercase tracking-widest px-4 py-1.5 shadow-[0_5px_15px_rgba(29,194,193,0.3)]">
                                         RESULT
                                     </span>
                                 </div>
 
                                 {/* Hover Glow Line (Bottom) */}
-                                <div className="absolute bottom-0 left-0 h-1 bg-accent w-0 group-hover:w-full transition-all duration-500 shadow-[0_0_15px_rgba(255,222,2,0.5)]" />
+                                <div className="absolute bottom-0 left-0 h-1 bg-accent w-0 group-hover:w-full transition-all duration-500 shadow-[0_0_15px_rgba(29,194,193,0.5)]" />
                             </motion.div>
 
                             {/* Info Area */}
