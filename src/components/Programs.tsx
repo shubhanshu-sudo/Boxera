@@ -10,9 +10,9 @@ const programs = [
     {
         id: "01",
         type: "TAG_STACK",
-        title: "GROUP CLASSES",
-        tagline: "COMMUNITY STRENGTH",
-        tags: ["HIIT", "BODY TRAINING", "STRENGTH & POWER TRAINING"],
+        title: "BOXING GROUP CLASS & OPEN GYM",
+        tagline: "BOXING ONLY",
+        tags: ["BOXING GROUP CLASS", "OPEN GYM", "PRICING"],
         icon: <Target className="w-6 h-6" />,
         image: "/WhatsApp Image 2026-02-25 at 11.59.48 AM.jpeg",
     },
@@ -21,7 +21,7 @@ const programs = [
         type: "PERSONAL_TRAINING",
         title: "PERSONAL TRAINING",
         tagline: "ONE-ON-ONE FOCUS",
-        tags: ["ASHWIN", "SHIVANI", "JEETH"],
+        tags: [],
         features: [
             "Individual Assessment",
             "Identification of wear point",
@@ -196,7 +196,7 @@ export default function Programs() {
                                                 {/* EXPLORE NOW Button */}
                                                 <TransitionLink
                                                     href={
-                                                        program.id === "01" ? "/training/group-classes" :
+                                                        program.id === "01" ? "/pricing#enroll" :
                                                             program.id === "03" ? "/training/dream-body-series" : "/pricing"
                                                     }
                                                     className="inline-block"
@@ -231,13 +231,15 @@ export default function Programs() {
                                             </div>
 
                                             <div className={`w-full flex flex-col items-center transition-all duration-700 mt-32 md:mt-44 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"}`}>
-                                                <div className="flex border-b border-white/10 mb-6 md:mb-8 w-full">
-                                                    {program.tags?.map((tag, tIdx) => (
-                                                        <div key={tIdx} className="flex-1 py-3 text-[9px] md:text-[10px] font-black text-white/40 hover:text-accent transition-colors border-r last:border-r-0 border-white/10 uppercase tracking-tighter">
-                                                            {tag}
-                                                        </div>
-                                                    ))}
-                                                </div>
+                                                {program.tags && program.tags.length > 0 && (
+                                                    <div className="flex border-b border-white/10 mb-6 md:mb-8 w-full">
+                                                        {program.tags.map((tag, tIdx) => (
+                                                            <div key={tIdx} className="flex-1 py-3 text-[9px] md:text-[10px] font-black text-white/40 hover:text-accent transition-colors border-r last:border-r-0 border-white/10 uppercase tracking-tighter">
+                                                                {tag}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                )}
                                                 <ul className="flex flex-col gap-3 md:gap-4 items-start mb-8 md:mb-10 w-fit mx-auto">
                                                     {program.features?.map((f, fIdx) => (
                                                         f ? (

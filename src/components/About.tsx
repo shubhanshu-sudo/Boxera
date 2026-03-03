@@ -44,26 +44,30 @@ export default function About() {
                 >
                     <div className="relative">
                         <h3 className="text-3xl md:text-5xl font-anton uppercase text-white leading-[1.1] mb-2 relative z-10">
-                            BOXX ERA IS AN <span className="text-accent">ELITE</span> TRANSFORMATION POWERHOUSE.
+                            BOXX ERA IS AN <span className="text-accent">ELITE TRANSFORMATION POWERHOUSE</span> DEDICATED TO DELIVERING UNPARALLELED RESULTS.
                         </h3>
                         <div className="absolute -left-4 -top-4 w-20 h-20 bg-accent/10 rounded-full blur-3xl" />
                     </div>
 
                     <div className="max-w-[650px] space-y-10">
                         <p className="text-lg md:text-xl font-normal text-white/85 leading-relaxed">
-                            We do not follow trendy or casual setups. Ours is a <span className="text-accent font-semibold italic">disciplined and structured academy</span> meant for people who are genuinely looking for results.
+                            Unlike trendy or casual fitness setups, we operate as a <span className="text-accent font-semibold italic">disciplined and structured academy</span> tailored for individuals truly committed to a complete metamorphosis.
                         </p>
 
                         <p className="text-lg md:text-xl font-normal text-white/85 leading-relaxed">
-                            Many times, we honestly ask people to join other gyms or studios if what they are looking for is not something we provide. Yes, it is true — <span className="border-b border-accent/30 pb-1">we carefully select our clients.</span> We prioritize those committed to a complete metamorphosis.
+                            We believe in quality over quantity, which is why we thoughtfully select our clients—those who are serious about transforming their mindsets and physiques.
                         </p>
 
                         <p className="text-lg md:text-xl font-normal text-white/85 leading-relaxed">
-                            There is no shirtless training or unnecessary socializing. We focus on <span className="text-white font-bold tracking-tight">building team leaders</span> and creating a positive environment where mindsets are changed and the right path is shown.
+                            At BOXX ERA, there&apos;s no room for superficial training or unnecessary socializing. Our focus is on cultivating <span className="text-accent font-semibold">team leaders</span>, fostering a positive environment, and guiding each member on the right path to excellence.
                         </p>
 
                         <p className="text-lg md:text-xl font-normal text-white/85 leading-relaxed">
-                            Our coaches and founders come purely from sports backgrounds, not business backgrounds — where <span className="text-accent font-bold">discipline is non-negotiable</span> and <span className="text-white font-bold border-b-2 border-accent">champions are created.</span>
+                            Our coaches and founders come from strong sports backgrounds, emphasizing <span className="text-accent font-bold">discipline, resilience, and relentless pursuit of greatness</span>—core qualities that <span className="text-white font-bold border-b-2 border-accent">shape champions.</span>
+                        </p>
+
+                        <p className="text-lg md:text-xl font-normal text-white/85 leading-relaxed">
+                            If you&apos;re ready to commit to a serious transformation and join a community that values discipline, focus, and results, BOXX ERA is the place for you.
                         </p>
                     </div>
 

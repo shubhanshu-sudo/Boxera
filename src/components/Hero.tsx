@@ -11,11 +11,11 @@ const slides = [
     {
         tagline: "",
         headline: "BOXX ERA",
-        description: "WOMEN LED TRANSFORMATION CENTER • ELITE TRANSFORMATION CENTRE & RESULT DRIVEN STUDIO",
+        description: "Result-oriented fitness boutique studio | Personal training • Transformations • Boxing Culture • Group Training",
         primaryCTA: "START YOUR TRANSFORMATION",
         primaryLink: "/pricing",
-        secondaryCTA: "VIEW SCHEDULE",
-        secondaryLink: "/#programs",
+        secondaryCTA: "BOXING & OPEN GYM PRICING",
+        secondaryLink: "/pricing#enroll",
         image: "/hero_new.jpg",
     },
     {

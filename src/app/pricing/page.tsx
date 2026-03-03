@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MoveRight, Check, Zap, Target, Flame, Users, Layout, MapPin, Search, Calendar, ChevronRight } from "lucide-react";
+import { MoveRight, Check, Zap, Target, Flame, Users, Layout, MapPin, Search, Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "@/components/Marquee";
 import PreFooter from "@/components/PreFooter";
 import Footer from "@/components/Footer";
+import { PAYMENT_LINK_BOXING_OPEN_GYM, PAYMENT_LINK_DBS, PAYMENT_LINK_CONSULTATION } from "@/lib/payment-links";
 
 // Animation Variants
 const fadeIn = {
@@ -50,7 +51,7 @@ export default function PricingPage() {
                             Pricing & <span className="text-accent">Programs</span>
                         </h1>
                         <p className="text-[clamp(0.8rem,2vw,1.1rem)] font-medium text-white/60 tracking-[0.2em] uppercase max-w-2xl mx-auto mb-10">
-                            Structured plans built for serious athletes.
+                            Customized plans to turn effort into proven results.
                         </p>
                         <motion.div
                             whileHover={{ scale: 1.05 }}
@@ -70,7 +71,7 @@ export default function PricingPage() {
                 <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             </section>
 
-            {/* SECTION 2: GROUP CLASSES & OPEN GYM */}
+            {/* SECTION 2: BOXING GROUP CLASS & OPEN GYM PRICING */}
             <section id="enroll" className="py-24 md:py-32 container mx-auto px-6">
                 <motion.div
                     initial="initial"
@@ -79,8 +80,11 @@ export default function PricingPage() {
                     className="text-center mb-16 md:mb-24"
                 >
                     <motion.h2 variants={fadeIn} className="font-anton text-4xl md:text-6xl uppercase tracking-tighter mb-6">
-                        GROUP CLASSES & <span className="text-accent">OPEN GYM</span>
+                        BOXING GROUP CLASS & <span className="text-accent">OPEN GYM</span> PRICING
                     </motion.h2>
+                    <motion.p variants={fadeIn} className="text-white/50 text-sm uppercase tracking-[0.2em] mb-4">
+                        Group class and open gym: boxing only for now.
+                    </motion.p>
                     <motion.div variants={fadeIn} className="w-24 h-[2px] bg-accent mx-auto" />
                 </motion.div>
 
@@ -121,7 +125,7 @@ export default function PricingPage() {
                             </div>
                             <div className="mt-auto pt-8 border-t border-white/5">
                                 <motion.a
-                                    href="https://rzp.io/l/XmEfQIuP1"
+                                    href={PAYMENT_LINK_BOXING_OPEN_GYM}
                                     whileHover={{ backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 25px rgba(212,0,0,0.4)" }}
                                     whileTap={{ scale: 0.98 }}
                                     className="w-full inline-flex justify-center items-center bg-accent text-black py-4.5 text-[11px] font-black uppercase tracking-[0.3em] transition-all text-center shadow-[0_10px_30px_rgba(29,194,193,0.15)]"
@@ -171,7 +175,7 @@ export default function PricingPage() {
                                 <Zap className="text-accent" size={32} />
                                 <span className="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">Package 01</span>
                             </div>
-                            <h3 className="font-anton text-3xl uppercase tracking-tighter">Standard Package <br /><span className="text-accent">Solo</span></h3>
+                            <h3 className="font-anton text-3xl uppercase tracking-tighter">Standard Package</h3>
                         </div>
 
                         <div className="space-y-6 w-full mb-12">
@@ -196,14 +200,6 @@ export default function PricingPage() {
                                 <span className="text-2xl font-anton text-accent">₹60,000</span>
                             </div>
                         </div>
-
-                        <motion.a
-                            href="https://rzp.io/l/KuMhkTpH"
-                            whileHover={{ x: 5, color: "#D40000" }}
-                            className="mt-auto inline-flex items-center gap-3 text-accent text-[10px] font-black uppercase tracking-[0.3em] group/btn transition-colors"
-                        >
-                            BOOK CONSULTATION <ChevronRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
-                        </motion.a>
                     </motion.div>
 
                     {/* PT Package 2 */}
@@ -217,7 +213,7 @@ export default function PricingPage() {
                                 <Flame className="text-accent" size={32} />
                                 <span className="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">Package 02</span>
                             </div>
-                            <h3 className="font-anton text-3xl uppercase tracking-tighter">Premium + Nutrition <br /><span className="text-accent">Solo</span></h3>
+                            <h3 className="font-anton text-3xl uppercase tracking-tighter">Premium + Nutrition</h3>
                         </div>
 
                         <div className="space-y-6 w-full mb-12">
@@ -234,14 +230,6 @@ export default function PricingPage() {
                                 <span className="text-2xl font-anton text-accent">₹99,000</span>
                             </div>
                         </div>
-
-                        <motion.a
-                            href="https://rzp.io/l/KuMhkTpH"
-                            whileHover={{ x: 5 }}
-                            className="mt-auto inline-flex items-center gap-3 text-accent text-[10px] font-black uppercase tracking-[0.3em] group/btn"
-                        >
-                            BOOK CONSULTATION <ChevronRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
-                        </motion.a>
                     </motion.div>
 
                     {/* PT Package 3: Highlighted */}
@@ -254,7 +242,7 @@ export default function PricingPage() {
                         </div>
                         <div className="mb-8">
                             <Target className="text-accent mb-4" size={32} />
-                            <h3 className="font-anton text-3xl uppercase tracking-tight">With Transformation Expert</h3>
+                            <h3 className="font-anton text-2xl md:text-3xl tracking-tight leading-tight">Unlock Your Full Potential with one-on-one Coaching from Our Head Transformation Specialist.</h3>
                         </div>
 
                         <div className="space-y-6 w-full mb-12">
@@ -272,16 +260,41 @@ export default function PricingPage() {
                                 </div>
                             </div>
                         </div>
-
-                        <motion.a
-                            href="https://rzp.io/l/KuMhkTpH"
-                            whileHover={{ scale: 1.02, backgroundColor: "#D40000", color: "#ffffff" }}
-                            whileTap={{ scale: 0.95 }}
-                            className="w-full mt-auto inline-flex justify-center items-center bg-accent text-black py-5 text-[10px] font-black uppercase tracking-[0.3em] transition-all"
-                        >
-                            BOOK CONSULTATION
-                        </motion.a>
                     </motion.div>
+                </motion.div>
+            </section>
+
+            {/* Thin Separator */}
+            <div className="container mx-auto px-6">
+                <div className="w-full h-[1px] bg-white/5" />
+            </div>
+
+            {/* SECTION 3.5: CONSULTATION WITH TRANSFORMATION EXPERT */}
+            <section className="py-24 md:py-32 container mx-auto px-6">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="max-w-3xl mx-auto text-center"
+                >
+                    <span className="text-accent text-[10px] font-black tracking-[0.4em] uppercase mb-4 block">
+                        Transformation Expert
+                    </span>
+                    <h2 className="font-anton text-4xl md:text-5xl lg:text-6xl uppercase tracking-tighter mb-6">
+                        Book a consultation with <span className="text-accent">Jeeth Sanghavi</span>
+                    </h2>
+                    <div className="w-24 h-[2px] bg-accent mx-auto mb-8" />
+                    <p className="text-white/70 text-base md:text-lg font-medium leading-relaxed mb-10">
+                        Ready to make real progress? Our paid consultation with a transformation expert offers personalized guidance for individuals with medical conditions, past injuries, or unmet goals. Take the first step today.
+                    </p>
+                    <motion.a
+                        href={PAYMENT_LINK_CONSULTATION}
+                        whileHover={{ scale: 1.05, backgroundColor: "#ffffff", color: "#000000", boxShadow: "0 0 30px rgba(29, 194, 193, 0.4)" }}
+                        whileTap={{ scale: 0.95 }}
+                        className="inline-flex items-center gap-4 bg-accent text-black px-10 md:px-14 py-5 text-xs font-black uppercase tracking-[0.3em] transition-all shadow-[0_0_30px_rgba(29,194,193,0.25)]"
+                    >
+                        BOOK CONSULTATION <MoveRight size={18} />
+                    </motion.a>
                 </motion.div>
             </section>
 
@@ -300,12 +313,12 @@ export default function PricingPage() {
                             viewport={{ once: true }}
                             className="lg:w-1/2"
                         >
-                            <span className="text-accent font-black tracking-[0.4em] uppercase text-xs mb-4 block">Transformation Elite</span>
+                            <span className="text-accent font-black tracking-[0.4em] uppercase text-xs mb-4 block">Group Transformation Program</span>
                             <h2 className="font-anton text-5xl md:text-7xl uppercase tracking-tighter mb-6 leading-none">
                                 DREAM BODY <br className="hidden md:block" /> <span className="text-accent">SERIES (DBS)</span>
                             </h2>
                             <p className="text-white/60 text-lg md:text-xl font-medium tracking-wide mb-10 max-w-xl">
-                                A 51-Day Elite Transformation Program designed for those who demand nothing less than peak performance and physical mastery.
+                                A 51-day group transformation program with personalized nutrition plans and complete accountability, designed to transform your physique—suitable for all fitness levels.
                             </p>
 
                             <div className="grid grid-cols-2 gap-8 mb-12">
@@ -328,7 +341,7 @@ export default function PricingPage() {
                             </div>
 
                             <motion.a
-                                href="https://rzp.io/l/XmEfQIuP1"
+                                href={PAYMENT_LINK_DBS}
                                 whileHover={{ scale: 1.05, backgroundColor: "#D40000", boxShadow: "0 0 30px rgba(212, 0, 0, 0.4)" }}
                                 whileTap={{ scale: 0.95 }}
                                 className="inline-flex items-center gap-4 bg-accent text-black px-12 py-6 text-xs font-black uppercase tracking-[0.3em] transition-all shadow-[0_15px_40px_rgba(29,194,193,0.1)]"

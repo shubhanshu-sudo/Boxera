@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { TransitionLink } from "@/components/transitions/TransitionLink";
 import Footer from "@/components/Footer";
+import { PAYMENT_LINK_DBS } from "@/lib/payment-links";
 
 const dbsCriteria = [
     "An Athlete's mindset is strongly needed. No excuses, a lot of discipline, and willingness to achieve your goals.",
@@ -91,7 +92,7 @@ export default function DreamBodySeriesPage() {
                             className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8"
                         >
                             <motion.a
-                                href="https://rzp.io/l/XmEfQIuP1"
+                                href={PAYMENT_LINK_DBS}
                                 whileHover={{ scale: 1.05, backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 50px rgba(212,0,0,0.4)" }}
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-accent text-black px-12 md:px-16 py-5 md:py-6 font-black uppercase tracking-[0.35em] text-[10px] md:text-xs transition-all duration-500"
@@ -205,7 +206,7 @@ export default function DreamBodySeriesPage() {
                                 <span className="text-white/40 block text-xs font-bold uppercase tracking-[0.2em] mt-2">TOTAL PROGRAM COST</span>
                             </div>
                             <motion.a
-                                href="https://rzp.io/l/XmEfQIuP1"
+                                href={PAYMENT_LINK_DBS}
                                 className="w-full bg-accent text-black py-5 font-black uppercase tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all"
                             >
                                 RESERVE STUDIO SLOT
@@ -224,7 +225,7 @@ export default function DreamBodySeriesPage() {
                                 <span className="text-white/40 block text-xs font-bold uppercase tracking-[0.2em] mt-2">TOTAL PROGRAM COST</span>
                             </div>
                             <motion.a
-                                href="https://rzp.io/l/XmEfQIuP1"
+                                href={PAYMENT_LINK_DBS}
                                 className="w-full bg-accent text-black py-5 font-black uppercase tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all"
                             >
                                 START ONLINE PROGRAM
@@ -298,7 +299,7 @@ export default function DreamBodySeriesPage() {
                         </h2>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
                             <motion.a
-                                href="https://rzp.io/l/XmEfQIuP1"
+                                href={PAYMENT_LINK_DBS}
                                 whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(29,194,193,0.4)" }}
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-accent text-black px-16 py-7 font-black uppercase tracking-[0.5em] text-xs transition-all w-full sm:w-auto"
