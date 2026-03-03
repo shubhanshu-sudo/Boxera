@@ -231,7 +231,82 @@ export default function ArticlesPage() {
                 </div>
             </section>
 
+            {/* SECTION: MEET COACH JEETH SANGHAVI */}
+            <section className="py-24 md:py-32 bg-zinc-950/50 border-y border-white/5 relative overflow-hidden">
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="max-w-5xl mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1 }}
+                            className="relative aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-sm mb-16 border border-white/5 shadow-2xl"
+                        >
+                            <Image
+                                src="/WhatsApp Image 2026-02-25 at 12.16.27 PM.jpeg"
+                                alt="Coach Jeeth Sanghavi - Boxing training at Boxx Era"
+                                fill
+                                className="object-cover object-center transition-transform duration-[3s] hover:scale-105"
+                                sizes="(max-width: 768px) 100vw, 1024px"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                            <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
+                                <span className="bg-accent text-black text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] px-4 py-2">
+                                    Meet Your Coach: Jeeth Sanghavi
+                                </span>
+                            </div>
+                        </motion.div>
 
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="max-w-3xl"
+                        >
+                            <span className="text-accent text-[10px] md:text-xs font-black uppercase tracking-[0.5em] mb-6 block">
+                                COACH SPOTLIGHT
+                            </span>
+
+                            <h2 className="text-4xl md:text-6xl font-anton uppercase leading-[0.9] tracking-tighter text-white mb-8">
+                                Meet Your Coach: <span className="text-accent">Jeeth Sanghavi</span>
+                            </h2>
+
+                            <div className="w-16 h-[2px] bg-accent/30 mb-12" />
+
+                            <div className="space-y-8 text-white/70 text-lg leading-relaxed font-light">
+                                <p>
+                                    Welcome to the heart of Boxx Era, where transformation begins! Meet <span className="text-white font-bold">Jeeth Sanghavi</span>, the trailblazing Founder and Transformational Expert at our premier fitness studio in Delhi & Gurugram.
+                                </p>
+
+                                <p>
+                                    With over 15 years of dedicated experience in the fitness industry, Jeeth has made it her mission to empower individuals to elevate their physical, mental, and emotional well-being through holistic, science-backed methods. As a proud recipient of the <span className="text-accent font-semibold">Rashtriya Shiksha Ratan Award</span>, her credentials speak volumes. A former international and national athlete, Jeeth has excelled in both lawn tennis and boxing, and even holds the title of advanced-level mountaineer.
+                                </p>
+
+                                <p>
+                                    Jeeth&apos;s expertise is wide-ranging, from body transformation and rehabilitation to sports training, making her a trusted name among fitness enthusiasts. One of her most significant accomplishments includes training Bollywood superstar <span className="text-white font-bold">Priyanka Chopra</span> for her role in the critically acclaimed film <em>Mary Kom</em>, where she expertly guided the actress to embody the grit and determination of an Olympic boxer.
+                                </p>
+
+                                <p>
+                                    At the heart of Boxx Era is a vibrant community committed to holistic transformation. Jeeth has cultivated an environment where personalized training, rehabilitation/prehabilitation programs, transformation coaching, and nutritional guidance come together to redefine the fitness experience in India.
+                                </p>
+
+                                <p>
+                                    Join us at Boxx Era and embark on your transformative journey with Coach Jeeth as your guide—where every step takes you closer to your ultimate self!
+                                </p>
+
+                                <div className="pt-10">
+                                    <Button
+                                        text="START YOUR TRANSFORMATION"
+                                        href="/#contact"
+                                        className="w-full sm:w-auto px-12 py-7"
+                                    />
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
 
             {/* SECTION 4: CATEGORY FILTER */}
             <section className="py-12 sticky top-20 md:top-24 bg-black/90 backdrop-blur-md z-40 border-b border-white/5">
