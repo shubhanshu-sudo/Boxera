@@ -10,7 +10,7 @@ export default function Footer() {
                     <div className="relative w-8 h-8 opacity-60">
                         <Image src="/Boxx Era-01 (1).png" alt="Logo" fill className="object-contain invert" />
                     </div>
-                    <span>BOXX ERA GYM © 2024</span>
+                    <span>BOXX ERA GYM © 2019</span>
                 </div>
                 <div className="flex gap-8">
                     <a href="https://www.instagram.com/boxxera.in?igsh=MWZ4MWRoaHh1ZjVsaQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Instagram</a>
