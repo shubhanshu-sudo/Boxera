@@ -122,10 +122,17 @@ export default function Programs() {
                         className="lg:max-w-md"
                     >
                         <div className="w-12 h-1 bg-accent mb-6 md:block hidden" />
-                        <p className="text-white/40 text-xs md:text-sm leading-relaxed uppercase tracking-[0.2em]">
-                            WE DON&apos;T JUST TEACH BOXING. WE ENGINEER PHYSICAL AND MENTAL EVOLUTION.
-                            CHOOSE YOUR PATH AND REDEFINE WHAT YOUR BODY IS CAPABLE OF.
-                        </p>
+                        <div className="flex flex-col gap-2">
+                            <p className="text-[clamp(0.55rem,1.6vw,0.9rem)] font-black tracking-[0.5em] text-[#1DC2C1] uppercase">
+                                excl u s ive &nbsp; NUTRI T I ON &nbsp; PLAN
+                            </p>
+                            <p className="text-[clamp(0.45rem,1.2vw,0.72rem)] font-bold tracking-[0.35em] text-white/70 uppercase">
+                                fat l os s &nbsp;|&nbsp; mu scl e &nbsp;toning &nbsp;|&nbsp; Ki d s &nbsp;t raining
+                            </p>
+                            <p className="text-[clamp(0.45rem,1.2vw,0.72rem)] font-bold tracking-[0.35em] text-white/70 uppercase">
+                                L I F ES TYL E &nbsp;ASSE S SMENT &nbsp;|&nbsp; nat u ral &nbsp;BO DY BUI L D ING
+                            </p>
+                        </div>
                     </motion.div>
                 </div>
 
