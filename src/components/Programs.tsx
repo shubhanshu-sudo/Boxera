@@ -121,8 +121,8 @@ export default function Programs() {
                     >
                         <div className="w-12 h-1 bg-accent mb-6 md:block hidden" />
                         <p className="text-sm text-white/70 leading-relaxed uppercase">
-                            EXCLUSIVE NUTRITION PLAN, FAT LOSS, MUSCLE TONING, KIDS TRAINING, SENIOR ADULT TRAINING,<br />
-                            SPORTS SPECIFIC TRAINING, LIFESTYLE ASSESSMENT, NATURAL BODY BUILDING
+                            EXCLUSIVE NUTRITION PLAN | FAT LOSS | MUSCLE BUILDING / TONING | KIDS TRAINING | SENIOR ADULT TRAINING |<br />
+                            SPORTS SPECIFIC TRAINING | LIFESTYLE ASSESSMENT | NATURAL BODY BUILDING
                         </p>
                     </motion.div>
                 </div>
