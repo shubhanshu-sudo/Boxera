@@ -142,125 +142,206 @@ export default function PricingPage() {
             </div>
 
             {/* SECTION 3: PERSONAL TRAINING */}
-            <section className="py-24 md:py-32 container mx-auto px-6">
-                <motion.div
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    className="text-center mb-16 md:mb-24"
-                >
-                    <motion.h2 variants={fadeIn} className="font-anton text-4xl md:text-6xl uppercase tracking-tighter mb-6">
-                        PERSONAL <span className="text-accent">TRAINING</span>
-                    </motion.h2>
-                    <motion.div variants={fadeIn} className="w-24 h-[2px] bg-accent mx-auto" />
-                </motion.div>
+          {/* SECTION 3: PERSONAL TRAINING */}
+<section className="py-24 md:py-32 container mx-auto px-6">
+    <motion.div
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="text-center mb-16 md:mb-24"
+    >
+        <motion.h2 variants={fadeIn} className="font-anton text-4xl md:text-6xl uppercase tracking-tighter mb-6">
+            PERSONAL <span className="text-accent">TRAINING</span>
+        </motion.h2>
+        <motion.div variants={fadeIn} className="w-24 h-[2px] bg-accent mx-auto" />
+    </motion.div>
 
-                <motion.div
-                    variants={staggerContainer}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10"
-                >
-                    {/* PT Package 1 */}
-                    <motion.div
-                        variants={fadeIn}
-                        whileHover={{ y: -5, borderColor: "rgba(29, 194, 193, 0.2)" }}
-                        className="group relative bg-zinc-900/20 border border-white/5 p-10 flex flex-col items-start transition-all duration-300"
-                    >
-                        <div className="mb-10 w-full">
-                            <div className="flex justify-between items-start mb-6">
-                                <Zap className="text-accent" size={32} />
-                                <span className="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">Package 01</span>
-                            </div>
-                            <h3 className="font-anton text-3xl uppercase tracking-tighter">Standard Package</h3>
-                        </div>
+    <motion.div
+        variants={staggerContainer}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10"
+    >
 
-                        <div className="space-y-6 w-full mb-12">
-                            <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                                <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">1 Session</span>
-                                <span className="text-2xl font-anton">₹2,500</span>
-                            </div>
-                            <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                                <div>
-                                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block line-through decoration-accent/30 opacity-40">₹30,000</span>
-                                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">12 Sessions</span>
-                                    <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 1 Month</span>
-                                </div>
-                                <span className="text-2xl font-anton text-accent">₹27,500</span>
-                            </div>
-                            <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                                <div>
-                                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block line-through decoration-accent/30 opacity-40">₹90,000</span>
-                                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">36 Sessions</span>
-                                    <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 3 Months</span>
-                                </div>
-                                <span className="text-2xl font-anton text-accent">₹60,000</span>
-                            </div>
-                        </div>
-                    </motion.div>
+        {/* PT Package 1 */}
+        <motion.div
+            variants={fadeIn}
+            whileHover={{ y: -5, borderColor: "rgba(29, 194, 193, 0.2)" }}
+            className="group relative bg-zinc-900/20 border border-white/5 p-10 flex flex-col items-start transition-all duration-300"
+        >
+            <div className="mb-10 w-full">
+                <div className="flex justify-between items-start mb-6">
+                    <Zap className="text-accent" size={32} />
+                    <span className="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">
+                        Package 01
+                    </span>
+                </div>
 
-                    {/* PT Package 2 */}
-                    <motion.div
-                        variants={fadeIn}
-                        whileHover={{ y: -5, borderColor: "rgba(29, 194, 193, 0.2)" }}
-                        className="group relative bg-zinc-900/20 border border-white/5 p-10 flex flex-col items-start transition-all duration-300"
-                    >
-                        <div className="mb-10 w-full">
-                            <div className="flex justify-between items-start mb-6">
-                                <Flame className="text-accent" size={32} />
-                                <span className="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">Package 02</span>
-                            </div>
-                            <h3 className="font-anton text-3xl uppercase tracking-tighter">Premium + Nutrition</h3>
-                        </div>
+                <h3 className="font-anton text-3xl uppercase tracking-tighter">
+                    Standard Package
+                </h3>
+            </div>
 
-                        <div className="space-y-6 w-full mb-12">
-                            <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                                <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">1 Session</span>
-                                <span className="text-2xl font-anton">₹3,500</span>
-                            </div>
-                            <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                                <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">12 Sessions</span>
-                                <span className="text-2xl font-anton text-accent">₹36,000</span>
-                            </div>
-                            <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                                <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">36 Sessions</span>
-                                <span className="text-2xl font-anton text-accent">₹99,000</span>
-                            </div>
-                        </div>
-                    </motion.div>
+            <div className="space-y-6 w-full mb-12">
+                <div className="flex justify-between items-end pb-4 border-b border-white/5">
+                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">
+                        1 Session
+                    </span>
+                    <span className="text-2xl font-anton">₹2,500</span>
+                </div>
 
-                    {/* PT Package 3: Highlighted */}
-                    <motion.div
-                        variants={fadeIn}
-                        className="group relative bg-black border-2 border-accent p-10 flex flex-col items-start shadow-[0_0_40px_rgba(29,194,193,0.15)] scale-105 lg:scale-110 z-10"
-                    >
-                        <div className="absolute top-0 right-0 bg-accent-red text-white px-4 py-1.5 text-[9px] font-black uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(212,0,0,0.4)]">
-                            EXCLUSIVE
-                        </div>
-                        <div className="mb-8">
-                            <Target className="text-accent mb-4" size={32} />
-                            <h3 className="font-anton text-2xl md:text-3xl tracking-tight leading-tight">Unlock Your Full Potential with one-on-one Coaching from Our Head Transformation Specialist.</h3>
-                        </div>
+                <div className="flex justify-between items-end pb-4 border-b border-white/5">
+                    <div>
+                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block line-through decoration-accent/30 opacity-40">
+                            ₹30,000
+                        </span>
+                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">
+                            12 Sessions
+                        </span>
+                        <span className="text-[9px] text-accent font-black uppercase tracking-widest">
+                            Validity 1 Month
+                        </span>
+                    </div>
 
-                        <div className="space-y-6 w-full mb-12">
-                            <div className="pb-4 border-b border-white/10">
-                                <p className="text-white/60 text-sm font-medium mb-2 leading-relaxed">
-                                    Work directly with our head transformation specialist for complete physiological and elite performance results.
-                                </p>
-                                <div className="flex flex-col items-start mt-6 gap-2">
-                                    <span className="text-5xl font-anton text-accent tracking-tighter">₹1,95,000</span>
-                                    <div className="flex items-center gap-4">
-                                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">36 Sessions</span>
-                                        <span className="w-1 h-1 bg-accent/40 rounded-full" />
-                                        <span className="text-[10px] text-accent/60 font-black uppercase tracking-widest">Validity 3 Months</span>
-                                    </div>
-                                </div>
-                            </div>
+                    <span className="text-2xl font-anton text-accent">
+                        ₹27,500
+                    </span>
+                </div>
+
+                <div className="flex justify-between items-end pb-4 border-b border-white/5">
+                    <div>
+                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block line-through decoration-accent/30 opacity-40">
+                            ₹90,000
+                        </span>
+
+                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">
+                            36 Sessions
+                        </span>
+
+                        <span className="text-[9px] text-accent font-black uppercase tracking-widest">
+                            Validity 3 Months
+                        </span>
+                    </div>
+
+                    <span className="text-2xl font-anton text-accent">
+                        ₹60,000
+                    </span>
+                </div>
+            </div>
+        </motion.div>
+
+
+        {/* PT Package 2 */}
+        <motion.div
+            variants={fadeIn}
+            whileHover={{ y: -5, borderColor: "rgba(29, 194, 193, 0.2)" }}
+            className="group relative bg-zinc-900/20 border border-white/5 p-10 flex flex-col items-start transition-all duration-300"
+        >
+            <div className="mb-10 w-full">
+                <div className="flex justify-between items-start mb-6">
+                    <Flame className="text-accent" size={32} />
+
+                    <span className="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">
+                        Package 02
+                    </span>
+                </div>
+
+                <h3 className="font-anton text-3xl uppercase tracking-tighter">
+                    Premium with Coach Shivani
+                </h3>
+
+                <p className="text-[11px] text-accent font-bold uppercase tracking-[0.2em] mt-2">
+                    With Nutrition Plan and Complete Accountability
+                </p>
+            </div>
+
+            <div className="space-y-6 w-full mb-12">
+                <div className="flex justify-between items-end pb-4 border-b border-white/5">
+                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">
+                        1 Session
+                    </span>
+
+                    <span className="text-2xl font-anton">
+                        ₹3,500
+                    </span>
+                </div>
+
+                <div className="flex justify-between items-end pb-4 border-b border-white/5">
+                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">
+                        12 Sessions
+                    </span>
+
+                    <span className="text-2xl font-anton text-accent">
+                        ₹36,000
+                    </span>
+                </div>
+
+                <div className="flex justify-between items-end pb-4 border-b border-white/5">
+                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">
+                        36 Sessions
+                    </span>
+
+                    <span className="text-2xl font-anton text-accent">
+                        ₹99,000
+                    </span>
+                </div>
+            </div>
+        </motion.div>
+
+
+        {/* PT Package 3 */}
+        <motion.div
+            variants={fadeIn}
+            className="group relative bg-black border-2 border-accent p-10 flex flex-col items-start shadow-[0_0_40px_rgba(29,194,193,0.15)] scale-105 lg:scale-110 z-10"
+        >
+            <div className="absolute top-0 right-0 bg-accent-red text-white px-4 py-1.5 text-[9px] font-black uppercase tracking-[0.2em]">
+                EXCLUSIVE
+            </div>
+
+            <div className="mb-8">
+                <Target className="text-accent mb-4" size={32} />
+
+                <h3 className="font-anton text-2xl md:text-3xl tracking-tight leading-tight">
+                    Transformation Coaching with Jeeth Sanghavi
+                </h3>
+
+                <p className="text-[11px] text-accent font-bold uppercase tracking-[0.2em] mt-2">
+                    Elite One-on-One Transformation Program
+                </p>
+            </div>
+
+            <div className="space-y-6 w-full mb-12">
+                <div className="pb-4 border-b border-white/10">
+                    <p className="text-white/60 text-sm font-medium mb-2 leading-relaxed">
+                        Train directly with Jeeth Sanghavi for elite physique
+                        transformation, advanced coaching, and complete
+                        lifestyle restructuring.
+                    </p>
+
+                    <div className="flex flex-col items-start mt-6 gap-2">
+                        <span className="text-5xl font-anton text-accent tracking-tighter">
+                            ₹1,95,000
+                        </span>
+
+                        <div className="flex items-center gap-4">
+                            <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">
+                                36 Sessions
+                            </span>
+
+                            <span className="w-1 h-1 bg-accent/40 rounded-full" />
+
+                            <span className="text-[10px] text-accent/60 font-black uppercase tracking-widest">
+                                Validity 3 Months
+                            </span>
                         </div>
-                    </motion.div>
-                </motion.div>
-            </section>
+                    </div>
+                </div>
+            </div>
+        </motion.div>
+
+    </motion.div>
+</section>
 
             {/* Thin Separator */}
             <div className="container mx-auto px-6">
