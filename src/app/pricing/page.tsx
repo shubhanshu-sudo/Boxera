@@ -80,7 +80,7 @@ export default function PricingPage() {
                     className="text-center mb-16 md:mb-24"
                 >
                     <motion.h2 variants={fadeIn} className="font-anton text-4xl md:text-6xl uppercase tracking-tighter mb-6">
-                        BOXING GROUP CLASS & <span className="text-accent">OPEN GYM</span> PRICING
+                        GROUP CLASS & <span className="text-accent">OPEN GYM</span> PRICING
                     </motion.h2>
                     
                     <motion.div variants={fadeIn} className="w-24 h-[2px] bg-accent mx-auto" />
