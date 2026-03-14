@@ -147,10 +147,12 @@ export default function Contact() {
                                         name="interest"
                                         className="w-full bg-transparent border-b border-white/10 py-3 text-sm focus:border-accent focus:outline-none transition-colors uppercase tracking-wider appearance-none cursor-pointer"
                                     >
-                                        <option className="bg-zinc-900" value="group">Group Classes</option>
                                         <option className="bg-zinc-900" value="personal">Personal Training</option>
+                                        <option className="bg-zinc-900" value="group">Group Classes</option>
                                         <option className="bg-zinc-900" value="dbs">Dream Body Series</option>
-                                        <option className="bg-zinc-900" value="boxing">Boxing / Combat Training</option>
+                                        <option className="bg-zinc-900" value="boxing">Boxing Training</option>
+                                        <option className="bg-zinc-900" value="transformation">Transformation Clinic</option>
+                                        <option className="bg-zinc-900" value="others">Others</option>
                                     </select>
                                 </div>
                             </div>
