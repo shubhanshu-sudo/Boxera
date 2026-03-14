@@ -110,7 +110,7 @@ export default function Programs() {
                         <span className="text-accent uppercase tracking-widest text-[10px] md:text-xs font-bold mb-4 block">
                             TRAINING DISCIPLINE
                         </span>
-                        <h2 className="text-xl md:text-2xl lg:text-3xl font-anton uppercase tracking-tight leading-[1.2] text-white max-w-sm">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-anton uppercase tracking-tight leading-[1.2] text-white max-w-sm">
                             EMPOWERING YOU WITH AN AUTHENTIC WORLD-CLASS ATHLETE TRAINING PHILOSOPHY.
                         </h2>
                     </motion.div>
@@ -123,14 +123,14 @@ export default function Programs() {
                     >
                         <div className="w-12 h-1 bg-accent mb-6 md:block hidden" />
                         <div className="flex flex-col gap-2">
-                            <p className="text-[clamp(0.55rem,1.6vw,0.9rem)] font-black tracking-[0.5em] text-[#1DC2C1] uppercase">
-                                excl u s ive &nbsp; NUTRI T I ON &nbsp; PLAN
+                            <p className="text-sm md:text-base font-bold text-white uppercase">
+                                Exclusive Nutrition Plan
                             </p>
-                            <p className="text-[clamp(0.45rem,1.2vw,0.72rem)] font-bold tracking-[0.35em] text-white/70 uppercase">
-                                fat l os s &nbsp;|&nbsp; mu scl e &nbsp;toning &nbsp;|&nbsp; Ki d s &nbsp;t raining
+                            <p className="text-sm text-white/70">
+                                Fat Loss | Muscle Toning | Kids Training | Senior Adult Training | Sports Specific Training
                             </p>
-                            <p className="text-[clamp(0.45rem,1.2vw,0.72rem)] font-bold tracking-[0.35em] text-white/70 uppercase">
-                                L I F ES TYL E &nbsp;ASSE S SMENT &nbsp;|&nbsp; nat u ral &nbsp;BO DY BUI L D ING
+                            <p className="text-sm text-white/70">
+                                Lifestyle Assessment | Natural Body Building
                             </p>
                         </div>
                     </motion.div>
