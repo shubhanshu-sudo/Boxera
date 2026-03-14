@@ -107,9 +107,7 @@ export default function Programs() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="text-accent uppercase tracking-widest text-[10px] md:text-xs font-bold mb-4 block">
-                            TRAINING DISCIPLINE
-                        </span>
+
                         <h2 className="text-2xl md:text-3xl lg:text-4xl font-anton uppercase tracking-tight leading-[1.2] text-white max-w-sm">
                             EMPOWERING YOU WITH AN AUTHENTIC WORLD-CLASS ATHLETE TRAINING PHILOSOPHY.
                         </h2>
@@ -122,17 +120,9 @@ export default function Programs() {
                         className="lg:max-w-md"
                     >
                         <div className="w-12 h-1 bg-accent mb-6 md:block hidden" />
-                        <div className="flex flex-col gap-2">
-                            <p className="text-sm md:text-base font-bold text-white uppercase">
-                                Exclusive Nutrition Plan
-                            </p>
-                            <p className="text-sm text-white/70">
-                                Fat Loss | Muscle Toning | Kids Training | Senior Adult Training | Sports Specific Training
-                            </p>
-                            <p className="text-sm text-white/70">
-                                Lifestyle Assessment | Natural Body Building
-                            </p>
-                        </div>
+                        <p className="text-sm text-white/70 leading-relaxed">
+                            Exclusive Nutrition Plan, Fat Loss, Muscle Toning, Kids Training, Senior Adult Training, Sports Specific Training, Lifestyle Assessment, Natural Body Building
+                        </p>
                     </motion.div>
                 </div>
 
