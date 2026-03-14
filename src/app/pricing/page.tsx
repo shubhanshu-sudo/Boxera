@@ -122,14 +122,12 @@ export default function PricingPage() {
                                 )}
                             </div>
                             <div className="mt-auto pt-8 border-t border-white/5">
-                                <motion.a
-                                    href={PAYMENT_LINK_BOXING_OPEN_GYM}
-                                    whileHover={{ backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 25px rgba(212,0,0,0.4)" }}
-                                    whileTap={{ scale: 0.98 }}
-                                    className="w-full inline-flex justify-center items-center bg-accent text-black py-4.5 text-[11px] font-black uppercase tracking-[0.3em] transition-all text-center shadow-[0_10px_30px_rgba(29,194,193,0.15)]"
+                                <Link
+                                    href="/#contact"
+                                    className="w-full inline-flex justify-center items-center bg-accent text-black py-4.5 text-[11px] font-black uppercase tracking-[0.3em] transition-all text-center shadow-[0_10px_30px_rgba(29,194,193,0.15)] hover:bg-red-600 hover:text-white"
                                 >
                                     ENROLL NOW
-                                </motion.a>
+                                </Link>
                             </div>
                         </motion.div>
                     ))}

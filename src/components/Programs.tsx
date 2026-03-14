@@ -11,7 +11,7 @@ const programs = [
         id: "01",
         type: "TAG_STACK",
         title: "GROUP CLASS & OPEN GYM",
-        tagline: "BOXING ONLY",
+        tagline: "",
         tags: ["GROUP CLASS", "OPEN GYM", "PRICING"],
         icon: <Target className="w-6 h-6" />,
         image: "/WhatsApp Image 2026-02-25 at 11.59.48 AM.jpeg",
