@@ -34,7 +34,7 @@ const programs = [
     {
         id: "03",
         type: "TAG_STACK",
-        title: "TRANSFORMATIVE PROGRAM",
+        title: "TRANSFORMATION CLINIC",
         tagline: "ELITE EVOLUTION",
         tags: ["Group / DBS", "1-1 / CONSULTATION"],
         icon: <Shield className="w-6 h-6" />,
@@ -57,31 +57,34 @@ export default function Programs() {
         return () => window.removeEventListener("resize", checkMobile);
     }, []);
 
-    // Handle Scroll detection for dots
+    // Handle Scroll detection for dots (manual swipe)
     const handleScroll = () => {
         if (!scrollRef.current || !isMobile) return;
         const scrollLeft = scrollRef.current.scrollLeft;
-        const cardWidth = scrollRef.current.offsetWidth * 0.85; // matching current width
+        const cardWidth = window.innerWidth * 0.85 + 24; // 85vw + gap-6
         const newIndex = Math.round(scrollLeft / cardWidth);
         if (newIndex !== activeMobileIndex) {
             setActiveMobileIndex(newIndex);
         }
     };
 
-    // Auto-slide logic for mobile
+    // Auto-slide logic for mobile/tablet
     useEffect(() => {
         if (!isMobile) return;
 
         const interval = setInterval(() => {
             if (!scrollRef.current) return;
             const nextIndex = (activeMobileIndex + 1) % programs.length;
-            const cardWithGap = (scrollRef.current.querySelector('div')?.offsetWidth || 0) + 24; // 24 is the gap-6
+            const cardWidth = window.innerWidth * 0.85 + 24; // 85vw + gap-6
 
             scrollRef.current.scrollTo({
-                left: nextIndex * cardWithGap,
+                left: nextIndex * cardWidth,
                 behavior: "smooth"
             });
-        }, 5000);
+
+            // Directly update index — don't rely on scroll event firing on touch devices
+            setActiveMobileIndex(nextIndex);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, [isMobile, activeMobileIndex]);
