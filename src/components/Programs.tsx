@@ -110,8 +110,8 @@ export default function Programs() {
                         <span className="text-accent uppercase tracking-widest text-[10px] md:text-xs font-bold mb-4 block">
                             TRAINING DISCIPLINE
                         </span>
-                        <h2 className="text-5xl md:text-7xl lg:text-8xl font-anton uppercase tracking-tight leading-[0.9]">
-                            ELITE <br /> <span className="text-white">TRANSFORMATIONS</span>
+                        <h2 className="text-xl md:text-2xl lg:text-3xl font-anton uppercase tracking-tight leading-[1.2] text-white max-w-sm">
+                            EMPOWERING YOU WITH AN AUTHENTIC WORLD-CLASS ATHLETE TRAINING PHILOSOPHY.
                         </h2>
                     </motion.div>
 
