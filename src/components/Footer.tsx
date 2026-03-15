@@ -14,7 +14,6 @@ export default function Footer() {
                 </div>
                 <div className="flex gap-8">
                     <a href="https://www.instagram.com/boxxera.in?igsh=MWZ4MWRoaHh1ZjVsaQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Instagram</a>
-                    <a href="#" className="hover:text-accent opacity-20 pointer-events-none transition-colors">Twitter</a>
                     <a href="#" className="hover:text-accent opacity-20 pointer-events-none transition-colors">Youtube</a>
                 </div>
                 <span>Built for the <span className="text-accent underline decoration-2 underline-offset-4">elite</span></span>

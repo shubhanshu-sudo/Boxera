@@ -30,6 +30,7 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "Training", href: "/#programs" },
+        { name: "DBS", href: "/training/dream-body-series" },
         { name: "Legacy", href: "/articles" },
         { name: "Pricing", href: "/pricing" },
         { name: "Gallery", href: "/gallery" },
@@ -172,7 +173,6 @@ export default function Navbar() {
                                     >
                                         Instagram
                                     </a>
-                                    <span className="text-white/20">Twitter</span>
                                     <span className="text-white/20">Youtube</span>
                                 </div>
                             </motion.div>

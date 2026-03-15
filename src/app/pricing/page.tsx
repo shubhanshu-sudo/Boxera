@@ -246,7 +246,7 @@ export default function PricingPage() {
                 </div>
 
                 <h3 className="font-anton text-3xl uppercase tracking-tighter">
-                    Premium with Coach Shivani
+                    Premium Package with Coach Shivani
                 </h3>
 
                 <p className="text-[11px] text-accent font-bold uppercase tracking-[0.2em] mt-2">
@@ -266,20 +266,20 @@ export default function PricingPage() {
                 </div>
 
                 <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">
-                        12 Sessions
-                    </span>
-
+                    <div>
+                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">12 Sessions</span>
+                        <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 1 Month (₹3,500/session)</span>
+                    </div>
                     <span className="text-2xl font-anton text-accent">
                         ₹36,000
                     </span>
                 </div>
 
                 <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px]">
-                        36 Sessions
-                    </span>
-
+                    <div>
+                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">36 Sessions</span>
+                        <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 3 Months</span>
+                    </div>
                     <span className="text-2xl font-anton text-accent">
                         ₹99,000
                     </span>

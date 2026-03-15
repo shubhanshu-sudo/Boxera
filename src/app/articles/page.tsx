@@ -163,7 +163,7 @@ export default function ArticlesPage() {
 
                                 <div className="pt-10">
                                     <Button
-                                        text="START YOUR TRANSFORMATION"
+                                        text="JEETH - START YOUR TRANSFORMATION"
                                         href="/#contact"
                                         className="w-full sm:w-auto px-12 py-7"
                                     />
@@ -255,11 +255,11 @@ export default function ArticlesPage() {
                                             Join us at Boxx Era — <span className="text-accent underline decoration-1 underline-offset-8">where champions are made.</span>
                                         </p>
 
-                                        <Button
-                                            text="START YOUR TRANSFORMATION"
-                                            href="/#contact"
-                                            className="w-full sm:w-auto px-12 py-7"
-                                        />
+<Button
+                                        text="START YOUR TRAINING - SHIVANI"
+                                        href="/#contact"
+                                        className="w-full sm:w-auto px-12 py-7"
+                                    />
                                     </div>
                                 </div>
                             </motion.div>

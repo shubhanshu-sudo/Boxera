@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { TransitionLink } from "@/components/transitions/TransitionLink";
-import { ArrowUpRight, Zap, Target, Shield, MoveRight } from "lucide-react";
+import { ArrowUpRight, Zap, Target, Shield, MoveRight, X } from "lucide-react";
 
 const programs = [
     {
@@ -20,7 +20,7 @@ const programs = [
         id: "02",
         type: "PERSONAL_TRAINING",
         title: "PERSONAL TRAINING",
-        tagline: "ONE-ON-ONE FOCUS",
+        tagline: "",
         tags: [],
         features: [
             "Individual Assessment",
@@ -35,17 +35,20 @@ const programs = [
         id: "03",
         type: "TAG_STACK",
         title: "TRANSFORMATION CLINIC",
-        tagline: "ELITE EVOLUTION",
-        tags: ["Group / DBS", "1-1 / CONSULTATION"],
+        tagline: "",
+        tags: ["1 on 1 training with transformation expert - Jeeth"],
         icon: <Shield className="w-6 h-6" />,
         image: "/himanshutransf.webp",
     },
 ];
 
+const TRANSFORMATION_CLINIC_LINK = "https://rzp.io/l/KuMhkTpH";
+
 export default function Programs() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const [isMobile, setIsMobile] = useState(false);
     const [activeMobileIndex, setActiveMobileIndex] = useState(0);
+    const [showTransformationModal, setShowTransformationModal] = useState(false);
     const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -56,6 +59,17 @@ export default function Programs() {
         window.addEventListener("resize", checkMobile);
         return () => window.removeEventListener("resize", checkMobile);
     }, []);
+
+    useEffect(() => {
+        if (showTransformationModal) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [showTransformationModal]);
 
     // Handle Scroll detection for dots (manual swipe)
     const handleScroll = () => {
@@ -195,23 +209,33 @@ export default function Programs() {
                                                 </motion.div>
 
                                                 {/* EXPLORE NOW Button */}
-                                                <TransitionLink
-                                                    href={
-                                                        program.id === "01" ? "/pricing#enroll" :
-                                                            program.id === "03" ? "/training/dream-body-series" : "/pricing"
-                                                    }
-                                                    className="inline-block"
-                                                >
+                                                {program.id === "03" ? (
                                                     <motion.button
                                                         initial={{ opacity: 0, y: 20 }}
                                                         animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                                         transition={{ delay: 0.4, duration: 0.5 }}
                                                         whileHover={{ backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 25px rgba(212,0,0,0.4)" }}
+                                                        onClick={() => setShowTransformationModal(true)}
                                                         className="mt-2 md:mt-4 bg-accent text-black px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all shadow-[0_5px_15px_rgba(0,0,0,0.2)]"
                                                     >
                                                         EXPLORE NOW <MoveRight size={16} />
                                                     </motion.button>
-                                                </TransitionLink>
+                                                ) : (
+                                                    <TransitionLink
+                                                        href={program.id === "01" ? "/pricing#enroll" : "/pricing"}
+                                                        className="inline-block"
+                                                    >
+                                                        <motion.button
+                                                            initial={{ opacity: 0, y: 20 }}
+                                                            animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                                            transition={{ delay: 0.4, duration: 0.5 }}
+                                                            whileHover={{ backgroundColor: "#D40000", color: "#ffffff", boxShadow: "0 0 25px rgba(212,0,0,0.4)" }}
+                                                            className="mt-2 md:mt-4 bg-accent text-black px-8 py-3 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs flex items-center gap-3 transition-all shadow-[0_5px_15px_rgba(0,0,0,0.2)]"
+                                                        >
+                                                            EXPLORE NOW <MoveRight size={16} />
+                                                        </motion.button>
+                                                    </TransitionLink>
+                                                )}
                                             </div>
 
                                             {/* Static Bottom */}
@@ -308,6 +332,71 @@ export default function Programs() {
                     </div>
                 )}
             </div>
+
+            {/* Transformation Clinic Modal */}
+            <AnimatePresence>
+                {showTransformationModal && (
+                    <>
+                        <motion.div
+                            key="transformation-modal-overlay"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 p-4 sm:p-6 flex items-center justify-center"
+                            onClick={() => setShowTransformationModal(false)}
+                        />
+                        <motion.div
+                            key="transformation-modal-content"
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                            className="fixed inset-4 sm:inset-6 md:inset-auto z-50 md:max-w-lg md:max-h-[85vh] md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 flex flex-col bg-zinc-900 border border-white/10 rounded-lg shadow-2xl overflow-hidden"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <div className="flex items-center justify-between p-4 sm:p-5 border-b border-white/10 flex-shrink-0">
+                                <h3 className="text-lg sm:text-xl font-anton uppercase text-white tracking-tight">
+                                    Transformation Clinic
+                                </h3>
+                                <button
+                                    type="button"
+                                    onClick={() => setShowTransformationModal(false)}
+                                    className="p-2 rounded-full text-white/60 hover:text-white hover:bg-white/10 transition-colors"
+                                    aria-label="Close"
+                                >
+                                    <X size={20} />
+                                </button>
+                            </div>
+                            <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 text-white/85 text-sm sm:text-base leading-relaxed">
+                                <p className="font-semibold text-accent text-base sm:text-lg">
+                                    A Premium, Personalized Holistic Transformation Program
+                                </p>
+                                <p>
+                                    Are you someone who has struggled to see results despite trying various approaches? Do you have ongoing medical conditions or past injuries that have held you back? Our Transformation Clinic is designed specifically for you.
+                                </p>
+                                <p>
+                                    This is a one-on-one, holistic transformation program tailored to your unique needs. Every plan is customized based on your individual circumstances—regardless of gender, age, or medical background. We understand that every person&apos;s journey is different, and our expert is here to guide you every step of the way.
+                                </p>
+                                <p>
+                                    Take the first step toward your transformation today. Book a consultation with our experienced specialist to start your personalized journey.
+                                </p>
+                            </div>
+                            <div className="p-4 sm:p-6 border-t border-white/10 flex-shrink-0">
+                                <a
+                                    href={TRANSFORMATION_CLINIC_LINK}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full inline-flex items-center justify-center gap-2 bg-accent text-black py-4 px-6 font-black uppercase tracking-[0.2em] text-xs sm:text-sm transition-all hover:bg-white rounded"
+                                >
+                                    Book Your Consultation Now <MoveRight size={18} />
+                                </a>
+                            </div>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
+
             <style jsx global>{`
                 .no-scrollbar::-webkit-scrollbar {
                     display: none;
