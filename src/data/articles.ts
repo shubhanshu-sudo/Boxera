@@ -17,7 +17,7 @@ export const articles: Article[] = [
         source: "LBB",
         sourceLogo: "/media/lbb_logo.svg",
         brandColor: "#000000",
-        headline: "Join Boxx Era Fitness Studio In South Delhi With Female Trainers",
+        headline: "Join Boxx Era Fitness Studio In South Delhi With Female Coaches",
         excerpt: "Experience high-performance training with a dedicated team of experts in the heart of South Delhi.",
         year: "2023",
         link: "https://lbb.in/delhi/join-Boxx-Era-fitness-studio-in-south-delhi-with-female-trainers/",

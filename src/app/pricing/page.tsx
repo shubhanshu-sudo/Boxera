@@ -151,6 +151,9 @@ export default function PricingPage() {
         <motion.h2 variants={fadeIn} className="font-anton text-4xl md:text-6xl uppercase tracking-tighter mb-6">
             PERSONAL <span className="text-accent">TRAINING</span>
         </motion.h2>
+        <motion.p variants={fadeIn} className="text-white/50 text-sm uppercase tracking-[0.2em] mb-4">
+            Achieve ur personal goals Online/offline
+        </motion.p>
         <motion.div variants={fadeIn} className="w-24 h-[2px] bg-accent mx-auto" />
     </motion.div>
 

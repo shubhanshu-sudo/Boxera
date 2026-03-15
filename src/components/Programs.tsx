@@ -26,7 +26,8 @@ const programs = [
             "Individual Assessment",
             "Identification of wear point",
             "Goal & result oriented training",
-            "Expert / Qualified Trainers"
+            "Expert / Qualified Coaches",
+            "Achieve ur personal goals Online/offline"
         ],
         icon: <Zap className="w-6 h-6" />,
         image: "/DSC_0087.webp",
