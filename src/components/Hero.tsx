@@ -14,7 +14,7 @@ const slides = [
         description: "Result-oriented fitness boutique studio | Personal training • Transformations • Boxing Culture • Group Training",
         primaryCTA: "START YOUR TRANSFORMATION",
         primaryLink: "/pricing",
-        secondaryCTA: "BOXING & OPEN GYM PRICING",
+        secondaryCTA: "GROUP CLASS & OPEN GYM PRICING",
         secondaryLink: "/pricing#enroll",
         image: "/hero_new.jpg",
     },

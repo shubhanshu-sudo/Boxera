@@ -266,12 +266,12 @@ export default function Programs() {
                                                         ))}
                                                     </div>
                                                 )}
-                                                <ul className="flex flex-col gap-3 md:gap-4 items-start mb-8 md:mb-10 w-fit mx-auto">
+                                                <ul className="flex flex-col gap-2 md:gap-2.5 items-stretch mb-3 md:mb-4 w-full max-w-[280px] mx-auto list-none pl-0">
                                                     {program.features?.map((f, fIdx) => (
                                                         f ? (
-                                                            <li key={fIdx} className="text-white/60 text-[9px] md:text-[10px] uppercase tracking-[0.2em] flex items-center gap-3 group/li">
-                                                                <span className="w-1.5 h-1.5 rounded-full bg-accent-red flex-shrink-0 shadow-[0_0_8px_rgba(212,0,0,0.6)] group-hover/li:bg-accent group-hover/li:shadow-[0_0_8px_rgba(29,194,193,0.6)] transition-all" />
-                                                                {f}
+                                                            <li key={fIdx} className="text-white/60 text-[9px] md:text-[10px] uppercase tracking-[0.2em] flex items-start gap-3 group/li text-left">
+                                                                <span className="w-1.5 h-1.5 rounded-full bg-accent-red flex-shrink-0 mt-1.5 shadow-[0_0_8px_rgba(212,0,0,0.6)] group-hover/li:bg-accent group-hover/li:shadow-[0_0_8px_rgba(29,194,193,0.6)] transition-all" />
+                                                                <span className="flex-1 min-w-0">{f}</span>
                                                             </li>
                                                         ) : null
                                                     ))}
