@@ -274,17 +274,17 @@ export default function PricingPage() {
                         <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 1 Month (₹3,500/session)</span>
                     </div>
                     <span className="text-2xl font-anton text-accent">
-                        ₹36,000
+                        ₹42,000
                     </span>
                 </div>
 
                 <div className="flex justify-between items-end pb-4 border-b border-white/5">
                     <div>
                         <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">36 Sessions</span>
-                        <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 3 Months</span>
+                        <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 3 Months (₹3,500/session)</span>
                     </div>
                     <span className="text-2xl font-anton text-accent">
-                        ₹99,000
+                        ₹1,26,000
                     </span>
                 </div>
             </div>
