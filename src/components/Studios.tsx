@@ -10,14 +10,14 @@ const locations = [
         address: "D-69, HAUZ KHAS RD, BLOCK H, HAUZ KHAS, NEW DELHI, DELHI 110016",
         link: "https://www.google.com/maps/dir//Boxx+Era+Fitness+Studio,+D-69,+Hauz+Khas+Rd,+near+main+market,+Block+H,+Hauz+Khas,+New+Delhi,+Delhi+110016/@28.5530108,77.2070739,17z/data=!4m9!4m8!1m1!4e2!1m5!1m1!1s0x390ce3db6c83b431:0xafc64cf1526c1c41!2m2!1d77.2070739!2d28.5530108?entry=ttu",
         cta: "GET DIRECTIONS",
-        image: "/image 1.png",
+        image: "/WhatsApp Image 2026-03-23 at 5.16.25 PM.jpeg",
     },
     {
         city: "Gurugram",
         address: "C-524, BLOCK C, SUSHANT LOK PHASE I, SECTOR 43, GURUGRAM, HARYANA 122009",
         link: "https://www.google.com/maps/dir//Boxx+Era+Fitness+Studio,+C-524,+Block+C,+Sushant+Lok+Phase+I,+Sector+43,+Gurugram,+Haryana+122009/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x390d1945a840c91f:0xafb204df9668f70c?sa=X&ved=1t:57443&ictx=111",
         cta: "GET DIRECTIONS",
-        image: "/image 2.png",
+        image: "/WhatsApp Image 2026-03-23 at 5.14.12 PM.jpeg",
     },
 ];
 

@@ -184,13 +184,13 @@ export default function ArticlesPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 1 }}
-                            className="relative aspect-[16/8] md:aspect-[21/9] w-full overflow-hidden rounded-sm mb-16 border border-white/5 shadow-2xl"
+                            className="relative aspect-[16/10] md:aspect-[21/11] w-full overflow-hidden rounded-sm mb-16 border border-white/5 shadow-2xl"
                         >
                             <Image
-                                src="/WhatsApp Image 2026-02-25 at 11.59.48 AM.jpeg"
+                                src="/WhatsApp Image 2026-03-23 at 5.14.34 PM.jpeg"
                                 alt="Coach Shivani Dahiya"
                                 fill
-                                className="object-cover transition-transform duration-[3s] hover:scale-105"
+                                className="object-cover object-[center_35%] transition-transform duration-[3s] hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
@@ -255,11 +255,11 @@ export default function ArticlesPage() {
                                             Join us at Boxx Era — <span className="text-accent underline decoration-1 underline-offset-8">where champions are made.</span>
                                         </p>
 
-<Button
-                                        text="START YOUR TRAINING WITH SHIVANI"
-                                        href="/#contact"
-                                        className="w-full sm:w-auto px-12 py-7"
-                                    />
+                                        <Button
+                                            text="START YOUR TRAINING WITH SHIVANI"
+                                            href="/#contact"
+                                            className="w-full sm:w-auto px-12 py-7"
+                                        />
                                     </div>
                                 </div>
                             </motion.div>

@@ -7,29 +7,14 @@ import { MoveRight } from "lucide-react";
 
 const galleryImages = [
     {
-        src: "/DSC_0525.webp",
-        alt: "Boxx Era studio atmosphere",
-        span: "md:col-span-1 md:row-span-1",
-    },
-    {
         src: "/2022-03-13.webp",
         alt: "High intensity training",
         span: "md:col-span-1 md:row-span-1",
     },
     {
-        src: "/2025-04-02.webp",
-        alt: "Boxx Era boxing energy",
-        span: "md:col-span-1 md:row-span-2",
-    },
-    {
         src: "/2021-08-17.webp",
         alt: "Community moments at Boxx Era",
         span: "md:col-span-2 md:row-span-1",
-    },
-    {
-        src: "/IMG_20200820_9.webp",
-        alt: "Intense training session",
-        span: "md:col-span-1 md:row-span-1",
     },
 ];
 
@@ -87,16 +72,6 @@ export default function GalleryPreview() {
                             {/* Permanent Dark Overlay */}
                             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-all duration-700" />
 
-                            {/* Hover Elements */}
-                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-start justify-start p-6">
-                                <motion.span
-                                    initial={{ opacity: 0, x: -10 }}
-                                    whileHover={{ opacity: 1, x: 0 }}
-                                    className="text-[10px] font-black uppercase tracking-[0.3em] text-accent border border-accent/30 px-4 py-2 backdrop-blur-md bg-black/40"
-                                >
-                                    VIEW
-                                </motion.span>
-                            </div>
                         </motion.div>
                     ))}
                 </div>

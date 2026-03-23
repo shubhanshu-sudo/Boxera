@@ -30,7 +30,7 @@ const slides = [
         primaryLink: "/pricing",
         secondaryCTA: "EXPLORE TRAINING",
         secondaryLink: "/#programs",
-        image: "/IMG_5062.jpg",
+        image: "/WhatsApp Image 2026-03-23 at 5.14.12 PM.jpeg",
         ghostText: "TRANSFORMATION EXPERT"
     },
     {
@@ -46,7 +46,7 @@ const slides = [
         primaryLink: "/#contact",
         secondaryCTA: "CONTACT US",
         secondaryLink: "/#contact",
-        image: "/ring.png",
+        image: "/WhatsApp Image 2026-02-25 at 12.17.10 PM.jpeg",
     },
 ];
 

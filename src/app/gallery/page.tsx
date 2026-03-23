@@ -14,28 +14,12 @@ const categories = ["ALL", "TRAINING", "GROUP CLASSES", "STUDIO", "TRANSFORMATIO
 // Gallery Data
 const galleryData = [
     {
-        id: 3,
-        src: "/DSC_0525.webp",
-        category: "STUDIO",
-        title: "Premium Equipment",
-        location: "Gear Room",
-        span: "md:col-span-1 md:row-span-1"
-    },
-    {
         id: 4,
         src: "/2022-03-13.webp",
         category: "GROUP CLASSES",
         title: "Team Energy",
         location: "Group Area",
         span: "md:col-span-1 md:row-span-1"
-    },
-    {
-        id: 5,
-        src: "/2025-04-02.webp",
-        category: "TRAINING",
-        title: "Personal Power",
-        location: "Drill Zone",
-        span: "md:col-span-1 md:row-span-2"
     },
     {
         id: 6,
@@ -46,36 +30,12 @@ const galleryData = [
         span: "md:col-span-2 md:row-span-1"
     },
     {
-        id: 7,
-        src: "/IMG_20200820_9.webp",
-        category: "TRAINING",
-        title: "Authentic Action",
-        location: "Heavy Bag Zone",
-        span: "md:col-span-1 md:row-span-1"
-    },
-    {
-        id: 8,
-        src: "/studios_bg.png",
-        category: "STUDIO",
-        title: "Modern Aesthetics",
-        location: "Lounge",
-        span: "md:col-span-1 md:row-span-1"
-    },
-    {
         id: 9,
         src: "/himanshutransf.webp",
         category: "TRANSFORMATIONS",
         title: "Himanshu's Journey",
         location: "Transformation Centre",
         span: "md:col-span-2 md:row-span-1"
-    },
-    {
-        id: 10,
-        src: "/training.png",
-        category: "TRAINING",
-        title: "Skill Sharpening",
-        location: "Speed Bag Corner",
-        span: "md:col-span-1 md:row-span-1"
     },
     {
         id: 11,
@@ -148,14 +108,6 @@ const galleryData = [
         title: "Elite Member Results",
         location: "Transformation Centre",
         span: "md:col-span-1 md:row-span-1"
-    },
-    {
-        id: 20,
-        src: "/c8e6f298-27dd-4542-8e45-a1c7be34c962.JPG",
-        category: "TRANSFORMATIONS",
-        title: "Disciplined Growth",
-        location: "Transformation Centre",
-        span: "md:col-span-2 md:row-span-1"
     },
     {
         id: 21,
@@ -381,32 +333,9 @@ export default function GalleryPage() {
                                         loading={index < 4 ? "eager" : "lazy"}
                                     />
 
-                                    {/* Overlay */}
+                                     {/* Overlay */}
                                     <div className="absolute inset-0 bg-black/40 lg:bg-black/50 lg:group-hover:bg-black/20 transition-all duration-700" />
                                     <div className="absolute inset-0 border border-accent/0 lg:group-hover:border-accent/40 lg:group-hover:shadow-[inset_0_0_50px_rgba(29,194,193,0.1)] transition-all duration-500 pointer-events-none" />
-
-                                    {/* Info Overlay - Desktop (Hover) */}
-                                    <div className="hidden lg:flex absolute inset-0 flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-black/80 via-transparent to-transparent">
-                                        <div className="flex items-center gap-3 mb-3">
-                                            <span className="text-[10px] font-black text-black bg-accent px-2 py-1 tracking-widest uppercase">
-                                                {image.category}
-                                            </span>
-                                        </div>
-                                        <h3 className="text-2xl font-anton uppercase text-white leading-none tracking-wide">
-                                            {image.title}
-                                        </h3>
-                                        <p className="text-[10px] font-black text-white/40 tracking-[0.3em] uppercase mt-2">
-                                            {image.location}
-                                        </p>
-                                        <div className="absolute top-8 right-8">
-                                            <Maximize2 size={20} className="text-accent opacity-60" />
-                                        </div>
-                                    </div>
-
-                                    {/* Mobile Indicator */}
-                                    <div className="lg:hidden absolute bottom-4 right-4 text-white/60">
-                                        <Maximize2 size={14} />
-                                    </div>
                                 </motion.div>
                             ))}
                         </AnimatePresence>
@@ -549,15 +478,7 @@ export default function GalleryPage() {
                                             fill
                                             className="object-cover transition-transform duration-[1.5s] ease-out lg:group-hover:scale-110"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
-                                        <div className="absolute bottom-6 left-6 right-6">
-                                            <h4 className="text-xl md:text-2xl font-anton uppercase text-white mb-2 leading-tight">{image.title}</h4>
-                                            <div className="flex items-center gap-4 text-[9px] font-black text-accent tracking-[0.2em] uppercase">
-                                                <span>{image.location}</span>
-                                                <div className="w-1 h-1 bg-white/30 rounded-full" />
-                                                <span className="text-white/40">RESULT DRIVEN</span>
-                                            </div>
-                                        </div>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-40 group-hover:opacity-10 transition-opacity duration-500" />
                                         <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                                             <Maximize2 size={16} className="text-white/60" />
                                         </div>
@@ -572,9 +493,6 @@ export default function GalleryPage() {
 
             {/* SECTION 6: CTA – END OF PAGE */}
             <section className="py-32 md:py-48 relative overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-20">
-                    <Image src="/ring.png" alt="CTA Background" fill className="object-cover" />
-                </div>
                 <div className="container mx-auto px-6 relative z-10 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
@@ -662,26 +580,6 @@ export default function GalleryPage() {
                                     priority
                                 />
                             </div>
-
-                            {/* Info */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.3 }}
-                                className="absolute bottom-6 md:bottom-20 left-4 md:left-24 right-4 text-left max-w-6xl mx-auto pointer-events-none"
-                            >
-                                <span className="inline-block text-accent text-[10px] md:text-xs font-black uppercase tracking-[0.3em] bg-accent/10 border border-accent/20 px-3 py-1 mb-4">
-                                    {galleryData[currentIndex].category}
-                                </span>
-                                <div className="flex flex-col md:flex-row md:items-end md:justify-between w-full gap-2">
-                                    <h4 className="text-3xl md:text-6xl font-anton uppercase text-white leading-none tracking-wide">
-                                        {galleryData[currentIndex].title}
-                                    </h4>
-                                    <p className="text-[10px] md:text-sm font-black text-white/40 tracking-[0.4em] uppercase">
-                                        LOCATION: {galleryData[currentIndex].location}
-                                    </p>
-                                </div>
-                            </motion.div>
                         </motion.div>
 
                         {/* Mobile Swipe Indicator */}
