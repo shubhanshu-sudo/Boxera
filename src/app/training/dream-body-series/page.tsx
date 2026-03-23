@@ -81,7 +81,7 @@ export default function DreamBodySeriesPage() {
                             transition={{ delay: 0.6 }}
                             className="text-sm md:text-lg lg:text-xl font-light uppercase tracking-[0.25em] text-white/60 max-w-4xl mx-auto mb-12 md:mb-16 leading-relaxed px-4"
                         >
-                            A 51-Day Physiological & Mental Evolution<br className="hidden sm:block" /> Designed For The Dedicated.
+                            A 51-Day Physiological & Mental Transformation<br className="hidden sm:block" /> Designed For The Dedicated.
                         </motion.p>
 
                         {/* CTA Buttons */}
@@ -97,7 +97,7 @@ export default function DreamBodySeriesPage() {
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-accent text-black px-12 md:px-16 py-5 md:py-6 font-black uppercase tracking-[0.35em] text-[10px] md:text-xs transition-all duration-500"
                             >
-                                START YOUR EVOLUTION
+                                START YOUR TRANSFORMATION
                             </motion.a>
                             <Link
                                 href="#criteria"
@@ -124,12 +124,13 @@ export default function DreamBodySeriesPage() {
             {/* 2️⃣ THE NUMBERS SECTION */}
             <section className="py-24 bg-[#050505] border-y border-white/5">
                 <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
                         {[
                             { icon: <Calendar className="w-8 h-8 text-accent" />, label: "DURATION", value: "51 DAYS" },
                             { icon: <Clock className="w-8 h-8 text-accent" />, label: "TIME", value: "7:00 AM" },
                             { icon: <Target className="w-8 h-8 text-accent" />, label: "FOCUS", value: "HOLISTIC" },
                             { icon: <Trophy className="w-8 h-8 text-accent" />, label: "GOAL", value: "PEAK PERF" },
+                            { icon: <Zap className="w-8 h-8 text-accent" />, label: "MODE", value: "ONLINE/OFFLINE" },
                         ].map((stat, idx) => (
                             <motion.div
                                 key={idx}
@@ -137,11 +138,11 @@ export default function DreamBodySeriesPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="flex flex-col items-center text-center p-8 border border-white/5 bg-black hover:border-accent/40 transition-colors"
+                                className="flex flex-col items-center text-center p-8 lg:p-6 border border-white/5 bg-black hover:border-accent/40 transition-colors"
                             >
                                 <div className="mb-6">{stat.icon}</div>
                                 <span className="text-white/30 text-[10px] font-black uppercase tracking-[0.3em] mb-2">{stat.label}</span>
-                                <span className="text-3xl font-anton uppercase text-white tracking-tight">{stat.value}</span>
+                                <span className="text-2xl lg:text-3xl font-anton uppercase text-white tracking-tight leading-tight">{stat.value}</span>
                             </motion.div>
                         ))}
                     </div>
@@ -156,13 +157,11 @@ export default function DreamBodySeriesPage() {
                             <h2 className="text-5xl md:text-8xl font-anton uppercase leading-[0.9] mb-12 tracking-tighter">
                                 THE <span className="text-accent underline decoration-1 underline-offset-8">PROGRAM</span> <br /> ARCHITECTURE
                             </h2>
-                            <p className="text-lg md:text-xl font-light text-white/60 leading-relaxed uppercase tracking-wide mb-10">
-                                This is not a hobby. It is a systematic overhaul of your physical and mental state. Our DBS program integrates elite sports science with uncompromising discipline.
-                            </p>
+
                             <div className="space-y-8">
                                 {[
                                     { title: "Personalized Protocol", text: "Every body is different. Your transformation begins with an individual assessment to identify weak points and leverage your strengths." },
-                                    { title: "Metabolic Conditioning", text: "High-intensity circuits designed to strip body fat while building functional, explosive power." },
+                                    { title: "Metabolic Conditioning", text: "High intensity and strength based workout designed to strip body fat while building muscle mass." },
                                     { title: "Clinical Nutrition", text: "Science-backed meal protocols that fuel performance and maximize aesthetic results." }
                                 ].map((item, i) => (
                                     <div key={i} className="flex gap-6 group">

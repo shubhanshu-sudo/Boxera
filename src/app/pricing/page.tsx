@@ -268,31 +268,31 @@ export default function PricingPage() {
                                 </span>
                             </div>
 
-                <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                    <div>
-                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block line-through decoration-accent/30 opacity-40">
-                            ₹42,000
-                        </span>
-                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">12 Sessions</span>
-                        <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 1 Month</span>
-                    </div>
-                    <span className="text-2xl font-anton text-accent">
-                        ₹36,000
-                    </span>
-                </div>
+                            <div className="flex justify-between items-end pb-4 border-b border-white/5">
+                                <div>
+                                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block line-through decoration-accent/30 opacity-40">
+                                        ₹42,000
+                                    </span>
+                                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">12 Sessions</span>
+                                    <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 1 Month</span>
+                                </div>
+                                <span className="text-2xl font-anton text-accent">
+                                    ₹36,000
+                                </span>
+                            </div>
 
-                <div className="flex justify-between items-end pb-4 border-b border-white/5">
-                    <div>
-                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block line-through decoration-accent/30 opacity-40">
-                            ₹1,26,000
-                        </span>
-                        <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">36 Sessions</span>
-                        <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 3 Months</span>
-                    </div>
-                    <span className="text-2xl font-anton text-accent">
-                        ₹99,000
-                    </span>
-                </div>
+                            <div className="flex justify-between items-end pb-4 border-b border-white/5">
+                                <div>
+                                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block line-through decoration-accent/30 opacity-40">
+                                        ₹1,26,000
+                                    </span>
+                                    <span className="text-white/40 font-bold uppercase tracking-widest text-[10px] block">36 Sessions</span>
+                                    <span className="text-[9px] text-accent font-black uppercase tracking-widest">Validity 3 Months</span>
+                                </div>
+                                <span className="text-2xl font-anton text-accent">
+                                    ₹99,000
+                                </span>
+                            </div>
                         </div>
                     </motion.div>
 
@@ -310,20 +310,18 @@ export default function PricingPage() {
                             <Target className="text-accent mb-4" size={32} />
 
                             <h3 className="font-anton text-2xl md:text-3xl tracking-tight leading-tight">
-                                Personal Training with Jeeth Sanghavi
+                                Personal Training with  Coach Jeeth Sanghavi
                             </h3>
 
                             <p className="text-[11px] text-accent font-bold uppercase tracking-[0.2em] mt-2">
-                                Elite One-on-One Transformation Program
+                                Elite one-on-one training with exclusive nutrition plan and complete accountability
                             </p>
                         </div>
 
                         <div className="space-y-6 w-full mb-12">
                             <div className="pb-4 border-b border-white/10">
                                 <p className="text-white/60 text-sm font-medium mb-2 leading-relaxed">
-                                    Train directly with Jeeth Sanghavi for elite physique
-                                    transformation, advanced coaching, and complete
-                                    lifestyle restructuring.
+                                    Train Directly with coach Jeeth Sanghavi and unlock your full potential
                                 </p>
 
                                 <div className="flex flex-col items-start mt-6 gap-2">

@@ -135,10 +135,10 @@ export default function Programs() {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.3, duration: 1 }}
-                        className="lg:max-w-md"
+                        className="md:max-w-md lg:max-w-md"
                     >
                         <div className="w-12 h-1 bg-accent mb-6 md:block hidden" />
-                        <p className="text-sm text-white/70 leading-relaxed uppercase">
+                        <p className="text-xs sm:text-sm md:text-sm text-white/70 leading-relaxed uppercase">
                             EXCLUSIVE NUTRITION PLAN | FAT LOSS | MUSCLE BUILDING / TONING | KIDS TRAINING | SENIOR ADULT TRAINING <br />
                             SPORTS SPECIFIC TRAINING | LIFESTYLE ASSESSMENT | NATURAL BODY BUILDING
                         </p>

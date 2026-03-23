@@ -163,7 +163,7 @@ export default function ArticlesPage() {
 
                                 <div className="pt-10">
                                     <Button
-                                        text="START YOUR TRANSFORMATION WITH JEETH"
+                                        text="START YOUR TRANSFORMATION WITH COACH JEETH"
                                         href="/#contact"
                                         className="w-full sm:w-auto px-12 py-7"
                                     />
@@ -256,7 +256,7 @@ export default function ArticlesPage() {
                                         </p>
 
                                         <Button
-                                            text="START YOUR TRAINING WITH SHIVANI"
+                                            text="START YOUR TRAINING WITH COACH SHIVANI"
                                             href="/#contact"
                                             className="w-full sm:w-auto px-12 py-7"
                                         />

@@ -40,7 +40,7 @@ const slides = [
         subHeadline: "CERTIFIED & TRANSFORMATION-FOCUSED TRAINING",
         description: (
             <>
-                TRAINED CELEBRITIES AND PROFESSIONAL ATHLETES — <span className="font-bold border-b border-white/30">PRIYANKA CHOPRA</span>
+                TRAINED CELEBRITIES AND PROFESSIONAL ATHLETES
             </>
         ),
         primaryCTA: "GET YOUR FIRST CLASS",

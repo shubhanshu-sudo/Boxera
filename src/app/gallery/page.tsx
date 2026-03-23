@@ -9,23 +9,47 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 // Gallery Categories
-const categories = ["ALL", "TRAINING", "GROUP CLASSES", "STUDIO", "TRANSFORMATIONS"];
+const categories = ["ALL", "STUDIO", "TRANSFORMATIONS"];
 
 // Gallery Data
 const galleryData = [
     {
-        id: 4,
-        src: "/2022-03-13.webp",
-        category: "GROUP CLASSES",
-        title: "Team Energy",
-        location: "Group Area",
+        id: 101,
+        src: "/WhatsApp Image 2026-03-23 at 5.15.51 PM.jpeg",
+        category: "STUDIO",
+        title: "Elite Studio",
+        location: "Main Floor",
         span: "md:col-span-1 md:row-span-1"
     },
     {
-        id: 6,
-        src: "/2021-08-17.webp",
-        category: "GROUP CLASSES",
-        title: "Community Grind",
+        id: 102,
+        src: "/WhatsApp Image 2026-03-23 at 5.16.01 PM.jpeg",
+        category: "STUDIO",
+        title: "Strength Zone",
+        location: "Main Floor",
+        span: "md:col-span-2 md:row-span-1"
+    },
+    {
+        id: 103,
+        src: "/WhatsApp Image 2026-02-25 at 12.25.01 PM.jpeg",
+        category: "STUDIO",
+        title: "Elite Training Floor",
+        location: "Main Studio",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 104,
+        src: "/WhatsApp Image 2026-03-23 at 5.14.12 PM.jpeg",
+        category: "STUDIO",
+        title: "DBS Zone",
+        location: "Combat Area",
+        span: "md:col-span-1 md:row-span-1"
+    },
+    {
+        id: 105,
+        src: "/WhatsApp Image 2026-03-23 at 5.16.25 PM.jpeg",
+        category: "STUDIO",
+        title: "Studio Atmosphere",
         location: "Main Floor",
         span: "md:col-span-2 md:row-span-1"
     },

@@ -52,12 +52,8 @@ export default function PreFooter() {
                             STILL UNSURE ABOUT <br />
                             <span className=" text-[0.8em] md:text-[0.7em] leading-none">WHAT PROGRAM TO CHOOSE?</span>
                         </h2>
-                        <span className="text-accent uppercase tracking-[0.4em] text-[10px] md:text-xs font-black mb-4 block">
-                            LET US HELP YOU
-                        </span>
-
                         <Button
-                            text="GET YOUR FIRST CLASS"
+                            text="LET US HELP YOU"
                             href="/#contact"
                             className="tracking-[0.4em]"
                         />
