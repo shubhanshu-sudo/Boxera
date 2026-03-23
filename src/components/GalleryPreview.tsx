@@ -7,16 +7,6 @@ import { MoveRight } from "lucide-react";
 
 const galleryImages = [
     {
-        src: "/DSC_0118.webp",
-        alt: "Boxx Era training session",
-        span: "md:col-span-2 md:row-span-2",
-    },
-    {
-        src: "/DSC_0087.webp",
-        alt: "Coach correction at Boxx Era",
-        span: "md:col-span-1 md:row-span-1",
-    },
-    {
         src: "/DSC_0525.webp",
         alt: "Boxx Era studio atmosphere",
         span: "md:col-span-1 md:row-span-1",

@@ -14,22 +14,6 @@ const categories = ["ALL", "TRAINING", "GROUP CLASSES", "STUDIO", "TRANSFORMATIO
 // Gallery Data
 const galleryData = [
     {
-        id: 1,
-        src: "/DSC_0118.webp",
-        category: "TRAINING",
-        title: "Heavy Bag Focus",
-        location: "Main Studio",
-        span: "md:col-span-2 md:row-span-2"
-    },
-    {
-        id: 2,
-        src: "/DSC_0087.webp",
-        category: "TRAINING",
-        title: "Coach Feedback",
-        location: "Ring Corner",
-        span: "md:col-span-1 md:row-span-1"
-    },
-    {
         id: 3,
         src: "/DSC_0525.webp",
         category: "STUDIO",

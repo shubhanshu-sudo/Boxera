@@ -16,7 +16,7 @@ const slides = [
         primaryLink: "/pricing",
         secondaryCTA: "GROUP CLASS & OPEN GYM PRICING",
         secondaryLink: "/pricing#enroll",
-        image: "/hero_new.jpg",
+        image: "/WhatsApp Image 2026-02-25 at 12.25.01 PM.jpeg",
     },
     {
         tagline: "ALL SENSES ON",
