@@ -32,7 +32,7 @@ const slides = [
         secondaryLink: "/#programs",
         image: "/WhatsApp Image 2026-03-23 at 5.18.59 PM.jpeg",
         ghostText: "TRANSFORMATION EXPERT",
-        position: "object-top"
+        position: "object-[center_10%]"
     },
     {
         tagline: "", // Moved to headline focal point

@@ -442,10 +442,10 @@ export default function PricingPage() {
                         >
                             <div className="absolute inset-0 border-2 border-accent/20 translate-x-6 translate-y-6 -z-1" />
                             <Image
-                                src="/training.png"
+                                src="/WhatsApp Image 2026-03-23 at 5.17.17 PM.jpeg"
                                 alt="DBS Elite Training"
                                 fill
-                                className="object-cover grayscale"
+                                className="object-cover grayscale object-[0%_15%]"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
                         </motion.div>

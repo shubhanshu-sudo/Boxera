@@ -167,15 +167,7 @@ export default function Programs() {
                                     ${isActive ? "border-accent shadow-[0_0_40px_rgba(29,194,193,0.25)]" : "border-white/5"}
                                 `}
                             >
-                                <div className="absolute inset-0">
-                                    <Image
-                                        src={program.image}
-                                        alt={program.title}
-                                        fill
-                                        className={`object-cover transition-all duration-1000 ${isActive ? "opacity-20 scale-105" : "opacity-15 scale-100"}`}
-                                    />
-                                    <div className={`absolute inset-0 transition-colors duration-700 ${isActive ? "bg-black/90" : "bg-black/70"}`} />
-                                </div>
+                                <div className="absolute inset-0 bg-zinc-900/40" />
 
                                 <div className="absolute inset-0 p-8 md:p-10 flex flex-col z-20 overflow-hidden text-center items-center">
 

@@ -37,7 +37,7 @@ export default function DreamBodySeriesPage() {
             <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden pt-20 md:pt-24">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/training.png"
+                        src="/WhatsApp Image 2026-02-25 at 12.25.01 PM.jpeg"
                         alt="DBS Hero"
                         fill
                         className="object-cover opacity-30 grayscale scale-110"
@@ -178,16 +178,25 @@ export default function DreamBodySeriesPage() {
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="lg:w-1/2 relative aspect-square w-full lg:max-w-xl group"
+                            className="lg:w-1/2 grid grid-cols-2 gap-4 w-full lg:max-w-xl group relative pr-4"
                         >
-                            <Image
-                                src="/hero.png"
-                                alt="DBS Training"
-                                fill
-                                className="object-cover grayscale transition-transform duration-1000 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <div className="absolute -inset-4 border border-accent/20 -z-1 translate-x-4 translate-y-4" />
+                            <div className="relative aspect-[2/3] overflow-hidden border border-white/5">
+                                <Image
+                                    src="/WhatsApp Image 2026-03-23 at 5.18.59 PM.jpeg"
+                                    alt="DBS Training 1"
+                                    fill
+                                    className="object-cover grayscale transition-transform duration-700 group-hover:scale-110 object-[30%_center]"
+                                />
+                            </div>
+                            <div className="relative aspect-[2/3] overflow-hidden border border-white/5 mt-12 shadow-2xl">
+                                <Image
+                                    src="/WhatsApp Image 2026-03-23 at 5.19.44 PM.jpeg"
+                                    alt="DBS Training 2"
+                                    fill
+                                    className="object-cover grayscale transition-transform duration-700 group-hover:scale-110 object-left"
+                                />
+                            </div>
+                            <div className="absolute -inset-4 border border-accent/10 -z-1 translate-x-4 translate-y-4 pointer-events-none" />
                         </motion.div>
                     </div>
 
@@ -217,7 +226,7 @@ export default function DreamBodySeriesPage() {
                             className="p-10 md:p-16 bg-black border-2 border-accent/20 flex flex-col items-center text-center relative overflow-hidden group"
                         >
                             <div className="absolute inset-0 bg-accent/[0.02]" />
-                            <span className="text-accent text-[10px] font-black uppercase tracking-[0.4em] mb-4">REMOTE EVOLUTION</span>
+                            <span className="text-accent text-[10px] font-black uppercase tracking-[0.4em] mb-4">REMOTE TRANSFORMATION</span>
                             <h3 className="text-4xl md:text-6xl font-anton uppercase text-white mb-8 tracking-tighter">ONLINE ACCESS</h3>
                             <div className="mb-12">
                                 <span className="text-5xl md:text-7xl font-black text-white">₹21,000</span>
