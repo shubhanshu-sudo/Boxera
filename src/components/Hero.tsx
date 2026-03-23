@@ -30,8 +30,9 @@ const slides = [
         primaryLink: "/pricing",
         secondaryCTA: "EXPLORE TRAINING",
         secondaryLink: "/#programs",
-        image: "/WhatsApp Image 2026-03-23 at 5.14.12 PM.jpeg",
-        ghostText: "TRANSFORMATION EXPERT"
+        image: "/WhatsApp Image 2026-03-23 at 5.18.59 PM.jpeg",
+        ghostText: "TRANSFORMATION EXPERT",
+        position: "object-top"
     },
     {
         tagline: "", // Moved to headline focal point
@@ -102,7 +103,7 @@ export default function Hero() {
                                 src={slides[current].image}
                                 alt="Hero Background"
                                 fill
-                                className="object-cover grayscale"
+                                className={`object-cover grayscale ${(slides[current] as any).position || "object-center"}`}
                                 priority
                             />
                             {/* Cinematic Overlay */}

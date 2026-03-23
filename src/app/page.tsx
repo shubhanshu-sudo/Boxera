@@ -3,15 +3,12 @@ import About from "@/components/About";
 import Transformations from "@/components/Transformations";
 import Programs from "@/components/Programs";
 import MediaPreview from "@/components/MediaPreview";
-import VideoCarousel from "@/components/VideoCarousel";
-import GalleryPreview from "@/components/GalleryPreview";
 import Marquee from "@/components/Marquee";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Studios from "@/components/Studios";
 import PreFooter from "@/components/PreFooter";
 import Footer from "@/components/Footer";
-
 import EmotionalCTA from "@/components/EmotionalCTA";
 
 export default function Home() {
@@ -38,16 +35,8 @@ export default function Home() {
       {/* Media Coverage - Authority & Credibility */}
       <MediaPreview />
 
-      {/* Train In Action - Video Carousel */}
-      <VideoCarousel />
-
-      {/* Gallery Preview - Visual Energy */}
-
-
       {/* Testimonials Section - Social Proof */}
       <Testimonials />
-
-      <GalleryPreview />
 
       {/* Contact Section - The Transformation Start */}
       <Contact />

@@ -153,16 +153,6 @@ export default function Transformations() {
                                 {/* Hover Glow Line (Bottom) */}
                                 <div className="absolute bottom-0 left-0 h-1 bg-accent w-0 group-hover:w-full transition-all duration-500 shadow-[0_0_15px_rgba(29,194,193,0.5)]" />
                             </motion.div>
-
-                            {/* Info Area */}
-                            <div className="mt-6 text-left">
-                                <h3 className="text-white text-xl md:text-2xl font-anton uppercase tracking-tight leading-none mb-1">
-                                    {item.name}
-                                </h3>
-                                <p className="text-accent text-[10px] md:text-xs font-black uppercase tracking-[0.2em]">
-                                    {item.result}
-                                </p>
-                            </div>
                         </div>
                     ))}
                 </ParallaxCarousel>

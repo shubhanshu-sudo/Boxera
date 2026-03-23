@@ -187,13 +187,13 @@ export default function ArticlesPage() {
                             className="relative aspect-[16/10] md:aspect-[21/11] w-full overflow-hidden rounded-sm mb-16 border border-white/5 shadow-2xl"
                         >
                             <Image
-                                src="/WhatsApp Image 2026-03-23 at 5.14.34 PM.jpeg"
+                                src="/WhatsApp Image 2026-03-23 at 6.04.12 PM.jpeg"
                                 alt="Coach Shivani Dahiya"
                                 fill
-                                className="object-cover object-[center_35%] transition-transform duration-[3s] hover:scale-105"
+                                className="object-cover object-[center_25%] transition-transform duration-[3s] hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
-                            <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
+                            <div className="absolute bottom-6 right-6 md:bottom-10 md:right-10">
                                 <span className="bg-accent text-black text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] px-4 py-2">
                                     Meet Coach Shivani Dahiya —
                                 </span>
