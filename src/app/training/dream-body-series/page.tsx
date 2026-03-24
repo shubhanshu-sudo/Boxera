@@ -292,7 +292,7 @@ export default function DreamBodySeriesPage() {
             <section className="py-32 md:py-64 relative overflow-hidden flex items-center justify-center text-center">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/programs_bg.png"
+                        src="/WhatsApp Image 2026-03-23 at 5.14.12 PM.jpeg"
                         alt="CTA BG"
                         fill
                         className="object-cover opacity-20"
