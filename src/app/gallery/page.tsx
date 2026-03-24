@@ -357,7 +357,7 @@ export default function GalleryPage() {
                                         loading={index < 4 ? "eager" : "lazy"}
                                     />
 
-                                     {/* Overlay */}
+                                    {/* Overlay */}
                                     <div className="absolute inset-0 bg-black/40 lg:bg-black/50 lg:group-hover:bg-black/20 transition-all duration-700" />
                                     <div className="absolute inset-0 border border-accent/0 lg:group-hover:border-accent/40 lg:group-hover:shadow-[inset_0_0_50px_rgba(29,194,193,0.1)] transition-all duration-500 pointer-events-none" />
                                 </motion.div>
@@ -421,7 +421,7 @@ export default function GalleryPage() {
                                 >
                                     MEMBER CASE STUDY
                                 </motion.span>
-                                <h4 className="text-4xl md:text-6xl font-anton uppercase text-white mb-4 leading-none whitespace-pre-wrap">HIMANSHU'S <br className="hidden xs:block" /> EVOLUTION</h4>
+                                <h4 className="text-4xl md:text-6xl font-anton uppercase text-white mb-4 leading-none whitespace-pre-wrap">HIMANSHU'S <br className="hidden xs:block" /> TRANSFORMATION</h4>
                                 <div className="flex flex-wrap items-center gap-4 md:gap-6 text-white/50 text-[10px] md:text-xs font-black tracking-[0.2em] uppercase">
                                     <span className="flex items-center gap-2 underline decoration-accent/40 underline-offset-4">FAT LOSS: 32KG</span>
                                     <div className="w-1.5 h-1.5 bg-accent rounded-full" />

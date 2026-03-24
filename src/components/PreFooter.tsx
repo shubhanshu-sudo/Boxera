@@ -5,6 +5,8 @@ import { TransitionLink } from "@/components/transitions/TransitionLink";
 import { ArrowUpRight, Package, Trophy, Image as ImageIcon, Phone } from "lucide-react";
 import Button from "./Button";
 
+import { usePathname } from "next/navigation";
+
 const quickLinks = [
     {
         title: "PACKAGES",
@@ -16,7 +18,7 @@ const quickLinks = [
         title: "JOURNEY",
         description: "SEE HOW WE TRANSFORM BEGINNERS INTO THEIR ELITE SELF.",
         icon: <Trophy size={20} />,
-        link: "/gallery",
+        link: "/#transformations",
     },
     {
         title: "GALLERY",
@@ -33,6 +35,19 @@ const quickLinks = [
 ];
 
 export default function PreFooter() {
+    const pathname = usePathname();
+
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        if (href.startsWith("/#") && pathname === "/") {
+            e.preventDefault();
+            const id = href.replace("/#", "");
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    };
+
     return (
         <section className="bg-black py-24 md:py-32 px-6 md:px-12 border-t border-white/5 relative overflow-hidden">
             {/* Background Decorative Gradient */}
@@ -82,6 +97,7 @@ export default function PreFooter() {
                         <TransitionLink
                             key={item.title}
                             href={item.link}
+                            onClick={(e) => handleLinkClick(e, item.link)}
                             className="group bg-zinc-900/40 backdrop-blur-sm border border-white/5 p-8 rounded-xl hover:border-accent-red/40 transition-all hover:-translate-y-2 flex flex-col justify-between h-full hover:bg-zinc-900/60"
                         >
                             <motion.div
